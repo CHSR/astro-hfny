@@ -6,34 +6,34 @@ import Header from "../components/Header.astro";
 
 const {
   title,
-  activeMainText = "About",
-  activeSubText = "About HFNY",
+  activeMainText = "Home Visits",
+  activeSubText = "Home Visits",
 } = Astro.props;
 
 const menuItems = [
   {
-    text: "About HFNY",
-    href: "/about",
+    text: "Home Visits",
+    href: "/homevisits",
     active: true,
   },
   {
-    text: "Timeline",
-    href: "/about/timeline",
+    text: "How Does HFNY Work?",
+    href: "/homevisits/process",
     active: false,
   },
   {
-    text: "What Makes Us Unique",
-    href: "/about/unique",
+    text: "Is HFNY for me?",
+    href: "/homevisits/eligibility",
     active: false,
   },
   {
-    text: "Administration",
-    href: "/about/administration",
+    text: "Family Voices",
+    href: "/homevisits/quotes",
     active: false,
   },
   {
-    text: "Testimonials",
-    href: "/about/testimonials",
+    text: "Find a Program Site",
+    href: "/sites",
     active: false,
   },
 ].map((item) => ({
