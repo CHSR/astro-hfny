@@ -2,10 +2,7 @@
 import AboutLayout from "../../layouts/AboutLayout.astro";
 ---
 
-<AboutLayout title="Healthy Families New York Org">
-	<!-- ***********************************************
-				enter page content below
-				*********************************************** -->
+<AboutLayout title="Healthy Families New York Org" activeText="Timeline">
 	<h1 class="heading">Timeline</h1>
 
 	<div class="date-list" id="accordion">
@@ -20,9 +17,8 @@ import AboutLayout from "../../layouts/AboutLayout.astro";
 		<dl>
 			<dt>1995</dt>
 			<dd class="disc">
-				March 28th - official start date for original <a
-					class="accordion-toggle">10 programs</a
-				>
+				March 28th - official start date for original
+				<a class="accordion-toggle">10 programs</a>
 				<div class="accordion-content">
 					<table>
 						<tr>
@@ -139,15 +135,15 @@ import AboutLayout from "../../layouts/AboutLayout.astro";
 				programs
 			</dd>
 			<dd class="disc">
-				Data collection begins for the <strong>1 year follow-up</strong> of the Randomized
-				Controlled Trial
+				Data collection begins for the <strong>1 year follow-up</strong>
+				of the Randomized Controlled Trial
 			</dd>
 		</dl>
 		<dl>
 			<dt>2002</dt>
 			<dd class="disc">
-				Data collection begins for the <strong>2 year follow-up</strong> of the Randomized
-				Controlled Trial
+				Data collection begins for the <strong>2 year follow-up</strong>
+				of the Randomized Controlled Trial
 			</dd>
 			<dd class="disc">
 				Healthy Families New York logo created:<br /><img
@@ -162,8 +158,8 @@ import AboutLayout from "../../layouts/AboutLayout.astro";
 				Otsego enrolls 10,000th statewide HFNY participant on 5/13/03
 			</dd>
 			<dd class="disc">
-				Data collection begins for the <strong>3 year follow-up</strong> of the Randomized
-				Controlled Trial
+				Data collection begins for the <strong>3 year follow-up</strong>
+				of the Randomized Controlled Trial
 			</dd>
 		</dl>
 		<dl>
@@ -213,8 +209,8 @@ import AboutLayout from "../../layouts/AboutLayout.astro";
 				Administration&rsquo;s Early Enrollment Committee
 			</dd>
 			<dd class="disc">
-				Data collection begins for the <strong>7 year follow-up</strong> of the Randomized
-				Controlled Trial
+				Data collection begins for the <strong>7 year follow-up</strong>
+				of the Randomized Controlled Trial
 			</dd>
 		</dl>
 		<dl>
@@ -465,8 +461,63 @@ import AboutLayout from "../../layouts/AboutLayout.astro";
 			</dd>
 		</dl>
 	</div>
-
-	<!-- *******************************************
-								end page content code 
-				******************************************* -->
 </AboutLayout>
+
+<script
+	type="text/javascript"
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="../js/accordion.js"></script>
+<style>
+	/* accordion styles ===================== */
+	.accordion-toggle {
+		color: #39c;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+	.accordion-content {
+		display: none;
+		padding-bottom: 0;
+	}
+	.accordion-content.default {
+		display: block;
+	}
+	.instructions {
+		background-image: url(../images/template_images/instructions-icon.png);
+		background-repeat: no-repeat;
+		position: left top;
+		color: #1d809c;
+		padding-left: 1.5em;
+	}
+
+	/* Timeline dates */
+	.date-list dl {
+		display: inline-block;
+		clear: left;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 1em;
+		padding-bottom: 0.5em;
+		min-height: 4em;
+	}
+
+	.date-list dt {
+		font-size: 4em;
+		color: #ccc;
+		float: left;
+		margin: 0 0.25em 0 0;
+		padding: 0;
+		line-height: 0.8em;
+		position: relative;
+	}
+
+	.date-list dd {
+		margin: 0 0 0 10em;
+		line-height: 1.6em;
+	}
+
+	.disc {
+		padding-left: 0.75em;
+		background-image: url(../images/template_images/black-bullet.png);
+		background-repeat: no-repeat;
+		background-position: 0px 10px;
+	}
+</style>
