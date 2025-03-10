@@ -1,0 +1,47 @@
+<div id="header">
+  <!-- mobile nav hamburger -->
+  <div id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  
+  <nav>
+    <!-- main site navigation -->
+    <ul id="main-nav">
+      <li><a href="/" class="active">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/home-visits">Home Visits</a></li>
+      <li><a href="/research">Research</a></li>
+      <li><a href="/resources">Resources</a></li>
+      <li><a href="/mis">MIS</a></li>
+      <li><a href="/training">Training</a></li>
+    </ul>
+    
+    <!-- user navigation -->
+    <ul id="user-nav">
+      <li><a href="/staff/login">HFNY Network</a></li>
+      <li><img src="/images/template_images/nav_divider.png" alt="hash mark" /></li>
+      <li><a href="/jobs">Jobs</a></li>
+      <li><img src="/images/template_images/nav_divider.png" alt="hash mark" /></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<script>
+  // Mobile menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const nav = document.querySelector('nav');
+  
+  hamburger?.addEventListener('click', () => {
+    nav?.classList.toggle('active');
+    hamburger.classList.toggle('active');
+    document.documentElement.scrollTop = 0;
+    document.body.scrollTop = 0;
+  });
+</script>
+
+<style>
+  /* We'll move the CSS here later */
+</style> 

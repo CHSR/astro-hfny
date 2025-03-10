@@ -1,0 +1,77 @@
+---
+const { menuItems } = Astro.props;
+---
+
+<!-- begin page navigation -->
+<div id="page-nav">
+    <ul>
+    {menuItems.map((item: { href: string | null | undefined; active: boolean; text: string; }) => (
+        <li>
+        <a href={item.href} class={item.active ? 'active' : ''}>
+            {item.text}
+        </a>
+        </li>
+    ))}
+    </ul>
+</div><!-- end page navigation -->
+
+<style>
+  /* =================================
+        page navigation styles
+  =================================*/
+
+  #mobile-page-nav {
+    display: none;
+    width: 95%;
+    background-image: url(../images/template_images/HFNY_logo_nav_mobile.png);
+    background-repeat: repeat-x;
+    background-color: #00919f;
+    color: #fff;
+    font-size: 0.85em;
+    padding: 4% 0 4% 5%;
+    /* position: relative;
+    left: -2%; */
+    cursor: pointer;
+  }
+
+  #page-nav {
+    background-color: #00919f;
+    background-image: url(../images/template_images/HFNY_logo_nav.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-top: 7em; /* 110 */
+    display: block;
+  }
+
+  #page-nav ul {
+    list-style-type: none;
+    width: 100%;
+  }
+
+  #page-nav ul li {
+    width: 100%;
+    background-image: url(../images/template_images/nav_button_top.png);
+    background-repeat: repeat-x;
+    background-position: left top;
+    position: relative;
+    border-bottom: 1px solid #035c74;
+    display: inline-block;
+  }
+
+  #page-nav ul li a {
+    text-decoration: none;
+    display: block;
+    width: 88%; /* allow for padding */
+    padding: 0.5em 6%;
+    color: #fff;
+    position: relative;
+  }
+
+  #page-nav ul li a:hover {
+    background-color: #00c3c1;
+  }
+
+  #page-nav ul li a.active {
+    background-color: /*#b71a8b*/ #016872;
+  }
+</style>

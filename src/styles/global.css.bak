@@ -1,0 +1,398 @@
+/* Reset and base styles */
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+ul,
+li,
+form,
+label,
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  background-color: #fff;
+  background-image: url('/images/template_images/background_02.png');
+  background-position: left top;
+  background-repeat: repeat-x;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000000;
+  height: 100%;
+  min-height: 100%;
+}
+
+/* Layout */
+#page {
+  max-width: 60em;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+}
+
+/* Header styles */
+#header {
+  width: 100%;
+  min-height: 46px;
+  display: block;
+  position: relative;
+  top: 3px;
+  font-size: 0.9em;
+}
+
+/* Navigation */
+#main-nav {
+  padding: 13px 0px 13px 10px;
+  display: inline-block;
+  float: left;
+}
+
+#main-nav li {
+  margin-right: 1.2em;
+  display: inline;
+}
+
+#main-nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 13px;
+}
+
+#main-nav li a:hover {
+  color: #e0c92e;
+}
+
+#main-nav li a.active {
+  background-image: url('/images/template_images/nav_indicator.png');
+  background-repeat: no-repeat;
+  background-position: 50% bottom;
+}
+
+/* User navigation */
+#user-nav {
+  padding: 13px 0px 13px 0px;
+  display: block;
+  overflow: visible;
+  text-align: right;
+  float: right;
+  width: 25%;
+  font-size: 0.85em;
+}
+
+#user-nav li {
+  margin-right: 0.7em;
+  display: inline;
+}
+
+#user-nav li img {
+  position: relative;
+  top: 3px;
+}
+
+#user-nav li a {
+  color: #b1e9f9;
+  text-decoration: none;
+  padding-bottom: 13px;
+}
+
+#user-nav li a:hover {
+  color: #e0c92e;
+}
+
+/* Mobile menu */
+#hamburger {
+  display: none;
+  border: 1px solid #1c7279;
+  cursor: pointer;
+  height: 24px;
+  width: 25px;
+  padding: 3px 4px;
+  position: absolute;
+  left: 0.4em;
+  top: 0.5em;
+  background: #4c5b5c;
+}
+
+#hamburger div {
+  background-color: #fff;
+  border: 1px solid #a4c0c2;
+  height: 1px;
+  margin-top: 4px;
+  width: 90%;
+}
+
+/* Banner */
+#banner {
+  position: relative;
+}
+
+/* Search box */
+#searchbox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  z-index: 10;
+}
+
+.searchbox {
+  position: relative;
+  min-width: 30px;
+  width: 0%;
+  height: 30px;
+  float: right;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.searchbox-open {
+  width: 100%;
+}
+
+.searchbox-input {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 0;
+  outline: 0;
+  background: #efefef;
+  width: 97%;
+  height: 30px;
+  margin: 0;
+  padding-left: 1.25em;
+  font-size: 0.8em;
+  color: #666;
+}
+/* =============================
+banner button styles 
+================================ */
+
+#banner-nav {
+	position: absolute;
+	display: block;
+	left: 0;
+	bottom: 0;
+	padding: 0 0 .25em .5em;
+	width: 31%;
+}
+
+#banner-nav ul {
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+#banner-nav ul li {
+	width: 100%;
+	max-width: 292px;
+	max-height: 80px;
+	margin-bottom: 3%;
+	position: relative;
+}
+
+#banner-nav ul li a { /* set font size with 'fitText' javascript */
+	width: 100%;
+	background-repeat: no-repeat;
+	background-size: cover; /* background image scales to fit */
+	border: 3px solid #00919f;
+	display: block;
+	color: #fff;
+	line-height: 1em;
+	text-decoration: none;
+	position: relative;
+	font-family: 'Cabin', sans-serif;
+	font-weight: 500;
+	padding-top: 26%; /* set box height */
+	text-shadow: 1px 1px #333;
+}
+
+#banner-nav ul li a span {
+	position: absolute;
+	left: 8px;
+	bottom: 4px;
+}
+
+#banner-nav ul li a:hover {
+	text-shadow: 2px 2px #002e32;
+	border-color: #bb169c;
+}
+
+#ban-nav-01 {
+	background-image: url(../images/template_images/what_is_family_support_nt.png);
+}
+
+#ban-nav-02 {
+	background-image: url(../images/template_images/am_I_eligible_nt.png);
+}
+
+#ban-nav-03 {
+	background-image: url(../images/template_images/how_does_it_work_nt.png);
+}
+
+/* Content area */
+#content {
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  background-image: url('/images/template_images/page_background.png');
+  background-repeat: repeat-x;
+  background-position: left top;
+}
+
+/* Text area */
+#text-area {
+  position: relative;
+  width: 100%;
+  padding-top: 1em;
+}
+
+#text-area h1 {
+  color: #00919f;
+  font-family: "Cabin", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  line-height: 1.1em;
+  margin: 0.6em 0 0.3em 0;
+}
+
+#text-area p {
+  margin: 0.25em 0 0.85em 0;
+  line-height: 1.35em;
+}
+
+/* Column layout */
+#col-1 {
+  float: left;
+  width: 12.75em;
+  padding-bottom: 2%;
+  position: relative;
+  display: inline-block;
+}
+
+#col-2 {
+  margin-right: 2%;
+  margin-left: 14em;
+  padding-bottom: 2%;
+  position: relative;
+}
+
+#col-3 {
+  float: right;
+  width: 25%;
+  padding-bottom: 2%;
+  position: relative;
+}
+
+/* Footer */
+#footer {
+  text-align: center;
+  border-top: 2px solid #00919f;
+  padding: 0.75em 0;
+  position: relative;
+  display: block;
+  clear: both;
+  width: 100%;
+}
+
+#footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#footer ul li {
+  display: inline;
+}
+
+#footer p {
+  color: #999999;
+  font-size: 0.75em;
+  clear: both;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 720px) {
+  body {
+    background-image: none;
+  }
+
+  #page {
+    max-width: 45em;
+  }
+
+  #header {
+    background-image: url('/images/template_images/HFNY_logo_mobile_1.png');
+    background-repeat: no-repeat;
+    background-color: #00919f;
+    background-position: 50% top;
+    min-height: 140px;
+  }
+
+  #hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+  }
+
+  nav.active {
+    display: block;
+    position: absolute;
+    top: 140px;
+    z-index: 4;
+    background-color: #4c5b5c;
+    width: 100%;
+    padding: 0;
+    font-size: 1.25em;
+  }
+
+  #main-nav,
+  #user-nav {
+    float: none;
+    width: 100%;
+    padding: 0;
+  }
+
+  #main-nav li,
+  #user-nav li {
+    margin: 0.85em 2em;
+    display: block;
+  }
+
+  #col-1,
+  #col-2,
+  #col-3 {
+    float: none;
+    width: 96%;
+    margin: 0 2%;
+  }
+} 
