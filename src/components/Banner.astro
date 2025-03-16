@@ -1,52 +1,64 @@
 ---
 const bannerImages = [
-  '/images/template_images/main_banners/banner_02.png',
-  '/images/template_images/main_banners/banner_03.png',
-  '/images/template_images/main_banners/banner_04.png',
-  '/images/template_images/main_banners/banner_05.png',
-  '/images/template_images/main_banners/banner_06.png',
-  '/images/template_images/main_banners/banner_08.png',
-  '/images/template_images/main_banners/banner_09.png',
-  '/images/template_images/main_banners/banner_10.png',
+  "/images/template_images/main_banners/banner_02.png",
+  "/images/template_images/main_banners/banner_03.png",
+  "/images/template_images/main_banners/banner_04.png",
+  "/images/template_images/main_banners/banner_05.png",
+  "/images/template_images/main_banners/banner_06.png",
+  "/images/template_images/main_banners/banner_08.png",
+  "/images/template_images/main_banners/banner_09.png",
+  "/images/template_images/main_banners/banner_10.png",
 ];
 
-const randomBannerImage = bannerImages[Math.floor(Math.random() * bannerImages.length)];
+const randomBannerImage =
+  bannerImages[Math.floor(Math.random() * bannerImages.length)];
 ---
 
 <div id="banner">
   <!-- Banner image -->
   <img src={randomBannerImage} alt="Healthy Families New York" />
-  
+
   <!-- Tag line -->
-  <p id="tagline">"Positive strength based service that is provided for free."</p>
-  
+  <p id="tagline">
+    "Positive strength based service that is provided for free."
+  </p>
+
   <!-- Banner navigation -->
   <div id="banner-nav">
     <ul>
-      <li><a href="/home-visits/process" id="ban-nav-01"><span>How does HFNY work?</span></a></li>
-      <li><a href="/home-visits/eligibility" id="ban-nav-03"><span>Is HFNY for me?</span></a></li>
-      <li><a href="/sites" id="ban-nav-02"><span>Find a HFNY program</span></a></li>
+      <li>
+        <a href="/homevisits/process" id="ban-nav-01"
+          ><span>How does HFNY work?</span></a>
+      </li>
+      <li>
+        <a href="/homevisits/eligibility" id="ban-nav-03"
+          ><span>Is HFNY for me?</span></a>
+      </li>
+      <li>
+        <a href="/sites" id="ban-nav-02"><span>Find a HFNY program</span></a>
+      </li>
     </ul>
   </div>
 </div>
 
 <script>
   // Search box functionality
-  const searchInput = document.querySelector('.searchbox-input');
-  const searchIcon = document.querySelector('.searchbox-icon');
-  
+  const searchInput = document.querySelector(".searchbox-input");
+  const searchIcon = document.querySelector(".searchbox-icon");
+
   function buttonUp() {
     const inputVal = searchInput?.value;
     if (searchIcon && inputVal && inputVal.length > 0) {
-      searchIcon.classList.add('active');
+      searchIcon.classList.add("active");
     } else if (searchIcon) {
-      searchIcon.classList.remove('active');
+      searchIcon.classList.remove("active");
     }
   }
-  
-  searchInput?.addEventListener('keyup', buttonUp);
+
+  searchInput?.addEventListener("keyup", buttonUp);
 </script>
 
 <style>
   /* We'll move the CSS here later */
-</style> 
+</style>
+
