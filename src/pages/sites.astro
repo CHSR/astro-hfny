@@ -45,7 +45,7 @@ import Layout from "@/layouts/Layout.astro";
       document,
       "script",
       "https://www.google-analytics.com/analytics.js",
-      "ga",
+      "ga"
     );
 
     ga("create", "UA-41499978-5", "auto");
@@ -514,7 +514,7 @@ import Layout from "@/layouts/Layout.astro";
         "</div>",
     });
     Fulton_marker.setTitle(
-      "Healthy Families of Fulton and Washington Counties",
+      "Healthy Families of Fulton and Washington Counties"
     );
     Fulton_marker.setLabel("Fulton");
     google.maps.event.addListener(Fulton_marker, "click", function () {
@@ -1432,7 +1432,7 @@ import Layout from "@/layouts/Layout.astro";
         "</div>",
     });
     Washington_marker.setTitle(
-      "Healthy Families of Fulton and Washington Counties",
+      "Healthy Families of Fulton and Washington Counties"
     );
     Washington_marker.setLabel("Washington");
     google.maps.event.addListener(Washington_marker, "click", function () {
@@ -1662,7 +1662,7 @@ import Layout from "@/layouts/Layout.astro";
       "click",
       function () {
         Bushwick_Bright_Start_window.open(nyc, Bushwick_Bright_Start_marker);
-      },
+      }
     );
 
     var Sunset_Park = { lat: 40.63, lng: -74.01 };
@@ -1763,7 +1763,7 @@ import Layout from "@/layouts/Layout.astro";
       "click",
       function () {
         Washington_Heights_window.open(nyc, Washington_Heights_marker);
-      },
+      }
     );
 
     var Corona = { lat: 40.7496015, lng: -73.8640892 };
@@ -1845,7 +1845,6 @@ import Layout from "@/layouts/Layout.astro";
     * The callback parameter executes the initMap() function
     -->
 <script
-  async
   defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDtO5xULky2EAG4h9-SOpi9BMeSH9x0KM&callback=initMap"
 ></script>
