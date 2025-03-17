@@ -2,54 +2,57 @@
 import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
-import "@/styles/hfny.css";
+// import "@/styles/hfny.css";
 ---
 
 <Layout title="Disclaimer">
   <Header />
 
   <div id="content">
-    <div id="text-area">
-      <h1 class="heading">Disclaimer</h1>
-      <h2>Links to Other Websites</h2>
-      <p>
-        The information posted on the HFNY website includes hypertext links or
-        pointers to information created and maintained by other public and/or
-        private organizations. HFNY provides these links and pointers solely for
-        your information and convenience, and has no responsibility for the
-        contents of any other websites. When you select a link to an outside
-        website, you are subject to the privacy, copyright, security and
-        information quality policies of that website.
-      </p>
+    <div id="col-2-full-width">
+      <div id="text-area">
+        <h1 class="heading">Disclaimer</h1>
+        <h2>Links to Other Websites</h2>
+        <p>
+          The information posted on the HFNY website includes hypertext links or
+          pointers to information created and maintained by other public and/or
+          private organizations. HFNY provides these links and pointers solely
+          for your information and convenience, and has no responsibility for
+          the contents of any other websites. When you select a link to an
+          outside website, you are subject to the privacy, copyright, security
+          and information quality policies of that website.
+        </p>
 
-      <p>
-        HFNY:
-        <ul>
-          <li>
-            DOES NOT control or guarantee the accuracy, legality, relevance,
-            timeliness, or completeness of information contained on a linked
-            website.
-          </li>
-          <li>
-            DOES NOT endorse linked websites, the views they express, or the
-            products/services they offer.
-          </li>
-          <li>
-            CANNOT authorize the use of copyrighted materials contained in
-            linked websites.
-          </li>
-          <li>
-            IS NOT responsible for transmissions users receive from linked
-            websites.
-          </li>
-          <li>
-            DOES NOT guarantee that outside websites comply with the
-            accessibility requirements of Section 508 of the Rehabilitation Act
-          </li>
-        </ul>
-      </p>
+        <p>
+          <h3>HFNY:</h3>
+          <ul>
+            <li>
+              DOES NOT control or guarantee the accuracy, legality, relevance,
+              timeliness, or completeness of information contained on a linked
+              website.
+            </li>
+            <li>
+              DOES NOT endorse linked websites, the views they express, or the
+              products/services they offer.
+            </li>
+            <li>
+              CANNOT authorize the use of copyrighted materials contained in
+              linked websites.
+            </li>
+            <li>
+              IS NOT responsible for transmissions users receive from linked
+              websites.
+            </li>
+            <li>
+              DOES NOT guarantee that outside websites comply with the
+              accessibility requirements of Section 508 of the Rehabilitation
+              Act
+            </li>
+          </ul>
+        </p>
 
-      <Footer />
+        <Footer />
+      </div>
     </div>
   </div>
 </Layout>
