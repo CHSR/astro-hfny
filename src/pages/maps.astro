@@ -1,0 +1,20 @@
+---
+// src/pages/maps.astro
+import GoogleMap from "@/components/GoogleMap.astro";
+---
+
+<GoogleMap apiKey="AIzaSyA_eX1F54LNo7ka-I-2V00_oNUCLjujW3Y" />
+
+<style is:inline>
+  /* Set the size of the div element that contains the map */
+  #state,
+  #nyc {
+    height: 600px;
+    width: 100%;
+    margin: auto;
+  }
+
+  #page {
+    max-width: 80em !important;
+  }
+</style>
