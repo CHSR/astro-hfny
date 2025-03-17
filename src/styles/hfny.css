@@ -1,0 +1,1190 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: bold;
+}
+
+ul {
+	overflow: hidden;
+}
+
+em {
+	font-style: italic;
+}
+
+strong {
+	font-weight: bold;
+}
+
+html {
+	font-family: sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	height: 100%;
+	min-height: 100%;
+}
+
+body {
+	background-color: #fff;
+	background-image: url(../images/template_images/background_02.png);
+	background-position: left top;
+	background-repeat: repeat-x;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	height: 100%;
+	min-height: 100%;
+}
+
+a:link {
+	color: #199bbf;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #6f2266;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #199bbf;
+	text-decoration: underline;
+}
+
+/* images scale with browser window size */
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9; /* ie8 */
+}
+
+/* add to elements so that they clear following elements at certain browser sizes */
+.clearfix:before {
+	display: table;
+	content: " ";
+}
+
+.clearfix:after {
+	display: table;
+	content: " ";
+	clear: both;
+}
+
+#page {
+	max-width: 60em; /* 960px */
+	margin: 0 auto;
+	position: relative;
+	height: 100%;
+	min-height: 100%;
+}
+
+/* ======================================
+    special style for web team instructions
+   ======================================== */
+
+.web-todo {
+	background-image: url(../images/web-to-do.png);
+	background-repeat: no-repeat;
+	background-position: 0.25em 0.25em;
+	padding: 0.25em 0.25em 0.25em 3.5em;
+	border: 1px dashed #f00;
+	position: relative;
+	display: block;
+	clear: right;
+	min-height: 2em;
+	display: none;
+}
+
+/* accordion styles ===================== */
+.accordion-toggle {
+	cursor: pointer;
+}
+.accordion-content {
+	display: none;
+	padding-bottom: 0;
+}
+.accordion-content.default {
+	display: block;
+}
+
+.instructions {
+	background-image: url(../images/template_images/instructions-icon.png);
+	background-repeat: no-repeat;
+	position: left top;
+	color: #1d809c;
+	padding-left: 1.5em;
+}
+
+/* ========================================
+    the hamburger menu for mobile devices
+    ======================================*/
+#hamburger {
+	display: none;
+	border: 1px solid #1c7279;
+	cursor: pointer;
+	height: 24px;
+	width: 25px;
+	padding: 3px 4px;
+	position: absolute;
+	left: 0.4em;
+	top: 0.5em;
+	background: #4c5b5c;
+}
+
+/* The white stripes in the hamburger button */
+#hamburger div {
+	background-color: #fff;
+	border: 1px solid #a4c0c2;
+	height: 1px;
+	margin-top: 4px;
+	width: 90%;
+}
+
+#header {
+	width: 100%;
+	min-height: 46px;
+	display: block;
+	position: relative;
+	top: 3px\9; /* IE8 and below */
+	font-size: 0.9em;
+}
+
+.ie9 #header {
+	top: 2px;
+}
+
+#main-nav {
+	padding: 13px 0px 13px 10px;
+	display: inline-block;
+	float: left;
+}
+
+#main-nav li {
+	margin-right: 1.2em;
+	display: inline;
+}
+
+#main-nav li a {
+	color: #fff;
+	text-decoration: none;
+	padding-bottom: 13px;
+}
+
+#main-nav li a:hover {
+	color: #e0c92e;
+}
+
+#main-nav li a.active {
+	background-image: url(../images/template_images/nav_indicator.png);
+	background-repeat: no-repeat;
+	background-position: 50% bottom;
+}
+
+#user-nav {
+	padding: 13px 0px 13px 0px;
+	display: block;
+	overflow: visible;
+	text-align: right;
+	float: right;
+	width: 25%; /* so IE8 plays nice */
+	font-size: 0.85em;
+}
+
+#user-nav li {
+	margin-right: 0.7em;
+	display: inline;
+}
+
+#user-nav li img {
+	position: relative;
+	top: 3px;
+}
+
+#user-nav li a {
+	color: #b1e9f9;
+	text-decoration: none;
+	padding-bottom: 13px;
+}
+
+#user-nav li a:hover {
+	color: #e0c92e;
+}
+
+#user-nav li a.active {
+	background-image: url(../images/template_images/nav_indicator.png);
+	background-repeat: no-repeat;
+	background-position: 50% bottom;
+}
+
+/* =================================
+    page content below header 
+   ==================================== */
+
+/* ==========================================
+  search
+  =========================================== */
+
+#searchbox {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40%;
+	z-index: 10;
+}
+
+.searchbox {
+	position: relative;
+	min-width: 30px;
+	width: 0%;
+	height: 30px;
+	float: right;
+	overflow: hidden;
+	-webkit-transition: width 0.3s;
+	-moz-transition: width 0.3s;
+	-ms-transition: width 0.3s;
+	-o-transition: width 0.3s;
+	transition: width 0.3s;
+}
+
+.searchbox-open {
+	width: 100%;
+}
+
+.searchbox-input {
+	position: absolute;
+	top: 0;
+	right: 0;
+	border: 0;
+	outline: 0;
+	background: #efefef;
+	width: 97%;
+	height: 30px;
+	margin: 0;
+	padding-left: 1.25em;
+	font-size: 0.8em;
+	color: #666;
+}
+
+.searchbox-input::-webkit-input-placeholder {
+	color: #7d7d7d;
+}
+.searchbox-input:-moz-placeholder {
+	color: #7d7d7d;
+}
+.searchbox-input::-moz-placeholder {
+	color: #7d7d7d;
+}
+.searchbox-input:-ms-input-placeholder {
+	color: #7d7d7d;
+}
+
+.searchbox-icon,
+.searchbox-submit {
+	width: 30px;
+	height: 30px;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0;
+	margin: 0;
+	cursor: pointer;
+	border: 0;
+	outline: 0;
+	background-image: url(../images/template_images/search_button.png);
+}
+
+/* ^^^^^^^^^^^^^^^ end search */
+
+#content {
+	width: 100%;
+	background-color: #fff;
+	position: relative;
+	background-image: url(../images/template_images/page_background.png);
+	background-repeat: repeat-x;
+	background-position: left top;
+}
+
+#col-1 {
+	float: left;
+	width: 12.75em; /* 204 */
+	/* margin-right: 1.5%; */
+	padding-bottom: 2%;
+	position: relative;
+	display: inline-block;
+}
+
+#col-2 {
+	/*float: left; 
+	width: 46.25em;*/
+	margin-right: 2%;
+	margin-left: 14em;
+	padding-bottom: 2%;
+	position: relative;
+}
+
+/* no left column */
+#col-2-full-width {
+	margin-right: 2%;
+	margin-left: 2%;
+	padding-bottom: 2%;
+	position: relative;
+}
+
+/* =================================
+   page navigation styles
+   =================================*/
+
+#mobile-page-nav {
+	display: none;
+	width: 95%;
+	background-image: url(../images/template_images/HFNY_logo_nav_mobile.png);
+	background-repeat: repeat-x;
+	background-color: #00919f;
+	color: #fff;
+	font-size: 0.85em;
+	padding: 4% 0 4% 5%;
+	/* position: relative;
+	left: -2%; */
+	cursor: pointer;
+}
+
+#page-nav {
+	background-color: #00919f;
+	background-image: url(../images/template_images/HFNY_logo_nav.png);
+	background-repeat: no-repeat;
+	width: 100%;
+	padding-top: 7em; /* 110 */
+	display: block;
+}
+
+#page-nav ul {
+	list-style-type: none;
+	width: 100%;
+}
+
+#page-nav ul li {
+	width: 100%;
+	background-image: url(../images/template_images/nav_button_top.png);
+	background-repeat: repeat-x;
+	background-position: left top;
+	position: relative;
+	border-bottom: 1px solid #035c74;
+	display: inline-block;
+}
+
+#page-nav ul li a {
+	text-decoration: none;
+	display: block;
+	width: 88%; /* allow for padding */
+	padding: 0.5em 6%;
+	color: #fff;
+	position: relative;
+}
+
+#page-nav ul li a:hover {
+	background-color: #00c3c1;
+}
+
+#page-nav ul li a.active {
+	background-color: /*#b71a8b*/ #016872;
+}
+
+/* ===================================================
+   styles for content within the text area of the page 
+   =================================================== */
+
+#text-area {
+	position: relative;
+	width: 100%;
+	padding-top: 1em;
+}
+
+#text-area h1,
+h2 {
+	color: #00919f;
+	font-family: "Cabin", sans-serif;
+	font-weight: 600;
+	font-size: 1.5em;
+	line-height: 1.1em;
+	margin: 0.6em 0 0.3em 0;
+}
+
+#text-area h2 {
+	font-size: 1.2em;
+	color: #a43e97;
+}
+
+#text-area h1.heading {
+	border-bottom: 2px solid #00919f;
+	padding-bottom: 0.17em;
+	margin: 0.3em 0 0.6em 0;
+}
+
+#text-area ul {
+	margin-top: 0.5em;
+}
+
+#text-area li {
+	margin-bottom: 0.5em;
+}
+
+#text-area p {
+	margin: 0.25em 0 0.85em 0;
+	line-height: 1.35em;
+}
+
+.medium-text {
+	font-size: 0.85em;
+}
+
+.small-text {
+	font-size: 0.7em;
+	line-height: 1em;
+}
+
+a.button {
+	padding: 0.2em 0.5em;
+	background: #21829e;
+	color: #fff;
+	border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	font-size: 0.8em;
+}
+
+a.button:hover {
+	text-decoration: none;
+	background: #099dab;
+	cursor: pointer;
+}
+
+a.button-large {
+	padding: 0.2em 0.5em;
+	background: #21829e;
+	color: #fff;
+	border-radius: 2px 2px 2px 2px;
+	-moz-border-radius: 2px 2px 2px 2px;
+	-webkit-border-radius: 2px 2px 2px 2px;
+	font-size: 1.25em;
+}
+
+a.button-large:hover {
+	text-decoration: none;
+	background: #099dab;
+	cursor: pointer;
+}
+
+.hide {
+	display: none;
+}
+
+.note {
+	font-size: 0.85em;
+	line-height: 1.25em;
+	padding: 0.4em 0.5em 0.4em 2.5em;
+	color: #666;
+	border: 1px solid #999;
+	background-image: url(../images/template_images/note_icon_lg.png);
+	background-repeat: no-repeat;
+	background-color: #efefef;
+	overflow: auto;
+}
+
+.inline-note {
+	color: #666;
+	font-size: 0.85em;
+	background-image: url(../images/template_images/note_icon_inline.png);
+	background-repeat: no-repeat;
+	padding-left: 1.1em;
+	margin-left: 0.5em;
+}
+
+.new-bug {
+	background-color: #ffde00;
+	color: #c06;
+	font-size: 0.65em;
+	padding: 0.25em 0.3em 0.15em 0.3em;
+}
+
+.clear {
+	clear: both;
+}
+
+#text-area ul,
+ol {
+	margin: 1em 0;
+	padding: 0 0 0 2.5em;
+}
+
+dd {
+	margin: 0 0 0.5em 1em;
+}
+
+dd span {
+	color: #999;
+	font-size: 0.85em;
+}
+
+.float-left {
+	float: left;
+	margin: 0.5em 1em 1em 0;
+	overflow: auto;
+	position: relative;
+	display: block;
+}
+
+.float-right {
+	float: right;
+	margin: 0.5em 0 1em 1em;
+	overflow: auto;
+	position: relative;
+	display: block;
+}
+
+.video-block {
+	display: inline-block;
+	margin-bottom: 2em;
+	width: 100%;
+}
+
+.video-block img {
+	max-width: 150px;
+}
+
+#text-area ul.link-list {
+	padding-left: 1em;
+	margin-top: 0.25em;
+}
+
+#text-area ul.link-list li {
+	/* list-style-image: url(../images/template_images/arrow_yellow.gif);*/
+	margin-bottom: 0.5em;
+}
+
+/* testimonial sidebar quote */
+div.testimonial {
+	background-color: #08a4a4;
+	position: relative;
+	width: 25%;
+	min-width: 150px;
+	padding: 0.8em;
+}
+
+div.testimonial p {
+	margin: 0;
+	padding: 0.6em 0 3em 0;
+	font-size: 1.15em;
+	line-height: 1.35em;
+	font-weight: bold;
+	font-style: italic;
+	color: #fff;
+	background-image: url(../images/template_images/closequote.png);
+	background-repeat: no-repeat;
+	background-position: 50% bottom;
+	text-align: center;
+}
+
+/* open quote graphic */
+div.testimonial p span {
+	background-image: url(../images/template_images/openquote.png);
+	background-repeat: no-repeat;
+	background-position: 50% top;
+	display: block;
+	margin: 0 auto 0.5em auto;
+	width: 83px;
+	height: 40px;
+}
+
+div.testimonial p.quote-attribute {
+	background-image: none;
+	font-size: 0.8em;
+	font-weight: normal;
+	font-style: normal;
+	padding: 0.5em 0 0.6em 0;
+}
+
+/* newsletter dated listings */
+.date-list dl {
+	display: inline-block;
+	clear: left;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 1em;
+	padding-bottom: 0.5em;
+	min-height: 4em;
+}
+
+.date-list dt {
+	font-size: 4em;
+	color: #ccc;
+	float: left;
+	margin: 0 0.25em 0 0;
+	padding: 0;
+	line-height: 0.8em;
+	position: relative;
+}
+
+.date-list dd {
+	margin: 0 0 0 10em;
+	line-height: 1.6em;
+}
+
+.disc {
+	padding-left: 0.75em;
+	background-image: url(../images/template_images/black-bullet.png);
+	background-repeat: no-repeat;
+	background-position: 0px 10px;
+}
+
+/* ===================================
+   icons after links  //10-22-15 client asked to hide icons//
+   =================================== 
+
+a[href$=".pdf"]:after {
+	content: url(../images/template_images/PDFicon.png);
+	padding-left: .2em;
+}
+
+a[href$=".doc"]:after {
+	content: url(../images/template_images/WordIcon.png);
+	padding-left: .2em;
+}
+
+
+a[href$=".docx"]:after {
+	content: url(../images/template_images/WordIcon.png);
+	padding-left: .2em;
+}
+
+a[href$=".ppt"]:after {
+	content: url(../images/template_images/PPTicon.png);
+	padding-left: .2em;
+}
+
+/* external links 
+a[href^="http://"] {
+	background-image: url(../images/template_images/OffsiteIcon.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding-right: 1em;
+}
+
+a[href^="https://"] {
+	background-image: url(../images/template_images/OffsiteIcon.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	padding-right: 1em;
+}
+
+/* video link 
+a[href$=".wmv"]:after {
+	content: url(../images/template_images/VideoIcon.png);
+	padding-left: .2em;
+}
+
+/* email link 
+a[href^="mailto"]:after {
+	content: url(../images/template_images/emailIcon.png);
+	padding-left: .1em;
+}
+
+/* no external link icon on internal links 
+a[href^="http://www.healthyfamiliesnewyork.org"] {
+	background-image: none;
+	padding-right: 0;
+}
+
+/* remove automatic external link icon from image links 
+a.no-icon {
+	background-image: none;
+	padding-right: 0;
+}
+*/
+
+/* =======================================================
+   program sites styles
+   ====================================================== */
+div.prg-site {
+	display: block;
+	margin-bottom: 1em;
+}
+
+.bar-head {
+	text-align: center;
+	background: #01799b;
+	color: #fff;
+	font-size: 0.9em;
+	font-weight: bold;
+	padding: 0.2em 0.5em;
+	margin-bottom: 1.2em;
+}
+
+p.facility {
+	font-weight: bold;
+}
+
+p.top {
+	border-bottom: 1px solid #999;
+	text-align: right;
+}
+
+p.top a {
+	/* border: 1px solid #999; */
+	padding: 0.1em 0.25em 0.1em 0.2em;
+	text-transform: uppercase;
+	font-size: 0.65em;
+	color: #fff;
+	background-color: #999;
+}
+
+p.mobile-map-text {
+	display: none;
+}
+
+#map-menu {
+	display: none;
+}
+
+/* =================================================================
+   style for image with caption // also apply float-left or float-right 
+   class to enclosing div 
+   ================================== */
+
+div.img-w-capt {
+	display: inline-block;
+}
+
+.img-w-capt table {
+	border: 0;
+	border-collapse: collpase;
+}
+
+.img-w-capt td {
+	padding: 0;
+}
+
+.img-w-capt caption {
+	caption-side: bottom;
+	font-size: 0.75em;
+	margin: 3px 0 0 2px;
+	text-align: left;
+	font-style: italic;
+}
+
+/* list with HFNY logo bullets */
+
+#text-area ul.hfny-list {
+	margin: 0;
+	padding: 0;
+}
+
+#text-area ul.hfny-list li {
+	background: url(../images/template_images/HFNY-bullett.png) no-repeat left top;
+	padding: 0 0 0.7em 31px;
+	list-style: none;
+	margin: 0;
+}
+
+/* =================================
+footer styles 
+==================================== */
+#footer {
+	text-align: center;
+	border-top: 2px solid #00919f;
+	padding: 0.75em 0;
+	position: relative;
+	display: block;
+	clear: both;
+	width: 100%;
+}
+
+#footer ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#footer ul li {
+	display: inline;
+}
+
+/* remove automatic external link icons */
+#footer a {
+	background-image: none;
+	padding-right: 0;
+}
+
+/* set logo container widths. allow for padding */
+#footer ul li.ocfs {
+	width: 17%;
+}
+#footer ul li.pca {
+	width: 24%;
+	position: relative;
+	bottom: 0.5em;
+}
+#footer ul li.chsr {
+	width: 35%;
+}
+#footer ul li.hfa {
+	width: 11%;
+}
+
+#footer ul li a {
+	padding: 0 1.5%;
+	position: relative;
+	width: 100%;
+}
+
+#footer p {
+	color: #999999;
+	font-size: 0.75em;
+	clear: both;
+}
+
+/* ==============================================
+   tablet styles
+   ============================================= */
+
+@media screen and (max-width: 960px) {
+	#main-nav li {
+		margin-right: 1em;
+	}
+
+	#user-nav {
+		width: 25%;
+	}
+
+	#user-nav li {
+		margin-right: 0.5em;
+	}
+
+	#content {
+		padding-left: 1%;
+		width: 98%;
+		padding-right: 1%;
+	}
+}
+
+/* mobile styles ======================================== */
+
+@media screen and (max-width: 720px) {
+	body {
+		background-image: none;
+	}
+
+	#page {
+		max-width: 45em; /* 720px */
+	}
+
+	#header {
+		clear: both;
+		background-image: url(../images/template_images/HFNY_logo_mobile_1.png);
+		background-repeat: no-repeat;
+		background-color: #00919f;
+		background-position: 50% top;
+		min-height: 140px;
+	}
+
+	#hamburger {
+		display: block;
+	}
+	#searchbox {
+		top: -132px;
+		right: 6px;
+		width: 95%;
+	}
+
+	nav {
+		display: none; /* hide until toggled */
+		position: absolute;
+		top: 140px; /* position below header graphic */
+		z-index: 4; /* bring to front */
+		background-color: #4c5b5c;
+		width: 100%;
+		padding: 0;
+		font-size: 1.25em;
+		height: 1000%; /* cover all content */
+	}
+
+	#main-nav {
+		float: none;
+		width: 100%;
+		padding: 0;
+	}
+
+	#main-nav li {
+		margin: 0.85em 2em;
+		display: block;
+	}
+
+	#main-nav li a.active {
+		background: none;
+	}
+
+	#user-nav {
+		float: none;
+		text-align: left;
+		width: 100%;
+		padding: 0;
+	}
+
+	#user-nav li {
+		margin: 0.85em 2em;
+		display: block;
+	}
+
+	#user-nav li a {
+		color: #b1e9f9;
+	}
+
+	#user-nav li a.active {
+		background: none;
+	}
+
+	#user-nav li {
+		margin-right: 0;
+		display: block;
+	}
+
+	#user-nav li img {
+		display: none;
+	}
+
+	#user-nav li a {
+		padding-bottom: 2px;
+	}
+
+	#content {
+		padding-left: 0;
+		width: 100%;
+		padding-right: 0;
+	}
+
+	#text-area {
+		padding-left: 1%;
+		width: 98%;
+		padding-right: 0;
+	}
+
+	.float-right,
+	.float-left {
+		clear: both;
+		margin: 1em auto;
+		float: none;
+	}
+
+	.date-list dt {
+		float: none;
+	}
+
+	.date-list dd {
+		margin-left: 0;
+	}
+
+	/* ==========================
+	   page navigation
+	   ========================== */
+	#mobile-page-nav {
+		display: block;
+	}
+
+	#page-nav {
+		display: none; /* hide until toggled */
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 3; /* one level behind main menu */
+		background-image: none;
+		width: 100%;
+		padding: 0;
+		font-size: 1.25em;
+	}
+
+	#page-nav ul li a:hover {
+		background-color: transparent;
+	}
+
+	#col-1 {
+		float: none;
+		width: 100%;
+	}
+
+	#col-2 {
+		margin-left: 2%;
+	}
+
+	/* ========================
+	   footer
+	   ========================= */
+
+	#footer ul li {
+		display: block;
+	}
+
+	/* set logo container widths */
+	#footer ul li.ocfs {
+		width: 100%;
+		bottom: 0;
+	}
+	#footer ul li.pca {
+		width: 100%;
+	}
+	#footer ul li.chsr {
+		width: 100%;
+	}
+	#footer ul li.hfa {
+		width: 100%;
+	}
+
+	#footer ul li a {
+		padding: 0;
+	}
+
+	#footer p {
+		font-size: 0.85em;
+		margin-top: 1.5%;
+	}
+}
+
+/* set styles for program sites page below max image width */
+@media screen and (max-width: 670px) {
+	.map-text {
+		display: none;
+	}
+	#map-menu {
+		display: block;
+	}
+}
+
+@media screen and (max-width: 360px) {
+	.video-block img {
+		max-width: 100%;
+		width: 100%;
+	}
+
+	/* hide click-on-map instructions */
+	p.map-text {
+		display: none;
+	}
+
+	p.top a {
+		display: none;
+	}
+
+	p.mobile-map-text {
+		display: inline-block;
+		font-size: 0.8em;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 250px) {
+	#header {
+		background-image: url(../images/template_images/HFNY_logo_mobile.png);
+		min-height: 93px;
+	}
+
+	nav {
+		top: 93px; /* position below header graphic */
+		font-size: 1em;
+	}
+
+	#page-nav {
+		font-size: 1em;
+	}
+}
