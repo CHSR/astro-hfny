@@ -24,6 +24,7 @@
 - feat = feature
 - bugfix
 - refactor
+- chore
 - docs
 - style
 - perf
