@@ -9,6 +9,13 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/sitemap": "^3.2.1",
     "astro": "^5.4.2"
+  },
+  "pnpm": {
+    "ignoredBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ]
   }
 }

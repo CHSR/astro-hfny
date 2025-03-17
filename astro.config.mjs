@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://www.healthyfamiliesnewyork.org',
@@ -11,5 +12,7 @@ export default defineConfig({
     build: {
       assetsInlineLimit: 0
     }
-  }
-}); 
+  },
+
+  integrations: [sitemap()]
+});
