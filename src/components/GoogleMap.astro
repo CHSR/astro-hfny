@@ -4,7 +4,7 @@ import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 
 // GoogleMap.astro
-const { apiKey } = Astro.props;
+import { SECRET_GOOGLEMAPSAPIKEY } from "astro:env/server";
 ---
 
 <Layout title="Sites">
@@ -29,7 +29,7 @@ const { apiKey } = Astro.props;
         <Footer />
       </div>
 
-      <script define:vars={{ apiKey }} is:inline>
+      <script is:inline>
         window.initMap = function () {
           // Initialize and add the maps
           var nys_center = { lat: 42.666, lng: -75.408 };
@@ -1906,7 +1906,7 @@ const { apiKey } = Astro.props;
       <script
         async
         defer
-        src={`https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`}
+        src={`https://maps.googleapis.com/maps/api/js?key=${SECRET_GOOGLEMAPSAPIKEY}&callback=initMap`}
       ></script>
     </div>
   </div>
