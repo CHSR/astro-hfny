@@ -44,7 +44,7 @@ const { title } = Astro.props;
 
 <!-- set initial font size and scale text to window size -->
 <script src="/js/fittext.js" is:inline></script>
-<script>
+<script is:inline>
   window.fitText(document.getElementById("audience-nav"), 4.7);
   window.fitText(document.getElementById("banner-nav"), 1.2);
   window.fitText(document.getElementById("tagline"), 2.2);
