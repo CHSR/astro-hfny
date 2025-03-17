@@ -1,47 +1,21 @@
-# Astro Starter Kit: Minimal
+# ![HFNY](/Public/images/HFNY_logo_mobile_1-100.png) ➕ ![Astro](/public/astro-logo-100.png) = 💟
 
-```sh
-pnpm create astro@latest -- --template minimal
-```
+This is a rewrite of the Healthy Families New York informational web site located at http://www.healthyfamiliesnewyork.org.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+The goal of the rewrite is to make the code more maintainable, understandable, and future tech friendly. This is accomplished by using the Astro front-end framework. The current, legacy site is a static site (with a few exceptions, i.e. search, login, etc.), but is designed so that every page transition requires a page load and server round trip. Astro embraces the static nature of the site and does an awesome job optimizing the performance.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Specifically, here are some design goals:
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `pnpm install`             | Installs dependencies                            |
-| `pnpm dev`             | Starts local dev server at `localhost:4321`      |
-| `pnpm build`           | Build your production site to `./dist/`          |
-| `pnpm preview`         | Preview your build locally, before deploying     |
-| `pnpm astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `pnpm astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- Reduce duplication
+  - Every single page in the legacy site must include the layout, styling, and code for the:
+    - Header
+    - Footer
+    - Navigation menu and sub-menus
+    - Bloated single CSS file
+- Ease maintainability
+  - Adding new features is very difficult with the legacy app
+  - Introducing a SPA methodology eliminates page loads and server round trips
+- Enforce the single purpose for each section of the pages through Astro's component-based model
+- Take advantage of the momentum of Astro, with it's large community of developers and rich extension pool:
+  - To make it easier to add new features, including some much-needed interactivity and ease-of-use
+  - To refactor current features that currently have many drawbacks, specifically authentication
