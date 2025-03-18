@@ -1,5 +1,20 @@
 ---
 import ResearchLayout from "@/layouts/ResearchLayout.astro";
+import { db, Publication } from "astro:db";
+
+const pubs = await db.select().from(Publication);
+const distinctCats = await db
+  .selectDistinct({ category: Publication.category })
+  .from(Publication);
+
+// console.log(pubs);
+// console.log(distinctCats);
+
+// New and improved version coming soon - Thanks to Astro DB
+// pull out each individual set of rows per category
+// get a distinct list of catergories
+// loop through the categories in a foreach and get the rows for each category
+// and create layout for pubs within each category
 ---
 
 <ResearchLayout
@@ -7,580 +22,115 @@ import ResearchLayout from "@/layouts/ResearchLayout.astro";
   activeMainText="Research"
   activeSubText="Publications"
 >
-  <h1>New and improved version coming soon - Thanks to Astro DB</h1>
-  <hr />
-
-  <h1 class="heading">Publications</h1>
-  <h3>Where can I get more information about HFNY&rsquo;s effectiveness?</h3>
-
-  <p class="instructions">
-    Click on the headings below or <a class="button" id="expandAll"
-      >Expand All</a
-    >
-    <a class="button" id="collapseAll" style="display:none;">Collapse All</a>
-  </p>
-
-  <div id="accordion">
-    <h2 class="accordion-toggle">Fact Sheets</h2>
-    <div class="accordion-content">
-      <ul class="link-list">
-        <li>
-          <a
-            href="http://www.ocfs.state.ny.us/main/publications/Pub5134.pdf"
-            target="_blank"
-            >Healthy Families New York: A Home Visiting Program that Works 2012</a
-          >
-        </li>
-        <li>
-          <a
-            href="../Media/pdf/HFNY_Program_Cost_Synopsis_12-14-09.pdf"
-            target="_blank">Early Program Cost Synopsis: 2009</a
-          >
-        </li>
-      </ul>
+  <main>
+    <h1 class="heading">Publications</h1>
+    <h3>Where can I get more information about HFNY&rsquo;s effectiveness?</h3>
+    <p class="instructions">
+      Click on the headings below or <a class="button" id="expandAll"
+        >Expand All</a
+      >
+      <a class="button" id="collapseAll" style="display:none;">Collapse All</a>
+    </p>
+    <div id="accordion">
+      <!-- map through the items in distinctCats and create a new section for each category -->
+      <!-- filter the items in pubs and map through to create a new entry for each publication -->
+      {
+        distinctCats.map((cat) => (
+          <>
+            <h2 class="accordion-toggle">
+              {cat.category === "Journal"
+                ? "Journal Articles and Book Chapters"
+                : cat.category + "s"}
+            </h2>
+            <div class="accordion-content">
+              <ul class="link-list">
+                {pubs
+                  .filter((pub) => pub.category === cat.category)
+                  .map((pub) => (
+                    <>
+                      <li>
+                        <a href={pub.fullPath} target="_blank">
+                          {pub.title}
+                        </a>
+                        {pub.additionalInfo && (
+                          <>
+                            <span class="small-text">{pub.additionalInfo}</span>
+                          </>
+                        )}
+                      </li>
+                    </>
+                  ))}
+              </ul>
+            </div>
+          </>
+        ))
+      }
     </div>
+    <br />
+    <p>
+      Note: Some of the links above will take you away from the
+      healthyfamiliesnewyork.org site. Please see
+      <a href="/disclaimer">disclaimer.</a>
+    </p>
+  </main>
 
-    <h2 class="accordion-toggle">Status Reports</h2>
-    <div class="accordion-content">
-      <ul class="link-list">
-        <li>
-          <a
-            href="Publications/PreventionStatus2020HFNY05.2021.pdf"
-            target="_blank">Healthy Families New York:Status Report - 2021</a
-          >
-        </li>
-        <li>
-          <a href="/media/pdf/PreventionStatus042021.pdf" target="_blank"
-            >Community Based Prevention Programs:Status Report - April 2021</a
-          >
-        </li>
-        <li>
-          <a
-            href="Publications/PreventionStatusReport032021.pdf"
-            target="_blank"
-            >Community Based Prevention Programs:Status Report - March 2021</a
-          >
-        </li>
-        <li>
-          <a
-            href="Publications/PreventionStatus2021February.pdf"
-            target="_blank"
-            >Community Based Prevention Programs:Status Report - February 2021</a
-          >
-        </li>
-        <li>
-          <a
-            href="Publications/PreventionStatus2021_january.pdf"
-            target="_blank"
-            >Community Based Prevention Programs:Status Report - January 2021</a
-          >
-        </li>
-        <li>
-          <a
-            href="Publications/PreventionStatus2020_December.pdf"
-            target="_blank"
-            >Community Based Prevention Programs:Status Report - December - 2020</a
-          >
-        </li>
-        <li>
-          <a href="Publications/preventionstatus112020.pdf" target="_blank"
-            >Community Based Prevention Programs:Status Report - November - 2020</a
-          >
-        </li>
-        <li>
-          <a
-            href="Publications/PreventionStatusReport2020October.pdf"
-            target="_blank"
-            >Community Based Prevention Programs:Status Report - October - 2020</a
-          >
-        </li>
-        <li>
-          <a
-            href="Publications/PreventionStatusReport2020September.pdf"
-            target="_blank"
-            >Community Based Prevention Programs:Status Report - September -
-            2020</a
-          >
-        </li>
-        <li>
-          <a
-            href="/Media/pdf/HFNYPreventionStatus.August2020.pdf"
-            target="_blank"
-            >Community Based Prevention Programs:Status Report - August - 2020</a
-          >
-        </li>
-        <li>
-          <a href="Publications/PreventionStatus.July2020.pdf" target="_blank"
-            >Community Based Prevention Programs:Status Report - July - 2020</a
-          >
-        </li>
-        <li>
-          <a
-            href="/Staff/Documents/Prevention_Status_June2020.pdf"
-            target="_blank"
-            >Community Based Prevention Programs:Status Report - June - 2020</a
-          >
-        </li>
-        <li>
-          <a href="/Staff/Documents/Prevention_Status_May.pdf" target="_blank"
-            >Community Based Prevention Programs:Status Report - May 2020</a
-          >
-        </li>
-        <li>
-          <a
-            href="Publications/Prevention Status-April FINAL.pdf"
-            target="_blank"
-            >Community Based Prevention Programs:Status Report - April 2020</a
-          >
-        </li>
-      </ul>
-    </div>
+  <script
+    type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"
+  ></script>
+  <script type="text/javascript" src="../js/accordion.js"></script>
+  <style>
+    /* accordion styles ===================== */
+    .accordion-toggle {
+      color: #39c;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .accordion-content {
+      display: none;
+      padding-bottom: 0;
+    }
+    .accordion-content.default {
+      display: block;
+    }
+    .instructions {
+      background-image: url(../images/template_images/instructions-icon.png);
+      background-repeat: no-repeat;
+      position: left top;
+      color: #1d809c;
+      padding-left: 1.5em;
+    }
 
-    <h2 class="accordion-toggle">Research Briefs</h2>
-    <div class="accordion-content">
-      <ul class="link-list">
-        <li>
-          <a
-            href="Publications/Shifting Patterns in HFNY Referrals 2024_approved.pdf"
-            target="_blank"
-          >
-            Shifting Patterns in Healthy Families New York Referrals - 2024
-          </a>
-        </li>
-        <li>
-          <a
-            href="/Staff/Documents/Research Brief - Changes in Assessment scores after Implementation of One-Step Process Pilot 2015-2020_final.pdf"
-            target="_blank"
-          >
-            Research Brief - Changes in Assessment scores after Implementation
-            of One-Step Process Pilot 2015-2020
-          </a>
-        </li>
-        <li>
-          <a
-            href="/Staff/Documents/HFNY_CE_ResearchBriefY1Final.pdf"
-            target="_blank"
-            >Healthy Families New York: Findings from a Pilot Study of
-            Enrollment Processes - 03/2021</a
-          >
-        </li>
-        <li>
-          <a
-            href="/Staff/Documents/CurriculaDeliveryHF2019dated2019_11_20_final.pdf"
-            target="_blank"
-            >Research Brief Fall 2019, Curricula Delivery at Healthy Families
-            New York Programs</a
-          >
-        </li>
-        <li>
-          <a
-            href="Publications/SocialNetworkAnalysisBrief2019.pdf"
-            target="_blank">Social Network Analysis of HFNY Referrals</a
-          >
-        </li>
-        <li>
-          <a
-            href="Publications/WICPosterResults8.15.19FinalforWebsite.pdf"
-            target="_blank"
-            >Exploring Strengths and Challenges in Obtaining Referrals from the
-            Women, Infants and Children Program</a
-          >
-        </li>
-        <li>
-          <a href="..\Media\pdf\HFNYResearchBriefSummer2018.pdf"
-            >Key Demographic and Organizational Factors in Predicting Healthy
-            Families New York Home Visitor Retention</a
-          >
-        </li>
-        <li>
-          <a
-            href="Publications/HFNYPreventsChildMaltreatment09-2013.pdf"
-            target="_blank"
-            >Healthy Families New York Prevents Child Maltreatment 2013</a
-          >
-        </li>
-        <li>
-          <a href="Publications/LBW_Research_Brief.pdf" target="_blank"
-            >Healthy Families New York Home Visiting Program Improves Birth
-            Outcomes&mdash;Research Brief</a
-          >
-        </li>
-        <li>
-          <a
-            href="Publications/HFNYPromotesSuccessatSchoolwithcitation.pdf"
-            target="_blank"
-          >
-            Healthy Families New York Promotes Success at School 2012</a
-          >
-        </li>
-        <li>
-          <a
-            href="http://www.ocfs.state.ny.us/main/reports/Healthy%20Families%20New%20York%20Short%2011-24-2010%20FINAL.pdf"
-            target="_blank"
-            >The Healthy Families New York Home Visiting Program: Findings from
-            the Randomized Controlled Trial, 2010</a
-          >
-        </li>
-        <li>
-          <a href="Publications/HFNY-First-Year-Evaluation.pdf" target="_blank">
-            Healthy Families New York: Results of First Year Evaluation, 2004</a
-          >
-        </li>
-      </ul>
-    </div>
+    /* Timeline dates */
+    .date-list dl {
+      display: inline-block;
+      clear: left;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 1em;
+      padding-bottom: 0.5em;
+      min-height: 4em;
+    }
 
-    <h2 class="accordion-toggle">Reports</h2>
-    <div class="accordion-content">
-      <ul class="link-list">
-        <li>
-          <a href="/Media/pdf/HFNY-Annual-Report-2022-2023.pdf" target="_blank">
-            HFNY Annual Report - 2022-2023
-          </a>
-        </li>
-        <li>
-          <a
-            href="Publications/2019HFNYTriennialReport102020.pdf"
-            target="_blank">2019 HFNY Triennial Report</a
-          >
-        </li>
-        <li>
-          <a
-            href="/Media/pdf/2018_2019HFNYAnnualServiceReview9.17.20_Appendix C.pdf"
-            target="_blank">2018-2019 HFNY Annual Service Review - Appendix C</a
-          >
-        </li>
-        <li>
-          <a
-            href="/Media/pdf/2017_2018HFNYAnnualServiceReview_Appendix B.pdf"
-            target="_blank"
-            >2017-2018 HFNY Annual Service Review - Appendix B
-          </a>
-        </li>
-        <li>
-          <a href="Publications/2016triennialhfnyreport.pdf" target="_blank"
-            >Healthy Families New York Home Visiting Program: 2016 Triennial
-            Report
-          </a>
-        </li>
-        <li>
-          <a
-            href="Publications/HFNY2016.2017ProgramServicesandOutcomesAnalysisReport092020.pdf"
-            target="_blank"
-            >HEALTHY FAMILIES NEW YORK: PROGRAM SERVICES AND OUTCOMES ANALYSIS
-            2016 - 2017
-          </a>
-        </li>
-        <li>
-          <a
-            href="Publications/EvaluatingEffectivenessofHomeVisitingServicesinPromotingChildrensAjustmenttoSchool.pdf"
-            target="_blank"
-            >Evaluating the effectiveness of home visiting services in promoting
-            children&rsquo;s adjustment in school: Final report to the Pew
-            Center on the States.
-          </a>
-          <br />
-          <span class="small-text"
-            >Kirkland, K. &amp; Mitchell-Herzfeld, S. (2012). Rensselaer, New
-            York: New York State Office of Children and Family Services.</span
-          >
-        </li>
+    .date-list dt {
+      font-size: 4em;
+      color: #ccc;
+      float: left;
+      margin: 0 0.25em 0 0;
+      padding: 0;
+      line-height: 0.8em;
+      position: relative;
+    }
 
-        <li>
-          <a
-            href="https://www.ncjrs.gov/pdffiles1/nij/grants/232945.pdf"
-            target="_blank"
-            >A randomized trial of Healthy Families New York (HFNY): Does home
-            visiting prevent child maltreatment?</a
-          ><br />
-          <span class="small-text"
-            >DuMont, K., Kirkland, K., Mitchell-Herzfeld, S., Ehrhard-Dietzel,
-            S., Rodriquez, M., Lee, E., Layne, C., and Greene, R. (2011). Final
-            Report to National Institute of Justice (Grant # 2006-MU-MU-0002).</span
-          >
-        </li>
+    .date-list dd {
+      margin: 0 0 0 10em;
+      line-height: 1.6em;
+    }
 
-        <li>
-          <a
-            href="Publications/final_HFNY_obs_working_paper_7-16-08.pdf"
-            target="_blank"
-            >Effects of Healthy Families New York on maternal behaviors:
-            Observational assessments of positive and negative parenting</a
-          ><br />
-          <span class="small-text"
-            >DuMont, K., Rodriguez, M., Mitchell-Herzfeld, S., Walden, N.,
-            Kirkland, K., Greene, R., & Lee, E. (2008). Rensselaer, NY: New York
-            State Office of Children and Family Services.</span
-          >
-        </li>
-
-        <li>
-          <a
-            href="Publications/HFNYRandomizedTrialWorkingPaper.pdf"
-            target="_blank"
-            >Healthy Families New York (HFNY) randomized trial: Impacts on
-            parenting after the first two years.</a
-          ><br />
-          <span class="small-text"
-            >DuMont, K., Mitchell-Herzfeld, S., Greene, R., Lee, E., Lowenfels,
-            A., & Rodriquez, M. (2006). Rensselaer, NY: New York State Office of
-            Children & Family Services.</span
-          >
-        </li>
-
-        <li>
-          <a href="Publications/HFNYEvalReport.pdf" target="_blank">
-            Evaluation of Healthy Families New York (HFNY): First year program
-            impacts</a
-          ><br />
-          <span class="small-text"
-            >Mitchell-Herzfeld, S., Izzo, C., Greene, R., Lee, E. & Lowenfels,
-            A. (2005). Rensselaer, NY: New York State Office of Children &
-            Family Services.</span
-          >
-        </li>
-      </ul>
-    </div>
-
-    <h2 class="accordion-toggle">Journal Articles and Book Chapters</h2>
-    <div class="accordion-content">
-      <ul class="link-list">
-        <li>
-          <a
-            href="https://link.springer.com/article/10.1007/s11121-020-01110-w"
-            target="_blank"
-          >
-            Sustained Impact on Parenting Practices: Year 7 Findings from the
-            Healthy Families New York Randomized Controlled Trial
-          </a>
-          <br />
-          <span class="small-text">
-            Kristen Kirkland,Eunju Lee, Carolyn Smith, and Rose Greene -
-            Prevention Science volume 21,pages 498–507(2020)
-          </span>
-        </li>
-        <li>
-          <a
-            href="/Media/pdf/2018reducingmaltreatmentthroughhv.pdf"
-            target="_blank"
-          >
-            Reducing Maltreatment Recurrence Through Home Visitation: A
-            Promising Intervention for Child Welfare Involved Families
-          </a>
-          <br />
-          <span class="small-text">
-            Eunju Lee, Kristen Kirkland, Claudia Miranda-Julian, and Rose Greene
-            - Child Abuse &amp; Neglect: The International Journal, Volume 86,
-            Dec. 2018</span
-          >
-        </li>
-        <!-- Bad layout below. Not sure why, but it cause the page to not render -->
-        <!-- <li>
-          <a
-            href="..\Media\pdf\2018reducingmaltreatmentthroughhv.pdf"
-            target="_blank"
-          >
-            Reducing Maltreatment Recurrence Through Home Visitation: A
-            Promising Intervention for Child Welfare Involved Families
-          </a>
-          <br />
-          <span class="small-text">
-            Eunju Lee, Kristen Kirkland, Claudia Miranda-Julian, and Rose Greene
-            - Child Abuse &amp; Neglect: The International Journal, Volume 86,
-            Dec 2018
-          </span>
-        </li> -->
-        <li>
-          <a
-            href="..\Media\pdf\Engaging At-Risk Fathers in Home Visiting Services_ Effects on Program Retention and Father Involvement.pdf"
-            target="_blank"
-            >Engaging At-Risk Fathers in Home Visiting Services: Effects on
-            Program Retention and Father Involvement
-          </a>
-          <br />
-          <span class="small-text">
-            Sandra McGinnis, Eunju Lee, Kristen Kirkland, Carolyn Smith, Claudia
-            Miranda-Julian and Rose Greene - Child and Adolescent Social Work
-            Journal, July 2018)
-          </span>
-        </li>
-        <li>
-          <a href="Publications/HFNYBFSMpper.pdf"
-            >Let's Talk About Breastfeeding: The Importance of Delivering a
-            Message in a Home Visiting Program
-          </a>
-          <br />
-          <span class="small-text"
-            >Sandra McGinnis, Eunju Lee, Kristen Kirkland,Claudia
-            Miranda-Julian, and Rose Greene (2017) American Journal of Health
-            Promotion 1-8
-          </span>
-        </li>
-        <li>
-          <a
-            href="https://zerotothree.sharepoint.com/sites/Communications/ExternalResources/_layouts/15/guestaccess.aspx?guestaccesstoken=JaH%2fA0qDNnLBcS3kKhUhCE2DP0CTkLGdL6sWETS69lI%3d&docid=1d4b824f13d2f4f7093b2c70d6737646a"
-            target="_blank"
-            >Effectiveness of home visiting as a strategy for promoting
-            children&rsquo;s adjustment to school.
-          </a>
-          <br />
-          <span class="small-text"
-            >Kirkland, K. (2013). Zero to Three, 33, 31-37.
-          </span>
-        </li>
-        <li>
-          <a
-            href="http://www.sciencedirect.com/science/article/pii/S0190740913000406"
-            target="_blank"
-            >Organizational climate and burnout among home visitors: Testing
-            mediating effects of empowerment.
-          </a>
-          <br />
-          <span class="small-text">
-            Lee, E., Esaki, N., Kim, J., Greene, R., Kirkland, K. &
-            Mitchell-Herzfeld, S. (2013). Children and Youth Services Review,
-            35, 594-602.
-          </span>
-        </li>
-        <li>
-          <a
-            href="http://link.springer.com/chapter/10.1007%2F978-1-4614-0586-3_17"
-            target="_blank"
-            >Averting child maltreatment: Individual, social, and community
-            resources.
-          </a>
-          <br />
-          <span class="small-text">
-            DuMont, K., Ehrhard-Dietzel, S. & Kirkland, K. (2011) in Michael
-            Ungar (Ed.) The Social Ecology of Resilience: A Handbook of Theory
-            and Practice.
-          </span>
-        </li>
-        <li>
-          <a
-            href="http://www.sciencedirect.com/science/article/pii/S0190740911001460"
-            target="_blank"
-            >Risk and protective factors for child neglect during early
-            childhood: A cross-study comparison.
-          </a>
-          <br />
-          <span class="small-text">
-            Shook-Slack, K., Berger, L. M., DuMont, K., Yang. M., Kim, B.,
-            Ehrhard-Dietzel, S. & Holl, J. L. (2011) Children and Youth Services
-            Review, 33, 1354-1363.
-          </span>
-        </li>
-        <li>
-          <a
-            href="http://www.sciencedirect.com/science/article/pii/S0145213410002164"
-            target="_blank"
-            >Effects of Healthy Families New York on the promotion of maternal
-            parenting competencies and the prevention of harsh parenting.
-          </a>
-          <br />
-          <span class="small-text">
-            Rodriguez, M. L., Dumont, K., Mitchell-Herzfeld, S. D., Walden, N.
-            J., Greene, R. (2010). Child Abuse and Neglect, 34, 711-723.
-          </span>
-        </li>
-        <li>
-          <a
-            href="Publications/HFNY_low_birth_weight_article.pdf"
-            target="_blank"
-            >Reducing low birth weight through home visitation: A randomized
-            controlled trial.</a
-          >
-          <br /><span class="small-text"
-            >Lee, E., Mitchell-Herzfeld, S., Lowenfels, A., Greene, R.,
-            Dorabawila, V., & DuMont, K. (2009). American Journal of Preventive
-            Medicine, 36, 154-160.</span
-          >
-        </li>
-        <li>
-          <a
-            href="http://www.sciencedirect.com/science/article/pii/S074937970900511X"
-            target="_blank"
-            >Author response: Reducing low birth weight through home visitation.
-          </a>
-          <br />
-          <span class="small-text">
-            Lee, E., Greene, R., Mitchell-Herzfeld, S., & DuMont, K. (2009).
-            American Journal of Preventive Medicine, 37, 472-473.
-          </span>
-        </li>
-        <li>
-          <a
-            href="http://www.sciencedirect.com/science/article/pii/S0145213408000148"
-            target="_blank"
-            >Healthy Families New York (HFNY) randomized trial: Effects on early
-            child abuse and neglect.
-          </a>
-          <br />
-          <span class="small-text">
-            DuMont, K., Mitchell-Herzfeld, S., Greene, R., Lee, E., Lowenfels,
-            A., Rodriguez, M., & Dorabawila, V. (2008). Child Abuse & Neglect,
-            32, 295-315.
-          </span>
-        </li>
-      </ul>
-    </div>
-  </div>
+    .disc {
+      padding-left: 0.75em;
+      background-image: url(../images/template_images/black-bullet.png);
+      background-repeat: no-repeat;
+      background-position: 0px 10px;
+    }
+  </style>
 </ResearchLayout>
-
-<script
-  type="text/javascript"
-  src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script type="text/javascript" src="../js/accordion.js"></script>
-<style>
-  /* accordion styles ===================== */
-  .accordion-toggle {
-    color: #39c;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  .accordion-content {
-    display: none;
-    padding-bottom: 0;
-  }
-  .accordion-content.default {
-    display: block;
-  }
-  .instructions {
-    background-image: url(../images/template_images/instructions-icon.png);
-    background-repeat: no-repeat;
-    position: left top;
-    color: #1d809c;
-    padding-left: 1.5em;
-  }
-
-  /* Timeline dates */
-  .date-list dl {
-    display: inline-block;
-    clear: left;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 1em;
-    padding-bottom: 0.5em;
-    min-height: 4em;
-  }
-
-  .date-list dt {
-    font-size: 4em;
-    color: #ccc;
-    float: left;
-    margin: 0 0.25em 0 0;
-    padding: 0;
-    line-height: 0.8em;
-    position: relative;
-  }
-
-  .date-list dd {
-    margin: 0 0 0 10em;
-    line-height: 1.6em;
-  }
-
-  .disc {
-    padding-left: 0.75em;
-    background-image: url(../images/template_images/black-bullet.png);
-    background-repeat: no-repeat;
-    background-position: 0px 10px;
-  }
-</style>
