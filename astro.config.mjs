@@ -2,6 +2,8 @@ import { defineConfig, envField } from 'astro/config';
 
 import sitemap from '@astrojs/sitemap';
 
+import db from '@astrojs/db';
+
 export default defineConfig({
   site: 'https://www.healthyfamiliesnewyork.org',
   base: '/',
@@ -27,5 +29,5 @@ export default defineConfig({
     }
   },
 
-  integrations: [sitemap()]
+  integrations: [sitemap(), db()]
 });
