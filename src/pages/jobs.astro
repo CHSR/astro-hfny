@@ -1,0 +1,306 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+// import "@/styles/hfny.css";
+// TODO: Convert HTML table into a database table and refactor this page to generate rows dynamically
+---
+
+<Layout title="Jobs">
+  <Header />
+
+  <div id="content">
+    <div id="col-2-full-width">
+      <div id="text-area">
+        <h1 class="heading">Jobs</h1>
+
+        <p>
+          To post a job to the HFNY website, fill out the
+          <a href="Media/pdf/job_listings/HFNYJobAnnouncement.docx"
+            >HFNY Job Announcement document</a
+          >
+          and email the completed form to
+          <a href="mailto:support@chsr1.zohosupport.com">CHSR Support</a>
+          for posting. Please feel free to also send any other relevant documents,
+          for example, an internal document with a more detailed description of the
+          requirements and responsibilities of the position.
+        </p>
+        <hr />
+        <span style="font-weight: 700">Colored cells:</span>
+        <span style="background-color: lightpink">___</span> = More than 90 days
+        old. <span style="background-color: lightcoral">___</span> = More than 180
+        days old. These items will be removed in the near future.
+
+        <hr />
+        <h2 style="text-align: center">Current Open Positions</h2>
+        <hr />
+        <!-- begin job listings -->
+        <br />
+        <table id="tblJobs" class="display">
+          <thead>
+            <tr>
+              <th>Date posted</th>
+              <th>Program</th>
+              <th>Job Title</th>
+              <th>Description</th>
+              <th>Additional Information</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2025-03-17</td>
+              <td>Healthy Schenectady Families</td>
+              <td>Family Support Specialists (3 positions)</td>
+              <td>
+                <a
+                  href="./media/pdf/job_listings/HFNY-HSF Job Announcement-FSS(3).pdf"
+                  target="_blank"
+                >
+                  Description
+                </a>
+              </td>
+              <td>Resumes due by March 31, 2025</td>
+            </tr>
+            <!-- <tr>
+									<td>2024-07-30</td>
+									<td>Community Healthcare Network (Washington Heights)</td>
+									<td>Prenatal Coordinator</td>
+									<td>
+										<a
+											href="./media/pdf/job_listings/HFNY-CHN Job Announcement-Prenatal Coordinator.pdf"
+											target="_blank"
+										>
+											Description
+										</a>
+									</td>
+									<td>
+										<a
+											href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=4ec54d87-4188-4e6b-9210-07a439be273e&ccId=19000101_000001&jobId=522642&lang=en_US"
+											target="_blank"
+										>
+											Link to program site page
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2024-06-24</td>
+									<td>Healthy Schenectady Families</td>
+									<td>Supervisor</td>
+									<td>
+										<a
+											href="./media/pdf/job_listings/HFNY-HSF Job Announcement-Supervisor.pdf"
+											target="_blank"
+										>
+											Description
+										</a>
+									</td>
+									<td>Resumes due by July 5, 2024</td>
+								</tr>
+								<tr>
+									<td>2024-06-14</td>
+									<td>Healthy Schenectady Families</td>
+									<td>Family Support Specialist</td>
+									<td>
+										<a
+											href="./media/pdf/job_listings/HFNY-HSF Job Announcement FSS (003).pdf"
+											target="_blank"
+										>
+											Description
+										</a>
+									</td>
+									<td>Resumes due by July 1, 2024</td>
+								</tr>
+								<tr>
+									<td>2024-04-17</td>
+									<td>Healthy Families Wayne</td>
+									<td>
+										Family Resource/Family Support Specialists (4 positions)
+									</td>
+									<td>
+										<a
+											href="./media/pdf/job_listings/Wayne County HFNYJobAnnouncement.pdf"
+											target="_blank"
+										>
+											Description
+										</a>
+									</td>
+									<td>Positions open until filled</td>
+								</tr>
+								<tr>
+									<td>2024-03-18</td>
+									<td>WRI (Contractor for OCFS)</td>
+									<td>Program Manager</td>
+									<td>
+										<a
+											href="./media/pdf/job_listings/Job-posting-OCFS-Program-Manager-2024.pdf"
+											target="_blank"
+										>
+											Description
+										</a>
+									</td>
+									<td>Resumes due via email only by March 30, 2024</td>
+								</tr>
+								<tr>
+									<td>2024-03-07</td>
+									<td>Healthy Families Washington Heights</td>
+									<td>Program & Outreach Supervisor</td>
+									<td>
+										<a
+											href="./media/pdf/job_listings/HFNYJobAnnouncement-DWDC.pdf"
+											target="_blank"
+										>
+											Description
+										</a>
+									</td>
+									<td>
+										<a
+											href="https://dwdc.org/position-program-and-outreach-supervisor/"
+											target="_blank"
+										>
+											Link to program site page
+										</a>
+									</td>
+								</tr>
+								<tr>
+									<td>2024-02-09</td>
+									<td>Healthy Families of Montgomery and Schoharie Counties</td>
+									<td>Program Manager</td>
+									<td>
+										<a
+											href="./media/pdf/job_listings/HF MSC PM Job Opening.pdf"
+											target="_blank"
+										>
+											Link
+										</a>
+									</td>
+									<td>Resumes are due by February 23, 2024.</td>
+								</tr>
+								<tr>
+									<td>2023-07-28</td>
+									<td>Healthy Families North Country - Warren County</td>
+									<td>Home Visitor</td>
+									<td>
+										<a
+											href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=5095b7c3-7ee6-4fb7-85ad-2e37ec01e859&ccId=19000101_000001&lang=en_US&jobId=469254"
+											target="_blank"
+										>
+											Link
+										</a>
+									</td>
+									<td>N/A</td>
+								</tr>
+								<tr>
+									<td>2023-03-31</td>
+									<td>Healthy Schenectady Families</td>
+									<td>
+										Healthy Schenectady Families Family Support Specialist
+									</td>
+									<td>
+										<a
+											href="./media/pdf/job_listings/HFNYJobAnnouncement-Schenectady-SEI.pdf"
+											target="_blank"
+										>
+											Link
+										</a>
+									</td>
+									<td>Applications due, online only, by 04/13/2023</td>
+								</tr>
+								<tr>
+									<td>2023-03-13</td>
+									<td>Healthy Families Rockland County</td>
+									<td>Family Resource/Family Support Specialist</td>
+									<td>
+										<a
+											href="./media/pdf/job_listings/HFNYJobAnnouncement-Rockland-County-FRS-FSS.pdf"
+											target="_blank"
+										>
+											Link
+										</a>
+									</td>
+									<td>Bilingual preferred (Eng./Esp.)</td>
+								</tr>
+								<!-- <tr>
+								<td>2023-03-03</td>
+								<td>Prevent Child Abuse New York</td>
+								<td>Training and Staff Development Specialist</td>
+								<td>
+									<a href="./media/pdf/job_listings/TSD Specialist 2023 position announcement.pdf" target="_blank">
+										Link
+									</a>
+								</td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>2023-02-28</td>
+								<td>Healthy Schenectady Families</td>
+								<td>Healthy Schenectady Families Supervisor</td>
+								<td>
+									<a
+										href="./media/pdf/job_listings/HFNYJobAnnouncement-Schenectady-20230228.pdf"
+										target="_blank"
+									>
+										Link
+									</a>
+								</td>
+								<td>Applications due, online only, by 03/15/2023</td>
+							</tr>-->
+          </tbody>
+        </table>
+
+        <Footer />
+      </div>
+    </div>
+  </div>
+
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"
+  />
+
+  <!-- jQuery for mobile menu -->
+  <script
+    type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"
+  ></script>
+  <!-- dataTables -->
+  <script
+    type="text/javascript"
+    src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"
+  ></script>
+  <script type="text/javascript">
+    $(document).ready(function ($) {
+      $("#tblJobs").DataTable({
+        language: {
+          emptyTable: "No records.",
+        },
+        pageLength: 10,
+        bLengthChange: true,
+        bStateSave: true,
+        bSort: true,
+        responsive: true,
+        order: [[0, "desc"]],
+        autoWidth: true,
+        rowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+          var datePosted = new Date(aData[0]);
+          var secondsElapsed = Date.now();
+          var dateNow = new Date(secondsElapsed);
+          // Calculate the time difference in milliseconds of two dates
+          var timeDiff = dateNow.getTime() - datePosted.getTime();
+          // Convert milliseconds into number of days
+          var dayDiff = timeDiff / (1000 * 3600 * 24);
+
+          if (dayDiff >= 180) {
+            jQuery(nRow).find("td:eq(0)").css("background-color", "lightcoral");
+          } else if (dayDiff >= 90 && dayDiff < 180) {
+            jQuery(nRow).find("td:eq(0)").css("background-color", "lightpink");
+          }
+          // else if (dayDiff < 90) {
+          // 	/*To display empty cells in grey color */
+          // 	jQuery(nRow).find('td:eq(0)').css('background-color', '#D3D3D3');
+          // }
+        },
+      });
+    });
+  </script>
+</Layout>
