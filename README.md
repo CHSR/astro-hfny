@@ -1,4 +1,4 @@
-# ![HFNY](/Public/images/HFNY_logo_mobile_1-100.png) ➕ ![Astro](/public/astro-logo-100.png) = 💟
+# ![HFNY](/public/images/HFNY_logo_mobile_1-100.png) ➕ ![Astro](/public/astro-logo-100.png) = 💟
 
 This is a rewrite of the Healthy Families New York informational web site located at http://www.healthyfamiliesnewyork.org.
 
