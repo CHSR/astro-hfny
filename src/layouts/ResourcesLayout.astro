@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+const {
+  title,
+  activeMainText = "Resources",
+  activeSubText = "Resources",
+} = Astro.props;
+
+const menuItems = [
+  {
+    text: "Parenting",
+    href: "/resources",
+    active: true,
+  },
+  {
+    text: "Child Development & Health",
+    href: "/resources/development",
+    active: false,
+  },
+  {
+    text: "Financial Resources",
+    href: "/resources/financial",
+    active: false,
+  },
+  {
+    text: "Child Safety",
+    href: "/resources/safety",
+    active: false,
+  },
+  {
+    text: "Fatherhood",
+    href: "/resources/fatherhood",
+    active: false,
+  },
+  {
+    text: "Maternal Health",
+    href: "/resources/maternal",
+    active: false,
+  },
+].map((item) => ({
+  ...item,
+  active: activeSubText === item.text,
+}));
+---
+
+<Layout title={title}>
+  <Header activeMainText={activeMainText} />
+  <!-- begin content area -->
+  <div id="content">
+    <!-- begin 2-column layout -->
+    <div id="col-1">
+      <Sidebar menuItems={menuItems} />
+    </div><!-- end col-1 -->
+
+    <div id="col-2">
+      <!-- begin text area -->
+      <div id="text-area">
+        <slot />
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>
