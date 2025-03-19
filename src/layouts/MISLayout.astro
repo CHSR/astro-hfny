@@ -1,0 +1,43 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Sidebar from "../components/Sidebar.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+
+const { title, activeMainText = "MIS", activeSubText = "MIS" } = Astro.props;
+
+const menuItems = [
+  {
+    text: "MIS",
+    href: "/mis",
+    active: true,
+  },
+  {
+    text: "HFNY MIS",
+    href: "https://hfnymis.org",
+    active: false,
+  },
+].map((item) => ({
+  ...item,
+  active: activeSubText === item.text,
+}));
+---
+
+<Layout title={title}>
+  <Header activeMainText={activeMainText} />
+  <!-- begin content area -->
+  <div id="content">
+    <!-- begin 2-column layout -->
+    <div id="col-1">
+      <Sidebar menuItems={menuItems} />
+    </div><!-- end col-1 -->
+
+    <div id="col-2">
+      <!-- begin text area -->
+      <div id="text-area">
+        <slot />
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>
