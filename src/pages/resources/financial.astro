@@ -1,0 +1,168 @@
+---
+import ResourcesLayout from "@/layouts/ResourcesLayout.astro";
+---
+
+<ResourcesLayout
+  title="Resources"
+  activeMainText="Resources"
+  activeSubText="Financial Resources"
+>
+  <main>
+    <h1 class="heading">Financial Resources</h1>
+
+    <h2>
+      Welcome to the page that lists financial resources that are being
+      assembled from around the state to help in these challenging times. These
+      list a variety of resources for families that include food, clothing,
+      housing assistance, legal/immigration help, domestic violence, and
+      financial empowerment services that help with finding surer financial
+      stability and footing.
+      <br /><br />
+      To find out more about these resources and the financial literacy pilot that
+      is being developed for interested HFNY sites, please contact <a
+        href="https://www.albany.edu/center-human-services-research/christine_callahan.shtml"
+        style="color: darkcyan;">Dr. Christine Callahan at CHSR</a
+      > at <a href="mailto:ccallahan@albany.edu">ccallahan@albany.edu</a>
+    </h2>
+
+    <img src="/images/frimage102020.jpg" alt="financial_resources" />
+    <br /><br />
+    <h2>Child Tax Credit - 2021</h2>
+    <p>
+      Check out <a
+        href="/Documents/InfoontheChildTaxCreditforHFNYFamilies062021FINAL.pdf"
+        >this document</a
+      > for info on the expanded Child Tax Credit that can help HFNY families and
+      bring more money into households this year.
+    </p>
+
+    <p class="instructions">
+      Click on the links below for financial resources available in and around
+      your location.
+    </p>
+    <div id="accordion">
+      <h2 class="accordion-toggle">Capital Region</h2>
+      <div class="accordion-content">
+        <ul class="link-list">
+          <li>
+            <a
+              href="/Staff/Documents/Financial_Resource_Guide_Schenectady_REVISED_1.28.2020.docx"
+              style="color: darkcyan;">Schenectady Financial Resources Guide</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="accordion-toggle">Mid-Hudson</h2>
+      <div class="accordion-content">
+        <ul class="link-list">
+          <li>
+            <a
+              href="/Staff/Documents/Financial_Resource_Guide_Rockland_County2.11.2020.docx"
+              style="color: darkcyan;"
+            >
+              Rockland County Financial Resources Guides</a
+            >
+          </li>
+          <li>
+            <a
+              href="/Staff/Documents/Financial_Resource_Guide_Westchester_County9.1.2020.docx"
+              style="color: darkcyan;"
+              >Westchester County Financial Resources Guides</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <h2 class="accordion-toggle">New York City</h2>
+      <div class="accordion-content">
+        <ul class="link-list">
+          <li>
+            <a
+              href="/Staff/Documents/RESOURCE_GUIDE_FOR_FINANCIAL_LITERACY_NYC_8.21.2019(revised).docx"
+              style="color: darkcyan;"
+              >Central Harlem Financial Resources Guide</a
+            >
+            <li>
+              <a
+                href="/Staff/Documents/NYC_Food_Pantrieslist.docx"
+                style="color: darkcyan;">NYC Food Pantries</a
+              >
+            </li>
+          </li>
+        </ul>
+      </div>
+      <h2 class="accordion-toggle">Central Western</h2>
+      <div class="accordion-content">
+        <ul class="link-list">
+          <li>
+            <a
+              href="/Staff/Documents/Financial_Resource_Guide_for_Steuben_County_2.10.2020.docx"
+              style="color: darkcyan;">Steuben Financial Resources Guide</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <script
+    type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"
+  ></script>
+  <script type="text/javascript" src="../js/accordion.js"></script>
+  <style>
+    /* accordion styles ===================== */
+    .accordion-toggle {
+      color: #39c;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .accordion-content {
+      display: none;
+      padding-bottom: 0;
+    }
+    .accordion-content.default {
+      display: block;
+    }
+    .instructions {
+      background-image: url(../images/template_images/instructions-icon.png);
+      background-repeat: no-repeat;
+      position: left top;
+      color: #1d809c;
+      padding-left: 1.5em;
+    }
+
+    /* Timeline dates */
+    .date-list dl {
+      display: inline-block;
+      clear: left;
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 1em;
+      padding-bottom: 0.5em;
+      min-height: 4em;
+    }
+
+    .date-list dt {
+      font-size: 4em;
+      color: #ccc;
+      float: left;
+      margin: 0 0.25em 0 0;
+      padding: 0;
+      line-height: 0.8em;
+      position: relative;
+    }
+
+    .date-list dd {
+      margin: 0 0 0 10em;
+      line-height: 1.6em;
+    }
+
+    .disc {
+      padding-left: 0.75em;
+      background-image: url(../images/template_images/black-bullet.png);
+      background-repeat: no-repeat;
+      background-position: 0px 10px;
+    }
+  </style>
+</ResourcesLayout>
