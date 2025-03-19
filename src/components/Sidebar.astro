@@ -1,18 +1,31 @@
 ---
 const { menuItems } = Astro.props;
+// TODO: Troubleshoot why the HFNY MIS link is not opening in a new tab
 ---
 
 <!-- begin page navigation -->
 <div id="page-nav">
-    <ul>
-    {menuItems.map((item: { href: string | null | undefined; active: boolean; text: string; }) => (
-        <li>
-        <a href={item.href} class={item.active ? 'active' : ''}>
-            {item.text}
-        </a>
-        </li>
-    ))}
-    </ul>
+  <ul>
+    {
+      menuItems.map(
+        (item: {
+          href: string | null | undefined;
+          active: boolean;
+          text: string;
+        }) => (
+          <li>
+            <a
+              href={item.href}
+              class={item.active ? "active" : ""}
+              target={item.href?.includes("http") ? "_blank" : "_self"}
+            >
+              {item.text}
+            </a>
+          </li>
+        )
+      )
+    }
+  </ul>
 </div><!-- end page navigation -->
 
 <style>
