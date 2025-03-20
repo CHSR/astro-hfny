@@ -1,0 +1,122 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Sidebar from "@/components/Sidebar.astro";
+
+const {
+  title,
+  activeMainText = "HFNY Network",
+  activeSubText = "HFNY Network Landing Page",
+} = Astro.props;
+
+const menuItems = [
+  {
+    text: "HFNY Network Landing Page",
+    href: "/network",
+    active: true,
+  },
+  {
+    text: "One Step Guidance",
+    href: "/network/onestep",
+    active: false,
+  },
+  {
+    text: "Child Welfare Protocol (CWP)",
+    href: "/network/cwp",
+    active: false,
+  },
+  {
+    text: "HFNY Calendar",
+    href: "/network/hfnycalendar",
+    active: false,
+  },
+  {
+    text: "HFNY Worker Roles",
+    href: "/network/workerroles",
+    active: false,
+  },
+  {
+    text: "Forums/Events/SLM",
+    href: "/network/hfnyforums",
+    active: false,
+  },
+  {
+    text: "Policy Manuals and Appendices",
+    href: "/network/policies",
+    active: false,
+  },
+  {
+    text: "Curriculum",
+    href: "/network/curriculum",
+    active: false,
+  },
+  {
+    text: "Training",
+    href: "/network/training",
+    active: false,
+  },
+  {
+    text: "Healthy Families Missives",
+    href: "/network/missives",
+    active: false,
+  },
+  {
+    text: "Emergency Resources",
+    href: "/network/emergencyresources",
+    active: false,
+  },
+  {
+    text: "Outreach/Capacity Building",
+    href: "/network/outreach",
+    active: false,
+  },
+  {
+    text: "Reporting",
+    href: "/network/reporting",
+    active: false,
+  },
+  {
+    text: "QA/TA, FAQs, and CQI",
+    href: "/network/support",
+    active: false,
+  },
+  {
+    text: "Hiring",
+    href: "/network/hiring",
+    active: false,
+  },
+  {
+    text: "Accreditation",
+    href: "/network/accreditation",
+    active: false,
+  },
+  {
+    text: "Logout",
+    href: "/network/logout",
+    active: false,
+  },
+].map((item) => ({
+  ...item,
+  active: activeSubText === item.text,
+}));
+---
+
+<Layout title={title}>
+  <Header activeMainText={activeMainText} />
+  <!-- begin content area -->
+  <div id="content">
+    <!-- begin 2-column layout -->
+    <div id="col-1">
+      <Sidebar menuItems={menuItems} />
+    </div><!-- end col-1 -->
+
+    <div id="col-2">
+      <!-- begin text area -->
+      <div id="text-area">
+        <slot />
+      </div>
+    </div>
+  </div>
+  <Footer />
+</Layout>

@@ -1,0 +1,70 @@
+---
+import LoginLayout from "@/layouts/LoginLayout.astro";
+---
+
+<LoginLayout
+  title="HFNY Network"
+  activeMainText="HFNY Network"
+  activeSubText="Staff Login"
+>
+  <h1 class="heading">Staff Login</h1>
+
+  <!--- JSLogin: The actual login form. Leaving the styling to Ric. -->
+  <form
+    action=""
+    method="post"
+    enctype="multipart/form-data"
+    onSubmit="return checkPassword()"
+  >
+    <p id="errorText">
+      <noscript
+        >Your browser has JavaScript turned off. You must allow JavaScript to be
+        able to log in.</noscript
+      >
+    </p>
+    <p>
+      <label for="password">Please enter the Staff Section password:</label>
+      <input type="password" name="password" id="password" />
+    </p>
+    <p><input type="submit" value="Submit" /></p>
+  </form>
+
+  <!-- JSLogin: Lines 43-76 set up the login page -->
+  <script type="text/javascript">
+    //<!--
+    // If the cookie exists, forward to MIS page
+    if (document.cookie.indexOf("passwordOk=true") != -1)
+      // window.location = "workerroles.htm";
+      window.location = "/network/landing";
+
+    // This will allow the hash functionality to be used when checking the password
+    String.prototype.hashCode = function () {
+      var hash = 0;
+      if (this.length == 0) return hash;
+      for (i = 0; i < this.length; i++) {
+        chr = this.charCodeAt(i);
+        hash = (hash << 5) - hash + chr;
+        hash = hash & hash;
+      }
+      return hash;
+    };
+
+    // Perform the password check. If it's good, set a cookie and redirect; otherwise display an error message.
+    function checkPassword() {
+      var checkPW =
+        String.fromCharCode(72, 101, 64, 108) +
+        String.fromCharCode(116, 104, 121, 70) +
+        String.fromCharCode(64, 109, 105, 108) +
+        String.fromCharCode(105, 101, 36);
+      if ($("#password").prop("value") == checkPW) {
+        document.cookie = "passwordOk=true;path=/;secure";
+        window.location = "/network/landing";
+      } else {
+        $("#password").val("");
+        $("#errorText").text("Incorrect password. Please try again.");
+      }
+      return false;
+    }
+    //-->
+  </script>
+</LoginLayout>
