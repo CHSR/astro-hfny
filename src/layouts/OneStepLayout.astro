@@ -1,0 +1,50 @@
+---
+import NetworkLayout from "./NetworkLayout.astro";
+// TODO: Refactor One Step pages
+---
+
+<NetworkLayout
+  title="One Step"
+  activeMainText="HFNY Network"
+  activeSubText="One Step Guidance"
+>
+    <h1 class="heading">One Step Information</h1>
+    <div>
+      <p>
+        <table style="border: 1; cellpadding: 5; cellspacing: 5; width: 100%; background-color: white;"
+        >
+          <tr>
+            <th class="tblhead">
+              <h1><a href="/network/onestep/faqs">FAQs</a></h1>
+            </th>
+            <th class="tblhead">
+              <h1><a href="/network/onestep/guidelines">Guidelines</a></h1>
+            </th>
+            <th class="tblhead">
+              <h1><a href="/network/onestep/toolkit">Toolkit</a></h1>
+            </th>
+            <th class="tblhead">
+              <h1><a href="/network/onestep/videos">Video Playlist</a></h1>
+            </th>
+          </tr>
+        </table>
+      </p>
+      
+        <div class="align: center; width: 750; height: 125; style: border:thick; margin: 25px;">
+          <img src="/images/onestepprocess.png" width="675" height="95" />
+        </div>
+        
+        <slot />
+
+    </div>
+  </main>
+
+  <style>
+    .tblhead {
+      colspan: 20px;
+      bgcolor: #CCCCCC;
+      style: border:thick; 
+      border-color: #39C;
+    }
+
+</NetworkLayout>
