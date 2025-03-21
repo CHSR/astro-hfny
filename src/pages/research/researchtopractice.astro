@@ -1,5 +1,555 @@
 ---
+import Accordion from "@/components/Accordion.astro";
 import ResearchLayout from "@/layouts/ResearchLayout.astro";
+
+const accItemsRTP = [
+  {
+    togglerTitle: "Breastfeeding",
+    togglerContent: `<img src='/images/breastfeeding.png' alt='Breastfeeding' class='float-left'  width='45%' />
+                    Promoting optimal child and family health and development is one of HFNY's  
+                    primary goals. Encouraging breastfeeding is one of the ways that HFNY works to  
+                    achieve this goal, since breastfeeding is associated with many positive outcomes  
+                    for both infants and mothers. We studied program data to examine how HFNY 
+                    encourages breastfeeding and found that the number of home visits a family  
+                    received and the percent of home visits in which breastfeeding was discussed  
+                    were associated with a greater likelihood of a mother initiating breastfeeding 
+                    and continuing to breastfeed for six months or more. Critically, we found that  
+                    breastfeeding conversations work for those enrolled both prenatally and postnatally  
+                    and that continuing to have breastfeeding conversations during the postnatal period  
+                    is important for encouraging breastfeeding continuation. These results demonstrate  
+                    the impact of home visitors' efforts and suggest that home visitors should try to  
+                    have more conversations about breastfeeding with families when possible. 
+                    <ul class="link-list">
+                      <li>
+                        <a
+                          href="Publications/Breastfeeding conversations brief 080524A.pdf"
+                          target="_blank"
+                        >
+                          Healthy Families New York Breastfeeding Research Brief 2024 -
+                          Breastfeeding Conversations and Breastfeeding Continuation in
+                          Postnatal Enrollees
+                        </a>
+                      </li>
+                      <li>
+                        <a href="Publications/BF-ResearchBrief-Final.pdf" target="_blank">
+                          Healthy Families New York Breastfeeding Research Brief 2013
+                        </a>
+                      </li>
+                      <li>
+                        <a href="Publications/HFNYBFSMpper.pdf" target="_blank">
+                          Let's Talk About Breastfeeding: The Importance of Delivering a
+                          Message in a Home Visiting Program</a
+                        >
+                      </li>
+                    </ul>
+                  `,
+  },
+  {
+    togglerTitle: "Combined Enrollment",
+    togglerContent: `<img src="../images/enrollmentpicmomworker.jpg" class="float-right" width="45%" />
+                      <p><strong>Background</strong></p>
+                      <p>
+                        HFNY currently conducts a “two-step” enrollment process whereby one
+                        worker assesses a family for program services and another worker
+                        provides services and ongoing support. The Family Assessment Worker
+                        (FAW) conducts the Parent Survey (PS) to inform a family’s eligibility
+                        for services as well as their needs and strengths. If a family is deemed
+                        eligible for services, the information from the PS is shared with a
+                        Family Support Worker (FSW) who then visits the family. While this “warm
+                        handoff” recognizes the different skill sets needed for assessments and
+                        home visits, some families may find it difficult to connect with the FAW
+                        only to be told she will not be the person providing services.<br /><br
+                        />
+                        In contrast, other Healthy Families programs utilize a “one-step” or “combined”
+                        enrollment process whereby the same worker conducts the PS and maintains
+                        the family on her caseload. In this process, the PS is only used to collect
+                        information, not to determine program eligibility. This provides continuity
+                        for the family and allows for rapport between the family and the home visitor
+                        to be established early.<br /><br />
+                        In 2015, HFNY formed a “Combined Enrollment Committee” to research this process.
+                        After conversations with one-step programs to discuss the benefits and challenges
+                        of combined enrollment, it was decided that a pilot project should be conducted
+                        to determine the utility of this process for HFNY.
+                      </p>
+                      <p><strong>Pilot Project Description</strong></p>
+                      <p><u>Overview of Participation</u></p>
+                      <p>
+                        The pilot project involves three sites across NYS. The first site began
+                        the pilot in January, 2018; the second site began in June, 2018; the
+                        third site is scheduled to begin in the fall of 2018. Each site will
+                        participate in the pilot for about three years. This will allow enough
+                        time for an analysis of enrollment and retention rates pre-and
+                        post-combined enrollment.<br /><br />
+                        Prior to beginning the pilot, all workers at the sites are being cross-trained
+                        (to conduct assessments and home visits). Workers are also being trained
+                        on the “Welcome Family Visit,” in which the HFNY worker provides the family
+                        with additional information about the program, engages the family in a fun
+                        activity, and answers any questions. Throughout their participation in the
+                        pilot, sites will be provided with support from the Central Administration
+                        team; the pilot is viewed as a collaborative effort, with ongoing feedback
+                        from the sites.<br /><br />
+                        <u>Expected Outcomes</u><br /><br />
+                        Data from each of the pilot sites pre-and post-combined enrollment will be
+                        analyzed to determine the impact of the pilot. A process and an outcome evaluation
+                        will be conducted to address the following:<br /><br />
+                        Process Evaluation
+                        <ul>
+                          <li>Was staff receptive to the pilot study? Why/why not?</li>
+                          <li>
+                            Did newly trained workers feel comfortable conducting assessments
+                            and home visits? Why/why not?
+                          </li>
+                          <li>
+                            How did workers feel about the Welcome Family Visit (benefits,
+                            challenges etc.)?
+                          </li>
+                          <li>
+                            What, if any, barriers were encountered in moving to a combined
+                            process?
+                          </li>
+                        </ul>
+                        Outcome Evaluation
+                        <ul>
+                          <li>Did the timeframe between screen and enrollment decrease?</li>
+                          <li>Did enrollment rates improve?</li>
+                          <li>Did retention rates improve?</li>
+                        </ul>
+                        Based on earlier conversations with one-step programs, it is expected that
+                        enrollment and retention rates will increase, as families will benefit from
+                        having the consistency of the same person conduct the parent survey and provide
+                        services<br /><br />
+                        Findings from the evaluation will inform any needed changes to the model
+                        and will determine whether or not HFNY should move to a combined enrollment
+                        process statewide.
+                      </p>
+                      <p>
+                        <a
+                          href="/Staff/Documents/Research Brief - Changes in Assessment scores after Implementation of One-Step Process Pilot 2015-2020_final.pdf"
+                          target="_blank"
+                        >
+                          Research Brief - Changes in Assessment scores after Implementation of
+                          One-Step Process Pilot 2015-2020
+                        </a>
+                      </p>
+                      <p>
+                        <a
+                          href="/Staff/Documents/HFNY_CE_ResearchBriefY1Final.pdf"
+                          target="_blank"
+                        >
+                          Healthy Families New York: Findings from a Pilot Study of Enrollment
+                          Processes
+                        </a>
+                      </p>
+                      <p>
+                        <a
+                          href="/Staff/Documents/HFNY pilot enrollment process brief_021623.pdf"
+                          target="_blank"
+                        >
+                          Healthy Families New York: Findings from a Three-Year Pilot Study of
+                          Enrollment Practices
+                        </a>
+                      </p>
+                    `,
+  },
+  {
+    togglerTitle: "Curricula",
+    togglerContent: `<img src="../images/CurriculapicforHFNY.jpg" alt="Curricula" class="float-left" width="45%" />
+                      <p>
+                        Curricula delivered at the home visits are an important part of
+                        improving the lives of the families we serve through Healthy Families
+                        New York (HFNY). These curricula help facilitate bonding between
+                        families and staff, teach parents about child development, and encourage
+                        positive parent-child interaction.
+                      </p>
+                      <p>
+                        We performed a detailed analysis of curricula use across HFNY during
+                        2018, including rates of use, frequency of implementation of different
+                        curricula, and curricula used for three subgroups of interest (young
+                        parents, fathers, and prenatal families). Importantly, we found that of
+                        the almost 73,000 home visits conducted in 2018, 74% included at least
+                        one curriculum. The curricula most frequently used were Growing Great
+                        Kids (32% of visits); Partners for a Healthy Baby by Florida State
+                        University (19%); Parents as Teachers (9%), and San Angelo (9%). And
+                        most (86%) prenatal families also received at least one visit with a
+                        prenatal-focused curriculum. These results demonstrate that home
+                        visitors are making a marked effort to deliver curricula during home
+                        visits.
+                      </p>
+                      <p>
+                        However, we also noted that we needed to revisit the curricula currently
+                        identified as “HFNY Approved” to review the evidence base and provide
+                        more up-to-date recommendations. We also wanted to further explore
+                        curricula that represent especially good tools for serving special
+                        interest groups, such as young parents and fathers, as neither group had
+                        particularly high rates of targeted curricula implementation in our full
+                        analysis
+                      </p>
+                      <p>
+                        In late 2019, HFNY formed a “Curriculum Committee” to identify an
+                        updated set of evidence-informed primary HFNY curricula, and to note the
+                        best curricula for special interest groups. We also seek to ensure that
+                        the endorsed curricula are culturally appropriate for the families
+                        served. This Committee includes representatives from all three branches
+                        of Central Administration and many program staff, including home
+                        visitors, supervisors, and program managers; members are now working to
+                        answer these questions. We are also reaching out to other states to
+                        determine which curricula they find to be the most useful. Committee
+                        members and Central Administration can then have conversations with
+                        programs and staff to engage programs in using the new recommended
+                        curricula, help programs plan for the associated costs of the different
+                        curricula they may choose, and help programs choose curricula that are
+                        appropriate for special interest groups and for the specific and diverse
+                        communities they serve.
+                      </p>
+
+                      <ul class="link-list">
+                        <li>
+                          <a
+                            href="/Staff/Documents/CurriculaDeliveryHF2019dated2019_11_20_final.pdf"
+                            target="_blank"
+                          >
+                            Research Brief Fall 2019, Curricula Delivery at Healthy Families New
+                            York Programs</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            href="/Media/newsletters/the_Link_Winter_feb2020 (HFNY).pdf"
+                            target="_blank"
+                          >
+                            The Link – HFNY Newsletter (2020 Winter):
+                          </a>
+                        </li>
+                      </ul>`,
+  },
+  {
+    togglerTitle: "Early Prenatal Enrollment",
+    togglerContent: `<img src="/images/pregnant-woman.png" alt="Pregnant woman" class="float-right" width="45%" />
+                      <p>
+                        Results obtained from the HFNY Randomized Controlled Trial demonstrate the
+                        positive benefits of enrolling families early in pregnancy. As a result,
+                        HFNY has embarked on additional studies to identify ways to increase the
+                        early prenatal enrollment of families.
+                      </p>
+                      <p>
+                        <strong>Exploration Phase:</strong> The Central Administration team convened
+                        an Early Prenatal Enrollment workgroup to examine the HFNY screening and assessment
+                        process. The workgroup examined program data on screens and assessments and
+                        surveyed staff to discuss their enrollment practices. Based on this information,
+                        the workgroup made the following recommendations to increase the enrollment
+                        of families early in pregnancy: (1) simplify the screening form, (2) focus
+                        the target population, and (3) develop supporting materials to engage community
+                        stakeholders.
+                      </p>
+
+                      <p>
+                        <strong>Pilot Phase:</strong> A pilot project was developed to assess the effectiveness
+                        of implementing the recommendations proposed by the workgroup. Five HFNY program
+                        sites were selected to implement a new screening form, analyze their enrollment
+                        processes, and communicate with community agencies about the benefits of early
+                        enrollment. HFNY program staff and community referral partners found the new
+                        screen form easier to use. Program sites also increased their efforts to engage
+                        with community partners to obtain prenatal referrals. As a result, most of
+                        the pilot programs saw an increase in the number of families who were screened
+                        and enrolled prenatally. The new screen form was subsequently implemented statewide.
+                      </p>
+                      <p>
+                        <strong>Implementation Phase:</strong> Following the statewide roll out of
+                        the new screen form, a study examining prenatal screening, assessment, and
+                        enrollment was conducted with six program sites. These sites were provided
+                        with technical assistance to discuss difficulties with prenatal enrollment
+                        and to develop strategies to overcome any challenges. Subsequently, three sites
+                        increased prenatal screens, and four sites increased prenatal enrollments.
+                        Findings suggested that developing good working relationships with community
+                        partners providing prenatal care, especially WIC programs, was important for
+                        increasing prenatal screens.
+                      </p>
+                      <ul class="link-list">
+                        <li>
+                          <a href="../Media/newsletters/TheLinkMarch2013.pdf" target="_blank">
+                            The Link Newsletter 2013: Healthy Families New York Programs
+                            Successful in Increasing Prenatal Enrollment
+                          </a>
+                        </li>
+                      </ul>
+    `,
+  },
+  {
+    togglerTitle: "Family Support Specialists (FSS)",
+    togglerContent: `<p>Family support specialists were surveyed about their work at the three
+                      randomized controlled trial study sites in 2002, seven program sites in
+                      2005, and 10 program sites in 2006. We used the data from these surveys to
+                      examine the processes related to FSS burnout. We found that family support
+                      specialists who perceived their organizational climates to be more
+                      positive (i.e., lower work pressure and higher emphasis on planning,
+                      efficiency and getting the job done) experienced lower levels of burnout.
+                      These results were due, in part, to FSS's having greater empowerment or
+                      control over their jobs. These results suggest that both work climate and
+                      FSS empowerment are important factors to assess and address when
+                      attempting to reduce burnout and staff turnover.
+                    </p>
+                    <ul class="link-list">
+                      <li>
+                        <a
+                          href="http://www.sciencedirect.com/science/article/pii/S0190740913000406"
+                          target="_blank"
+                        >
+                          Organizational climate and burnout among home visitors: Testing
+                          mediating effects of empowerment.
+                        </a>
+                      </li>
+                    </ul>
+
+                    <p>
+                      A survey of family support specialists at all program sites statewide was
+                      completed in 2014. The survey was designed to gain a better understanding
+                      of the experience of workers and to find ways to improve or optimize their
+                      work environment. Approximately 85% of family support workers responded to
+                      the survey. We found that age, education, and program proximity impact
+                      staff retention.
+                    </p>
+                    <a href="/media/newsletters/Link Winter 1.2018.pdf" target="_blank">
+                      Education and Job Climate Key to Home Visitor Retention</a
+                    ><br />
+                    <a href="/media/newsletters/LinkWinter2016.pdf" target="_blank"
+                      >Family Support Specialists’ Experiences with HFNY Programs</a
+                    ><br />
+                    <a href="/media/pdf/HFNYResearchBriefSummer2018.pdf" target="_blank"
+                      >Key Demographic and Organizational Factors in Predicting Healthy Families
+                      New York Home Visitor Retention</a
+                    ><br /><br />
+
+                    <p>
+                      We are currently preparing to conduct another survey of family support
+                      specialists. The primary goal of the survey is to better understand worker
+                      roles and workload, obtain updated demographics, and capture reflections
+                      on work environments. This survey will include both FSWs and FAWs to
+                      determine if workers in these two roles have similar or different
+                      experiences at their programs.
+                    </p>
+                  `,
+  },
+  {
+    togglerTitle: "Fatherhood",
+    togglerContent: `<img src="../images/father-baby-hispanic.png" alt="Father and baby" width="47%" height="306" class="float-left" style="padding-top:1em" />
+                      <p>
+                        Research continues to emphasize the important role that fathers play in
+                        promoting healthy child development. In 2007, HFNY began a focused effort
+                        to promote the development of a father inclusive culture and increase
+                        involvement of fathers in all aspects of home visiting.
+                      </p>
+
+                      <p>
+                        Initial exploration of our data determined that we were not adequately
+                        capturing fathers' participation in home visits. This led to a revision to
+                        our data collection forms and our management information system. We
+                        subsequently undertook additional analyses to learn more about how fathers
+                        are involved in HFNY.
+                      </p>
+
+                      <p>
+                        We found that father participation in home visits has increased since the
+                        beginning of our Fatherhood Initiative. In 2007, 13% of visits had a
+                        father present, compared to 19% of visits in 2015. We learned that when
+                        fathers are present from the very beginning of services, they participate
+                        more frequently. Families where fathers attend visits also remain enrolled
+                        in the program longer than families with fathers who did not attend any
+                        visits. Additionally, father involvement in visits influences family
+                        stability, with participating fathers being more likely to remain in or
+                        move into the home.
+                      </p>
+
+                      <p>
+                        These findings suggest that programs should focus their efforts on
+                        engaging fathers from the very beginning and requesting their presence
+                        during the assessment process and at initial visits. Family support
+                        specialists should be educated as to the benefits of father presence,
+                        family stability, and how to balance engaging fathers against concerns
+                        they may have about issues like domestic violence.
+                      </p>
+
+                      <ul class="link-list">
+                        <li>
+                          <a
+                            href="Publications/HFNYFatherInvolvementFactSheetFinal9-20-16.pdf"
+                            target="_blank"
+                          >
+                            HFNY Father Involvement Fact Sheet-Understanding Fathers’
+                            Participation in Home Visits
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  `,
+  },
+  {
+    togglerTitle: "Financial Literacy",
+    togglerContent: `<img src="../images/Financial Literacy-istockphoto-1039983960-612x612.jpg" class="float-right" width="45%"/>
+                      <p>
+                        Enhancing family self-sufficiency is one of the major goals of Healthy
+                        Families New York: we hope that, over the course of participation in home
+                        visiting, families will be able to increase their available income,
+                        receive more of the benefits available to them, more efficiently use their
+                        resources, or set and meet their own financial goals. Inadequate income is
+                        one of the major eligibility criteria for family participation in HFNY;
+                        indeed, nearly three-quarters of families were recorded as having
+                        inadequate or insufficient income as of program enrollment, and many
+                        report it to be one of their largest sources of stress. In response to
+                        this need, HFNY has undertaken several activities meant to support
+                        families as they develop financial knowledge and skills to build toward
+                        these goals, including partnering with external organizations for
+                        financial skills trainings and building staff skills in having specific
+                        conversations about family financial resources from the start of service
+                        delivery.
+                        <br /><br />
+                        <p>
+                          <a
+                            href="/Staff/Documents/HFNY_rb_handout only 021423B.pdf"
+                            target="_blank"
+                          >
+                            Strategies for Approaching First Conversations with Families about
+                            Finances
+                          </a>
+                        </p>
+                      </p>
+                    `,
+  },
+  {
+    togglerTitle: "MIECHV",
+    togglerContent: `<!-- <img src="../images/Financial Literacy-istockphoto-1039983960-612x612.jpg" class="float-right" width="45%" /> -->
+                    <p>
+                      HFNY programs are primarily funded by the New York State Office of
+                      Children and Family Services; some programs receive additional funding
+                      from the Maternal, Infant, and Early Childhood Home Visiting (MIECHV)
+                      Program, which is administered by the U.S. Department of Health and Human
+                      Services' Health Resources & Services Administration (HRSA). MIECHV-funded
+                      programs are required to conduct annual reporting on 19 system outcomes
+                      and performance measures (i.e., benchmarks) in six benchmark areas (listed
+                      below). Members of the HFNY Central Administration (CA) track program
+                      performance on these benchmarks quarterly and annually, provide HFNY
+                      MIECHV programs with quarterly reports, and provide HRSA with annual
+                      reports. Programs can use the quarterly reports to support their
+                      continuous quality improvement (CQI) efforts.
+                    </p>
+                    <p>
+                      HFNY CA members and HFNY programs also meet quarterly for technical
+                      assistance (TA) surrounding the MIECHV benchmarks. Such TA meetings allow
+                      programs and CA to review analyses about benchmark data, discuss
+                      strategies for and barriers to success, and create a space for
+                      peer-to-peer sharing and learning. Given the breadth of information that
+                      is shared during these quarterly meetings, members of the CA team have
+                      created infographics summarizing the MIECHV benchmarks and additional
+                      analyses discussed. Although HRSA has not yet set performance targets for
+                      the benchmarks, CA's goal is that the quarterly reports and meetings, as
+                      well as the infographics, help programs to improve their performance and
+                      think more deeply about what affects program performance on the measures,
+                      and thus improve their practices and impacts on families.
+                    </p>
+                    <br />
+                    <h3>MIECHV Benchmarks</h3>
+                    <ul>
+                      <li>
+                        <p>
+                          <h3>Benchmark Area 1: Maternal and Newborn Health</h3>
+                          <b>Measures:</b> preterm birth, breastfeeding, depression screening, well-child
+                          visits, postpartum care, and tobacco cessation referrals
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <h3>Benchmark Area 2: Child Injuries, Maltreatment, and ED Visits</h3>
+                          <b>Measures:</b> safe sleep, child injury, and child maltreatment
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <h3>Benchmark Area 3: School Readiness and Achievement</h3>
+                          <b>Measures:</b> parent-child interaction, early language and literacy
+                          activities, developmental screening, and behavioral concerns
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <h3>Benchmark Area 4: Crime or Domestic Violence</h3>
+                          <b>Measure:</b> intimate partner violence (IPV) screening
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <h3>Benchmark Area 5: Family Economic Self Sufficiency</h3>
+                          <b>Measures:</b> primary caregiver education and continuity of health insurance
+                          coverage
+                        </p>
+                      </li>
+                      <li>
+                        <p>
+                          <h3>Benchmark Area 6: Coordination and Referrals</h3>
+                          <b>Measures:</b> completed depression referrals, completed developmental
+                          referrals, and IPV referrals
+                        </p>
+                      </li>
+                    </ul>
+                    <h3>Infographics</h3>
+                    <ul>
+                      <li>
+                        <a href="Publications/MIECHV_PM2_Infographic_Final.pdf" target="_blank">
+                          Breastfeeding (PM2)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="Publications/MIECHV_PM4_Infographic_Final.pdf" target="_blank">
+                          Well-Child Visits (PM4)
+                        </a>
+                      </li>
+                      <li>
+                        <a href="Publications/MIECHV_PM5_Infographic_Final.pdf" target="_blank">
+                          Postpartum Care (PM5)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="Publications/MIECHV_PM11_Infographic_Final.pdf"
+                          target="_blank"
+                        >
+                          Early Language and Literacy Activities (PM11)
+                        </a>
+                      </li>
+                      <li>
+                        <a
+                          href="Publications/MIECHV_PM12_18_Infographic_Final.pdf"
+                          target="_blank"
+                        >
+                          Developmental Screening and Completed Developmental Referrals
+                          (PM12&18)
+                        </a>
+                        <li>
+                          <a
+                            href="Publications/MIECHV_PM13_Infographic_Final.pdf"
+                            target="_blank"
+                          >
+                            Behavioral Concerns (PM13)
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="Publications/MIECHV_PM16_Infographic_Final.pdf"
+                            target="_blank"
+                          >
+                            Continuity of Health Insurance Coverage (PM16)
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="Publications/MIECHV_PM3_17_Infographic_Final_9.6.2024.pdf"
+                            target="_blank"
+                          >
+                            Depression Screening and Completed Depression Referrals (PM3&17)
+                          </a>
+                        </li>
+                      </li>
+                    </ul>`,
+  },
+];
 ---
 
 <ResearchLayout
@@ -16,654 +566,6 @@ import ResearchLayout from "@/layouts/ResearchLayout.astro";
     particular importance to the program and the families we serve.
   </p>
   <p class="instructions">Click on the links below for more information.</p>
-  <div id="accordion">
-    <h2 class="accordion-toggle">Breastfeeding</h2>
-    <div class="accordion-content">
-      <img
-        src="../images/breastfeeding.png"
-        alt="Breastfeeding"
-        class="float-left"
-        width="45%"
-      />
-      <p>
-        Promoting optimal child and family health and development is one of
-        HFNY’s primary goals. Encouraging breastfeeding is one of the ways that
-        HFNY works to achieve this goal, since breastfeeding is associated with
-        many positive outcomes for both infants and mothers. We studied program
-        data to examine how HFNY encourages breastfeeding and found that the
-        number of home visits a family received and the percent of home visits
-        in which breastfeeding was discussed were associated with a greater
-        likelihood of a mother initiating breastfeeding and continuing to
-        breastfeed for six months or more. Critically, we found that
-        breastfeeding conversations work for those enrolled both prenatally and
-        postnatally and that continuing to have breastfeeding conversations
-        during the postnatal period is important for encouraging breastfeeding
-        continuation. These results demonstrate the impact of home visitors’
-        efforts and suggest that home visitors should try to have more
-        conversations about breastfeeding with families when possible.
-      </p>
 
-      <ul class="link-list">
-        <li>
-          <a
-            href="Publications/Breastfeeding conversations brief 080524A.pdf"
-            target="_blank"
-          >
-            Healthy Families New York Breastfeeding Research Brief 2024 –
-            Breastfeeding Conversations and Breastfeeding Continuation in
-            Postnatal Enrollees
-          </a>
-        </li>
-        <li>
-          <a href="Publications/BF-ResearchBrief-Final.pdf" target="_blank">
-            Healthy Families New York Breastfeeding Research Brief 2013
-          </a>
-        </li>
-        <li>
-          <a href="Publications/HFNYBFSMpper.pdf" target="_blank">
-            Let's Talk About Breastfeeding: The Importance of Delivering a
-            Message in a Home Visiting Program</a
-          >
-        </li>
-      </ul>
-    </div>
-    <h2 class="accordion-toggle">Combined Enrollment</h2>
-    <div class="accordion-content">
-      <img
-        src="../images/enrollmentpicmomworker.jpg"
-        class="float-right"
-        width="45%"
-      />
-      <p><strong>Background</strong></p>
-      <p>
-        HFNY currently conducts a “two-step” enrollment process whereby one
-        worker assesses a family for program services and another worker
-        provides services and ongoing support. The Family Assessment Worker
-        (FAW) conducts the Parent Survey (PS) to inform a family’s eligibility
-        for services as well as their needs and strengths. If a family is deemed
-        eligible for services, the information from the PS is shared with a
-        Family Support Worker (FSW) who then visits the family. While this “warm
-        handoff” recognizes the different skill sets needed for assessments and
-        home visits, some families may find it difficult to connect with the FAW
-        only to be told she will not be the person providing services.<br /><br
-        />
-        In contrast, other Healthy Families programs utilize a “one-step” or “combined”
-        enrollment process whereby the same worker conducts the PS and maintains
-        the family on her caseload. In this process, the PS is only used to collect
-        information, not to determine program eligibility. This provides continuity
-        for the family and allows for rapport between the family and the home visitor
-        to be established early.<br /><br />
-        In 2015, HFNY formed a “Combined Enrollment Committee” to research this process.
-        After conversations with one-step programs to discuss the benefits and challenges
-        of combined enrollment, it was decided that a pilot project should be conducted
-        to determine the utility of this process for HFNY.
-      </p>
-      <p><strong>Pilot Project Description</strong></p>
-      <p><u>Overview of Participation</u></p>
-      <p>
-        The pilot project involves three sites across NYS. The first site began
-        the pilot in January, 2018; the second site began in June, 2018; the
-        third site is scheduled to begin in the fall of 2018. Each site will
-        participate in the pilot for about three years. This will allow enough
-        time for an analysis of enrollment and retention rates pre-and
-        post-combined enrollment.<br /><br />
-        Prior to beginning the pilot, all workers at the sites are being cross-trained
-        (to conduct assessments and home visits). Workers are also being trained
-        on the “Welcome Family Visit,” in which the HFNY worker provides the family
-        with additional information about the program, engages the family in a fun
-        activity, and answers any questions. Throughout their participation in the
-        pilot, sites will be provided with support from the Central Administration
-        team; the pilot is viewed as a collaborative effort, with ongoing feedback
-        from the sites.<br /><br />
-        <u>Expected Outcomes</u><br /><br />
-        Data from each of the pilot sites pre-and post-combined enrollment will be
-        analyzed to determine the impact of the pilot. A process and an outcome evaluation
-        will be conducted to address the following:<br /><br />
-        Process Evaluation
-        <ul>
-          <li>Was staff receptive to the pilot study? Why/why not?</li>
-          <li>
-            Did newly trained workers feel comfortable conducting assessments
-            and home visits? Why/why not?
-          </li>
-          <li>
-            How did workers feel about the Welcome Family Visit (benefits,
-            challenges etc.)?
-          </li>
-          <li>
-            What, if any, barriers were encountered in moving to a combined
-            process?
-          </li>
-        </ul>
-        Outcome Evaluation
-        <ul>
-          <li>Did the timeframe between screen and enrollment decrease?</li>
-          <li>Did enrollment rates improve?</li>
-          <li>Did retention rates improve?</li>
-        </ul>
-        Based on earlier conversations with one-step programs, it is expected that
-        enrollment and retention rates will increase, as families will benefit from
-        having the consistency of the same person conduct the parent survey and provide
-        services<br /><br />
-        Findings from the evaluation will inform any needed changes to the model
-        and will determine whether or not HFNY should move to a combined enrollment
-        process statewide.
-      </p>
-      <p>
-        <a
-          href="/Staff/Documents/Research Brief - Changes in Assessment scores after Implementation of One-Step Process Pilot 2015-2020_final.pdf"
-          target="_blank"
-        >
-          Research Brief - Changes in Assessment scores after Implementation of
-          One-Step Process Pilot 2015-2020
-        </a>
-      </p>
-      <p>
-        <a
-          href="/Staff/Documents/HFNY_CE_ResearchBriefY1Final.pdf"
-          target="_blank"
-        >
-          Healthy Families New York: Findings from a Pilot Study of Enrollment
-          Processes
-        </a>
-      </p>
-      <p>
-        <a
-          href="/Staff/Documents/HFNY pilot enrollment process brief_021623.pdf"
-          target="_blank"
-        >
-          Healthy Families New York: Findings from a Three-Year Pilot Study of
-          Enrollment Practices
-        </a>
-      </p>
-    </div>
-    <h2 class="accordion-toggle">Curricula</h2>
-    <div class="accordion-content">
-      <img
-        src="../images/CurriculapicforHFNY.jpg"
-        alt="Curricula"
-        class="float-left"
-        width="45%"
-      />
-      <p>
-        Curricula delivered at the home visits are an important part of
-        improving the lives of the families we serve through Healthy Families
-        New York (HFNY). These curricula help facilitate bonding between
-        families and staff, teach parents about child development, and encourage
-        positive parent-child interaction.
-      </p>
-      <p>
-        We performed a detailed analysis of curricula use across HFNY during
-        2018, including rates of use, frequency of implementation of different
-        curricula, and curricula used for three subgroups of interest (young
-        parents, fathers, and prenatal families). Importantly, we found that of
-        the almost 73,000 home visits conducted in 2018, 74% included at least
-        one curriculum. The curricula most frequently used were Growing Great
-        Kids (32% of visits); Partners for a Healthy Baby by Florida State
-        University (19%); Parents as Teachers (9%), and San Angelo (9%). And
-        most (86%) prenatal families also received at least one visit with a
-        prenatal-focused curriculum. These results demonstrate that home
-        visitors are making a marked effort to deliver curricula during home
-        visits.
-      </p>
-      <p>
-        However, we also noted that we needed to revisit the curricula currently
-        identified as “HFNY Approved” to review the evidence base and provide
-        more up-to-date recommendations. We also wanted to further explore
-        curricula that represent especially good tools for serving special
-        interest groups, such as young parents and fathers, as neither group had
-        particularly high rates of targeted curricula implementation in our full
-        analysis
-      </p>
-      <p>
-        In late 2019, HFNY formed a “Curriculum Committee” to identify an
-        updated set of evidence-informed primary HFNY curricula, and to note the
-        best curricula for special interest groups. We also seek to ensure that
-        the endorsed curricula are culturally appropriate for the families
-        served. This Committee includes representatives from all three branches
-        of Central Administration and many program staff, including home
-        visitors, supervisors, and program managers; members are now working to
-        answer these questions. We are also reaching out to other states to
-        determine which curricula they find to be the most useful. Committee
-        members and Central Administration can then have conversations with
-        programs and staff to engage programs in using the new recommended
-        curricula, help programs plan for the associated costs of the different
-        curricula they may choose, and help programs choose curricula that are
-        appropriate for special interest groups and for the specific and diverse
-        communities they serve.
-      </p>
-
-      <ul class="link-list">
-        <li>
-          <a
-            href="/Staff/Documents/CurriculaDeliveryHF2019dated2019_11_20_final.pdf"
-            target="_blank"
-          >
-            Research Brief Fall 2019, Curricula Delivery at Healthy Families New
-            York Programs</a
-          >
-        </li>
-        <li>
-          <a
-            href="/Media/newsletters/the_Link_Winter_feb2020 (HFNY).pdf"
-            target="_blank"
-          >
-            The Link – HFNY Newsletter (2020 Winter):
-          </a>
-        </li>
-      </ul>
-    </div>
-    <h2 class="accordion-toggle">Early Prenatal Enrollment</h2>
-    <div class="accordion-content">
-      <img
-        src="../images/pregnant-woman.png"
-        alt="Pregnant woman"
-        class="float-right"
-        width="45%"
-      />
-      <p>
-        Results obtained from the HFNY Randomized Controlled Trial demonstrate
-        the positive benefits of enrolling families early in pregnancy. As a
-        result, HFNY has embarked on additional studies to identify ways to
-        increase the early prenatal enrollment of families.
-      </p>
-      <p>
-        <strong>Exploration Phase:</strong> The Central Administration team convened
-        an Early Prenatal Enrollment workgroup to examine the HFNY screening and
-        assessment process. The workgroup examined program data on screens and assessments
-        and surveyed staff to discuss their enrollment practices. Based on this information,
-        the workgroup made the following recommendations to increase the enrollment
-        of families early in pregnancy: (1) simplify the screening form, (2) focus
-        the target population, and (3) develop supporting materials to engage community
-        stakeholders.
-      </p>
-
-      <p>
-        <strong>Pilot Phase:</strong> A pilot project was developed to assess the
-        effectiveness of implementing the recommendations proposed by the workgroup.
-        Five HFNY program sites were selected to implement a new screening form,
-        analyze their enrollment processes, and communicate with community agencies
-        about the benefits of early enrollment. HFNY program staff and community
-        referral partners found the new screen form easier to use. Program sites
-        also increased their efforts to engage with community partners to obtain
-        prenatal referrals. As a result, most of the pilot programs saw an increase
-        in the number of families who were screened and enrolled prenatally. The
-        new screen form was subsequently implemented statewide.
-      </p>
-      <p>
-        <strong>Implementation Phase:</strong> Following the statewide roll out of
-        the new screen form, a study examining prenatal screening, assessment, and
-        enrollment was conducted with six program sites. These sites were provided
-        with technical assistance to discuss difficulties with prenatal enrollment
-        and to develop strategies to overcome any challenges. Subsequently, three
-        sites increased prenatal screens, and four sites increased prenatal enrollments.
-        Findings suggested that developing good working relationships with community
-        partners providing prenatal care, especially WIC programs, was important
-        for increasing prenatal screens.
-      </p>
-      <ul class="link-list">
-        <li>
-          <a href="../Media/newsletters/TheLinkMarch2013.pdf" target="_blank">
-            The Link Newsletter 2013: Healthy Families New York Programs
-            Successful in Increasing Prenatal Enrollment
-          </a>
-        </li>
-      </ul>
-    </div>
-    <h2 class="accordion-toggle">Family Support Specialists (FSS)</h2>
-    <div class="accordion-content">
-      <p>
-        Family support specialists were surveyed about their work at the three
-        randomized controlled trial study sites in 2002, seven program sites in
-        2005, and 10 program sites in 2006. We used the data from these surveys
-        to examine the processes related to FSS burnout. We found that family
-        support specialists who perceived their organizational climates to be
-        more positive (i.e., lower work pressure and higher emphasis on
-        planning, efficiency and getting the job done) experienced lower levels
-        of burnout. These results were due, in part, to FSS's having greater
-        empowerment or control over their jobs. These results suggest that both
-        work climate and FSS empowerment are important factors to assess and
-        address when attempting to reduce burnout and staff turnover.
-      </p>
-      <ul class="link-list">
-        <li>
-          <a
-            href="http://www.sciencedirect.com/science/article/pii/S0190740913000406"
-            target="_blank"
-          >
-            Organizational climate and burnout among home visitors: Testing
-            mediating effects of empowerment.
-          </a>
-        </li>
-      </ul>
-
-      <p>
-        A survey of family support specialists at all program sites statewide
-        was completed in 2014. The survey was designed to gain a better
-        understanding of the experience of workers and to find ways to improve
-        or optimize their work environment. Approximately 85% of family support
-        workers responded to the survey. We found that age, education, and
-        program proximity impact staff retention.
-      </p>
-      <a href="/media/newsletters/Link Winter 1.2018.pdf" target="_blank">
-        Education and Job Climate Key to Home Visitor Retention</a
-      ><br />
-      <a href="/media/newsletters/LinkWinter2016.pdf" target="_blank"
-        >Family Support Specialists’ Experiences with HFNY Programs</a
-      ><br />
-      <a href="/media/pdf/HFNYResearchBriefSummer2018.pdf" target="_blank"
-        >Key Demographic and Organizational Factors in Predicting Healthy
-        Families New York Home Visitor Retention</a
-      ><br /><br />
-
-      <p>
-        We are currently preparing to conduct another survey of family support
-        specialists. The primary goal of the survey is to better understand
-        worker roles and workload, obtain updated demographics, and capture
-        reflections on work environments. This survey will include both FSWs and
-        FAWs to determine if workers in these two roles have similar or
-        different experiences at their programs.
-      </p>
-    </div>
-    <h2 class="accordion-toggle">Fatherhood</h2>
-    <div class="accordion-content">
-      <img
-        src="../images/father-baby-hispanic.png"
-        alt="Father and baby"
-        width="47%"
-        height="306"
-        class="float-left"
-        style="padding-top:1em"
-      />
-      <p>
-        Research continues to emphasize the important role that fathers play in
-        promoting healthy child development. In 2007, HFNY began a focused
-        effort to promote the development of a father inclusive culture and
-        increase involvement of fathers in all aspects of home visiting.
-      </p>
-
-      <p>
-        Initial exploration of our data determined that we were not adequately
-        capturing fathers’ participation in home visits. This led to a revision
-        to our data collection forms and our management information system. We
-        subsequently undertook additional analyses to learn more about how
-        fathers are involved in HFNY.
-      </p>
-
-      <p>
-        We found that father participation in home visits has increased since
-        the beginning of our Fatherhood Initiative. In 2007, 13% of visits had a
-        father present, compared to 19% of visits in 2015. We learned that when
-        fathers are present from the very beginning of services, they
-        participate more frequently. Families where fathers attend visits also
-        remain enrolled in the program longer than families with fathers who did
-        not attend any visits. Additionally, father involvement in visits
-        influences family stability, with participating fathers being more
-        likely to remain in or move into the home.
-      </p>
-
-      <p>
-        These findings suggest that programs should focus their efforts on
-        engaging fathers from the very beginning and requesting their presence
-        during the assessment process and at initial visits. Family support
-        specialists should be educated as to the benefits of father presence,
-        family stability, and how to balance engaging fathers against concerns
-        they may have about issues like domestic violence.
-      </p>
-
-      <ul class="link-list">
-        <li>
-          <a
-            href="Publications/HFNYFatherInvolvementFactSheetFinal9-20-16.pdf"
-            target="_blank"
-          >
-            HFNY Father Involvement Fact Sheet-Understanding Fathers’
-            Participation in Home Visits
-          </a>
-        </li>
-      </ul>
-    </div>
-    <h2 class="accordion-toggle">Financial Literacy</h2>
-    <div class="accordion-content">
-      <img
-        src="../images/Financial Literacy-istockphoto-1039983960-612x612.jpg"
-        class="float-right"
-        width="45%"
-      />
-      <p>
-        Enhancing family self-sufficiency is one of the major goals of Healthy
-        Families New York: we hope that, over the course of participation in
-        home visiting, families will be able to increase their available income,
-        receive more of the benefits available to them, more efficiently use
-        their resources, or set and meet their own financial goals. Inadequate
-        income is one of the major eligibility criteria for family participation
-        in HFNY; indeed, nearly three-quarters of families were recorded as
-        having inadequate or insufficient income as of program enrollment, and
-        many report it to be one of their largest sources of stress. In response
-        to this need, HFNY has undertaken several activities meant to support
-        families as they develop financial knowledge and skills to build toward
-        these goals, including partnering with external organizations for
-        financial skills trainings and building staff skills in having specific
-        conversations about family financial resources from the start of service
-        delivery.
-        <br /><br />
-        <p>
-          <a
-            href="/Staff/Documents/HFNY_rb_handout only 021423B.pdf"
-            target="_blank"
-          >
-            Strategies for Approaching First Conversations with Families about
-            Finances
-          </a>
-        </p>
-      </p>
-    </div>
-    <h2 class="accordion-toggle">MIECHV</h2>
-    <div class="accordion-content">
-      <!-- <img src="../images/Financial Literacy-istockphoto-1039983960-612x612.jpg" class="float-right" width="45%" /> -->
-      <p>
-        HFNY programs are primarily funded by the New York State Office of
-        Children and Family Services; some programs receive additional funding
-        from the Maternal, Infant, and Early Childhood Home Visiting (MIECHV)
-        Program, which is administered by the U.S. Department of Health and
-        Human Services' Health Resources & Services Administration (HRSA).
-        MIECHV-funded programs are required to conduct annual reporting on 19
-        system outcomes and performance measures (i.e., benchmarks) in six
-        benchmark areas (listed below). Members of the HFNY Central
-        Administration (CA) track program performance on these benchmarks
-        quarterly and annually, provide HFNY MIECHV programs with quarterly
-        reports, and provide HRSA with annual reports. Programs can use the
-        quarterly reports to support their continuous quality improvement (CQI)
-        efforts.
-      </p>
-      <p>
-        HFNY CA members and HFNY programs also meet quarterly for technical
-        assistance (TA) surrounding the MIECHV benchmarks. Such TA meetings
-        allow programs and CA to review analyses about benchmark data, discuss
-        strategies for and barriers to success, and create a space for
-        peer-to-peer sharing and learning. Given the breadth of information that
-        is shared during these quarterly meetings, members of the CA team have
-        created infographics summarizing the MIECHV benchmarks and additional
-        analyses discussed. Although HRSA has not yet set performance targets
-        for the benchmarks, CA's goal is that the quarterly reports and
-        meetings, as well as the infographics, help programs to improve their
-        performance and think more deeply about what affects program performance
-        on the measures, and thus improve their practices and impacts on
-        families.
-      </p>
-      <br />
-      <h3>MIECHV Benchmarks</h3>
-      <ul>
-        <li>
-          <p>
-            <h3>Benchmark Area 1: Maternal and Newborn Health</h3>
-            <b>Measures:</b> preterm birth, breastfeeding, depression screening,
-            well-child visits, postpartum care, and tobacco cessation referrals
-          </p>
-        </li>
-        <li>
-          <p>
-            <h3>
-              Benchmark Area 2: Child Injuries, Maltreatment, and ED Visits
-            </h3>
-            <b>Measures:</b> safe sleep, child injury, and child maltreatment
-          </p>
-        </li>
-        <li>
-          <p>
-            <h3>Benchmark Area 3: School Readiness and Achievement</h3>
-            <b>Measures:</b> parent-child interaction, early language and literacy
-            activities, developmental screening, and behavioral concerns
-          </p>
-        </li>
-        <li>
-          <p>
-            <h3>Benchmark Area 4: Crime or Domestic Violence</h3>
-            <b>Measure:</b> intimate partner violence (IPV) screening
-          </p>
-        </li>
-        <li>
-          <p>
-            <h3>Benchmark Area 5: Family Economic Self Sufficiency</h3>
-            <b>Measures:</b> primary caregiver education and continuity of health
-            insurance coverage
-          </p>
-        </li>
-        <li>
-          <p>
-            <h3>Benchmark Area 6: Coordination and Referrals</h3>
-            <b>Measures:</b> completed depression referrals, completed developmental
-            referrals, and IPV referrals
-          </p>
-        </li>
-      </ul>
-      <h3>Infographics</h3>
-      <ul>
-        <li>
-          <a
-            href="Publications/MIECHV_PM2_Infographic_Final.pdf"
-            target="_blank"
-          >
-            Breastfeeding (PM2)
-          </a>
-        </li>
-        <li>
-          <a
-            href="Publications/MIECHV_PM4_Infographic_Final.pdf"
-            target="_blank"
-          >
-            Well-Child Visits (PM4)
-          </a>
-        </li>
-        <li>
-          <a
-            href="Publications/MIECHV_PM5_Infographic_Final.pdf"
-            target="_blank"
-          >
-            Postpartum Care (PM5)
-          </a>
-        </li>
-        <li>
-          <a
-            href="Publications/MIECHV_PM11_Infographic_Final.pdf"
-            target="_blank"
-          >
-            Early Language and Literacy Activities (PM11)
-          </a>
-        </li>
-        <li>
-          <a
-            href="Publications/MIECHV_PM12_18_Infographic_Final.pdf"
-            target="_blank"
-          >
-            Developmental Screening and Completed Developmental Referrals
-            (PM12&18)
-          </a>
-          <li>
-            <a
-              href="Publications/MIECHV_PM13_Infographic_Final.pdf"
-              target="_blank"
-            >
-              Behavioral Concerns (PM13)
-            </a>
-          </li>
-          <li>
-            <a
-              href="Publications/MIECHV_PM16_Infographic_Final.pdf"
-              target="_blank"
-            >
-              Continuity of Health Insurance Coverage (PM16)
-            </a>
-          </li>
-          <li>
-            <a
-              href="Publications/MIECHV_PM3_17_Infographic_Final_9.6.2024.pdf"
-              target="_blank"
-            >
-              Depression Screening and Completed Depression Referrals (PM3&17)
-            </a>
-          </li>
-        </li>
-      </ul>
-    </div>
-  </div>
+  <Accordion accItems={accItemsRTP} />
 </ResearchLayout>
-
-<script
-  type="text/javascript"
-  src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script type="text/javascript" src="../js/accordion.js"></script>
-<style>
-  /* accordion styles ===================== */
-  .accordion-toggle {
-    color: #39c;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  .accordion-content {
-    display: none;
-    padding-bottom: 0;
-  }
-  .accordion-content.default {
-    display: block;
-  }
-  .instructions {
-    background-image: url(../images/template_images/instructions-icon.png);
-    background-repeat: no-repeat;
-    position: left top;
-    color: #1d809c;
-    padding-left: 1.5em;
-  }
-
-  /* Timeline dates */
-  .date-list dl {
-    display: inline-block;
-    clear: left;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 1em;
-    padding-bottom: 0.5em;
-    min-height: 4em;
-  }
-
-  .date-list dt {
-    font-size: 4em;
-    color: #ccc;
-    float: left;
-    margin: 0 0.25em 0 0;
-    padding: 0;
-    line-height: 0.8em;
-    position: relative;
-  }
-
-  .date-list dd {
-    margin: 0 0 0 10em;
-    line-height: 1.6em;
-  }
-
-  .disc {
-    padding-left: 0.75em;
-    background-image: url(../images/template_images/black-bullet.png);
-    background-repeat: no-repeat;
-    background-position: 0px 10px;
-  }
-</style>
