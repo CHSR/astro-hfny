@@ -1,0 +1,80 @@
+---
+interface AccordionItems {
+  togglerTitle: string;
+  togglerContent: string;
+}
+
+const { accItems } = Astro.props;
+---
+
+<div id="accordion">
+  {
+    accItems.map((item: AccordionItems) => (
+      <div class="accordion-item">
+        <h2 class="accordion-toggle">{item.togglerTitle}</h2>
+        <div class="accordion-content">
+          <p set:html={item.togglerContent} />
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<script
+  type="text/javascript"
+  src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script type="text/javascript" src="../js/accordion.js"></script>
+<style>
+  /* accordion styles ===================== */
+  .accordion-toggle {
+    color: #39c;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  .accordion-content {
+    display: none;
+    padding-bottom: 0;
+  }
+  .accordion-content.default {
+    display: block;
+  }
+  .instructions {
+    background-image: url(../images/template_images/instructions-icon.png);
+    background-repeat: no-repeat;
+    position: left top;
+    color: #1d809c;
+    padding-left: 1.5em;
+  }
+
+  /* Timeline dates */
+  .date-list dl {
+    display: inline-block;
+    clear: left;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1em;
+    padding-bottom: 0.5em;
+    min-height: 4em;
+  }
+
+  .date-list dt {
+    font-size: 4em;
+    color: #ccc;
+    float: left;
+    margin: 0 0.25em 0 0;
+    padding: 0;
+    line-height: 0.8em;
+    position: relative;
+  }
+
+  .date-list dd {
+    margin: 0 0 0 10em;
+    line-height: 1.6em;
+  }
+
+  .disc {
+    padding-left: 0.75em;
+    background-image: url(../images/template_images/black-bullet.png);
+    background-repeat: no-repeat;
+    background-position: 0px 10px;
+  }
+</style>
