@@ -29,6 +29,11 @@ import LoginLayout from "@/layouts/LoginLayout.astro";
     <p><input type="submit" value="Submit" /></p>
   </form>
 
+  <script
+    type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"
+  ></script>
+
   <!-- JSLogin: Lines 43-76 set up the login page -->
   <script type="text/javascript">
     //<!--
@@ -56,12 +61,12 @@ import LoginLayout from "@/layouts/LoginLayout.astro";
         String.fromCharCode(116, 104, 121, 70) +
         String.fromCharCode(64, 109, 105, 108) +
         String.fromCharCode(105, 101, 36);
-      if ($("#password").prop("value") == checkPW) {
+      if (jQuery("#password").prop("value") == checkPW) {
         document.cookie = "passwordOk=true;path=/;secure";
         window.location = "/network/landing";
       } else {
-        $("#password").val("");
-        $("#errorText").text("Incorrect password. Please try again.");
+        jQuery("#password").val("");
+        jQuery("#errorText").text("Incorrect password. Please try again.");
       }
       return false;
     }
