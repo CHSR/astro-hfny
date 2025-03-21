@@ -1,0 +1,188 @@
+---
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+// TODO: Refactor accordion to use a component
+---
+
+<Layout title="Funders">
+  <Header />
+  <div id="content">
+    <div id="col-2-full-width">
+      <div id="text-area">
+        <h1 class="heading">Funders &amp; Sponsors</h1>
+
+        <p>
+          Healthy Families New York has worked to improve the health and
+          well-being of infants and children for over 20 years. With a proven
+          record of success in a number of birth and development outcomes, the
+          program has made a positive difference in the lives of thousands of
+          families.
+        </p>
+
+        <p class="instructions">
+          Click on the questions below or <a class="button" id="expandAll"
+            >Expand All</a
+          >
+          <a class="button" id="collapseAll" style="display:none;"
+            >Collapse All</a
+          >
+        </p>
+
+        <div id="image-swap" class="float-right">
+          <img
+            src="/images/sunset-silhouette.png"
+            alt="Group of people at sunset"
+          />
+        </div>
+      </div><!-- end image with caption -->
+
+      <div id="accordion">
+        <h2 class="accordion-toggle">
+          <a
+            href="javascript:ReplaceImage('image-swap','/images/sunset-silhouette.png')"
+            >What is Healthy Families New York?</a
+          >
+        </h2>
+        <div class="accordion-content">
+          <p>
+            Healthy Families New York, a Healthy Families America accredited
+            home visiting program, seeks to improve the health and well-being of
+            infants and children through home-based services delivered by
+            non-profit organizations in local communities. The program was
+            established in 1995 by the New York State Office of Children and
+            Family Services. It is an evidence-based voluntary home visiting
+            model designed to provide services to families that begin
+            prenatally, or at birth, through age five
+          </p>
+          <p>
+            <em><a href="About/default.htm">Learn more about our program</a></em
+            >
+          </p>
+        </div>
+
+        <h2 class="accordion-toggle">
+          <a
+            href="javascript:ReplaceImage('image-swap','/images/father-daughter.png')"
+            >Is Healthy Families New York an evidence based program?</a
+          >
+        </h2>
+        <div class="accordion-content">
+          <p>
+            Research demonstrates that HFNY is an evidence based program,
+            meaning that is has proven positive outcomes. Based on findings from
+            a randomized controlled trial, HFNY has been designated a proven
+            program by the Promising Practices Network on Children, Families,
+            and Communities. Promising Practices Network evidence criteria
+            include an assessment of study design, effect size, and statistical
+            significance. HFNY has demonstrated effects in improving birth
+            outcomes, preventing child abuse and neglect, and promoting success
+            in school.
+          </p>
+          <p>
+            <em><a href="Research/rct.htm">Learn more about our research</a></em
+            >
+          </p>
+        </div>
+
+        <h2 class="accordion-toggle">
+          <a
+            href="javascript:ReplaceImage('image-swap','/images/mother-baby-play.png')"
+            >What are the outcomes of Healthy Families New York?</a
+          >
+        </h2>
+        <div class="accordion-content">
+          <p>
+            Research from a randomized controlled trial shows that HFNY works
+            for a diverse array of families, including first-time teen parents
+            and those who have had experience with the child welfare system.
+            Specifically, research shows that HFNY:
+            <ul>
+              <li>Improves birth outcomes</li>
+              <li>Promotes success in school</li>
+              <li>Prevents child abuse and neglect</li>
+              <li>Supports positive parenting</li>
+              <li>Saves money</li>
+            </ul>
+          </p>
+          <p>
+            <em><a href="/research">Learn more about our outcomes</a></em>
+          </p>
+        </div>
+
+        <h2 class="accordion-toggle">
+          <a
+            href="javascript:ReplaceImage('image-swap','/images/mother-baby-interact-02.png')"
+            >Who are Healthy Families New York&rsquo;s partners?</a
+          >
+        </h2>
+        <div class="accordion-content">
+          <p>
+            Healthy Families New York partners with an array of local and state
+            agencies and organizations. These partnerships include hospitals,
+            health departments, local departments of social services, and local
+            non-profit organizations. Partnerships are designed to enhance the
+            mission and provision of services of both HFNY and the partner
+            agency. Partnerships are built on collaborative and reciprocal
+            relationships to enhance the services and functions of all partners.
+          </p>
+          <p>
+            <a href="/maps"
+              ><em
+                >Contact your local program to learn more about Healthy Families
+                partners in your area.</em
+              ></a
+            >
+          </p>
+        </div>
+
+        <h2 class="accordion-toggle">
+          <a
+            href="javascript:ReplaceImage('image-swap','/images/hold-hands.png')"
+            >Who are Healthy Families New York&rsquo;s funders?</a
+          >
+        </h2>
+        <div class="accordion-content">
+          <p>
+            HFNY is primarily funded through the New York State budget. Programs
+            may also receive funding through private and public foundations such
+            as:
+            <ul>
+              <li>United Way</li>
+              <li>Robin Hood Foundation</li>
+              <li>
+                Maternal, Infant &amp; Early Childhood Home Visiting Program (US
+                Department of Heath and Human Services, Health Resources and
+                Services Administration)
+              </li>
+            </ul>
+          </p>
+        </div>
+
+        <h2 class="accordion-toggle">
+          <a
+            href="javascript:ReplaceImage('image-swap','/images/father-infant.png')"
+            >Why should I support Healthy Families New York?</a
+          >
+        </h2>
+        <div class="accordion-content">
+          <p>
+            Babies do not come with instruction manuals. Healthy Families New
+            York nurtures healthy parent-child relationships, which is the
+            foundation for health and well-being over the life course.
+            Infants&rsquo; health at birth and the care they receive during
+            their early years has a profound impact that lasts throughout their
+            lives. Regular visits by trained home visitors during this crucial
+            time can influence the course of families&rsquo; lives and
+            positively impact their children&rsquo;s development. By reaching
+            overburdened families in the prenatal and immediate postnatal
+            periods, home visiting can prevent problems that necessitate costly
+            intervention and services.
+          </p>
+        </div>
+      </div>
+      <!-- end accordion -->
+    </div>
+    <Footer />
+  </div>
+</Layout>
