@@ -1,0 +1,94 @@
+---
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Layout from "@/layouts/Layout.astro";
+import Accordion from "@/components/Accordion.astro";
+// TODO: Refactor accordion to use a component
+
+const accItemsRes = [
+  {
+    togglerTitle: "How are data collected and managed?",
+    togglerContent:
+      "Program data are collected through standardized forms and validated instruments. " +
+      "All data are entered into the <a href='/mis'>Management Information System (MIS)</a>. " +
+      "This web-based system securely maintains information and provides evaluation data, " +
+      "and descriptive reports to assist in performance monitoring, program administration, " +
+      "and management of caseloads.",
+  },
+  {
+    togglerTitle: "How does HFNY maintain service quality?",
+    togglerContent:
+      "Each HFNY program enters data into the Management Information System (MIS). The data " +
+      "allows Healthy Families New York to track a programs' progress in meeting performance " +
+      "targets related to the goals of Healthy Families New York. Reports are generated from " +
+      "the MIS and are examined to assess performance. This information is also used to " +
+      "<a href='/research/cqi'>determine areas for improvement and further study</a>.",
+  },
+  {
+    togglerTitle: "What are the outcomes of the Randomized Control Trial?",
+    togglerContent:
+      "The <a href='/research/rct'>RCT</a> began in 2000 with 1,173 women&nbsp;in the " +
+      "Healthy Families New York and control groups. Data were collected at the time of " +
+      "the child's birth and at the first, second, third, and seventh birthdays (with " +
+      " various levels of retention); a 15-year follow-up study is currently underway. " +
+      "The RCT has demonstrated that Healthy Families New York is effective in areas " +
+      "including birth outcomes and child health, educational outcomes, child abuse " +
+      "and neglect, and parenting competencies.",
+  },
+  {
+    togglerTitle: "How is research translated into practice?",
+    togglerContent:
+      "Researchers, administrators, and practitioners work together to develop studies " +
+      "designed to improve program practice. We have conducted studies designed to " +
+      "improve early prenatal enrollment, rates of breastfeeding, and father involvement. " +
+      "For more information about these and other studies, please see our " +
+      "<a href='/research/researchtopractice'>Research to Practice</a> portfolio.",
+  },
+  {
+    togglerTitle: "Where can I find reports of evaluation findings?",
+    togglerContent:
+      "Findings from our research have been published in fact sheets, briefs, reports, " +
+      "and journal articles. Please see our <a href='/research/publications'>Publications</a> " +
+      "page for a full list of our work.",
+  },
+];
+---
+
+<Layout title="Researchers">
+  <Header />
+  <div id="content">
+    <div id="col-2-full-width">
+      <div id="text-area">
+        <h1 class="heading">Researchers</h1>
+
+        <p>
+          Evaluation in Healthy Families New York takes two primary forms:
+          continuous quality improvement (CQI) through the monitoring of
+          performance measures and other planned improvement activities, and a
+          longitudinal randomized control trial (RCT) begun in 2000. As a result
+          of the evaluation's rigorous random assignment design and the
+          program's significant and positive effects on a range of outcomes,
+          Healthy Families New York is considered an evidence-based program.
+        </p>
+
+        <p class="instructions">
+          Click on the questions below or <a class="button" id="expandAll"
+            >Expand All</a
+          >
+          <a class="button" id="collapseAll" style="display:none;"
+            >Collapse All</a
+          >
+        </p>
+
+        <img
+          src="/images/research-discussion.png"
+          alt="Researchers in discussion"
+          class="float-right"
+        />
+      </div>
+
+      <Accordion accItems={accItemsRes} />
+    </div>
+    <Footer />
+  </div>
+</Layout>
