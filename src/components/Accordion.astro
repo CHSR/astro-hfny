@@ -29,6 +29,55 @@ const { accItems } = Astro.props;
   type="text/javascript"
   src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script type="text/javascript" src="../js/accordion.js"></script>
+
+<!-- Experimental styles 
+ // TODO: Revisit the accordion experimental styles
+
+<style>
+  /* Accordion container */
+  #accordion {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  /* Accordion toggle (header) */
+  .accordion-toggle {
+    background-color: #f7f7f7;
+    color: #333;
+    cursor: pointer;
+    padding: 1px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+  }
+
+  .accordion-toggle:hover {
+    background-color: #eaeaea;
+  }
+
+  /* Accordion content */
+  .accordion-content {
+    display: none; /* Hidden by default */
+    padding: 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 1rem;
+    color: #555;
+  }
+
+  /* Active toggle */
+  .accordion-toggle.active {
+    background-color: #eaeaea;
+  }
+
+  /* Last item styling */
+  #accordion .accordion-content:last-child {
+    border-bottom: none;
+  }
+</style> -->
+
 <style>
   /* accordion styles ===================== */
   .accordion-toggle {
