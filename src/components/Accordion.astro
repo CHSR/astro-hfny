@@ -4,6 +4,9 @@ interface AccordionItems {
   togglerContent: string;
 }
 
+export interface Props {
+  accItems: AccordionItems[];
+}
 const { accItems } = Astro.props;
 ---
 
@@ -11,7 +14,9 @@ const { accItems } = Astro.props;
   {
     accItems.map((item: AccordionItems) => (
       <div class="accordion-item">
-        <h2 class="accordion-toggle">{item.togglerTitle}</h2>
+        <h2 class="accordion-toggle">
+          <p set:html={item.togglerTitle} />
+        </h2>
         <div class="accordion-content">
           <p set:html={item.togglerContent} />
         </div>
