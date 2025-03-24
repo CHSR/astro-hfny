@@ -2,7 +2,117 @@
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Layout from "@/layouts/Layout.astro";
-// TODO: Refactor accordion to use a component
+import Accordion from "@/components/Accordion.astro";
+
+// Accordion data
+const accItemsPro = [
+  {
+    togglerTitle: "What is Healthy Families New York?",
+    togglerContent: `
+      <p>
+        Healthy Families New York, a Healthy Families America accredited
+        home visiting program, seeks to improve the health and well-being
+        of infants and children through home-based services delivered by
+        non-profit organizations in local communities. The program was
+        established in 1995 by the New York State Office of Children and
+        Family Services. It is an evidence-based voluntary home visiting
+        model designed to provide services to families that begin
+        prenatally, or at birth, through age five.
+      </p>
+      <p>
+        <a href="/about">
+          <em>Learn more about our program</em>
+        </a>
+      </p>
+    `,
+  },
+  {
+    togglerTitle: "What kinds of services are offered?",
+    togglerContent: `
+      <p>
+        Our assessment service helps families identify the successes and
+        stressors that are unique to their family. After the assessment,
+        they are provided personalized referrals that meet their family’s
+        needs and goals. Additional services may include: providing
+        information about parenting, infant and child development, and
+        child health; connecting families with medical providers for
+        prenatal/well-baby visits and immunizations; assessing children
+        for developmental delays; and helping families access community
+        referral resources and services.
+      </p>
+      <p>
+        <a href="/homevisits/process">
+          <em>Learn more about our services</em>
+        </a>
+      </p>
+    `,
+  },
+  {
+    togglerTitle: "Who is eligible for the program?",
+    togglerContent: `
+      <p>
+        Parents who are pregnant or have at least one child less than
+        three months of age are eligible to be screened for services. For
+        additional eligibility criteria, please contact an
+        <a href="/maps">HFNY program</a> in your area.
+      </p>
+      <p>
+        <h3>Child Welfare Protocol</h3>
+        Several HFNY programs offer extended eligibility for families referred
+        from child welfare agencies. Programs offering the Healthy Families
+        America Child Welfare Protocol can offer services to families who are
+        pregnant or have at least one child under 24 months of age when the
+        referral comes directly from child welfare. Families DO NOT have to
+        have an open investigation or preventive services case to be referred.
+        Please see the image below to see which counties are currently being
+        offered the Child Welfare Protocol.
+      </p>
+      <p>
+        <img
+          src="/images/HFNY programs 03.23.png"
+          alt="Child Welfare Protocol Eligibility Map"
+        />
+      </p>
+    `,
+  },
+  {
+    togglerTitle: "Why should I refer expectant and new parents?",
+    togglerContent: `
+      <p>
+        Home visitors can inform expectant and new parents about the
+        benefits of prenatal care and well-baby visits, and assist them in
+        making and keeping appointments. They can answer questions about
+        child development and help parents maintain a safe and supportive
+        environment for their family. Research from a randomized
+        controlled trial shows that Healthy Families New York works for a
+        diverse array of families, including first-time teen parents and
+        those who have had experience with the child welfare system.
+        Specifically, research shows that Healthy Families New York:
+        <ul>
+          <li>Improves birth outcomes</li>
+          <li>Promotes success in school</li>
+          <li>Prevents child abuse and neglect</li>
+          <li>Supports positive parenting</li>
+          <li>Saves money</li>
+        </ul>
+      </p>
+      <p>
+        <a href="/research">Learn more about the benefits of HFNY</a>
+      </p>
+    `,
+  },
+  {
+    togglerTitle: "How do I make a referral?",
+    togglerContent: `
+      <p>
+        Referring is easy!
+        <a href="/maps">
+          <em>Find a Healthy Families New York program in your area.</em>
+        </a>
+      </p>
+    `,
+  },
+];
 ---
 
 <Layout title="Providers & Referral Sources">
@@ -34,121 +144,17 @@ import Layout from "@/layouts/Layout.astro";
           <table summary="image with caption">
             <caption></caption>
             <tr>
-              <td
-                ><img
+              <td>
+                <img
                   src="/images/referral-provider.png"
                   alt="Referral provider"
-                /></td
-              >
+                />
+              </td>
             </tr>
           </table>
-        </div><!-- end image with caption -->
-
-        <div id="accordion">
-          <h2 class="accordion-toggle">What is Healthy Families New York?</h2>
-          <div class="accordion-content">
-            <p>
-              Healthy Families New York, a Healthy Families America accredited
-              home visiting program, seeks to improve the health and well-being
-              of infants and children through home-based services delivered by
-              non-profit organizations in local communities. The program was
-              established in 1995 by the New York State Office of Children and
-              Family Services. It is an evidence-based voluntary home visiting
-              model designed to provide services to families that begin
-              prenatally, or at birth, through age five.
-            </p>
-            <p>
-              <a href="/about">
-                <em>Learn more about our program</em>
-              </a>
-            </p>
-          </div>
-
-          <h2 class="accordion-toggle">What kinds of services are offered?</h2>
-          <div class="accordion-content">
-            <p>
-              Our assessment service helps families identify the successes and
-              stressors that are unique to their family. After the assessment,
-              they are provided personalized referrals that meet their family’s
-              needs and goals. Additional services may include: providing
-              information about parenting, infant and child development, and
-              child health; connecting families with medical providers for
-              prenatal/well-baby visits and immunizations; assessing children
-              for developmental delays; and helping families access community
-              referral resources and services.
-            </p>
-            <p>
-              <a href="/homevisits/process"
-                ><em>Learn more about our services</em></a
-              >
-            </p>
-          </div>
-
-          <h2 class="accordion-toggle">Who is eligible for the program?</h2>
-          <div class="accordion-content">
-            <p>
-              Parents who are pregnant or have at least one child less than
-              three months of age are eligible to be screened for services. For
-              additional eligibility criteria, please contact an
-              <a href="/maps">HFNY program</a> in your area.
-            </p>
-            <p>
-              <h3>Child Welfare Protocol</h3>
-              Several HFNY programs offer extended eligibility for families referred
-              from child welfare agencies. Programs offering the Healthy Families
-              America Child Welfare Protocol can offer services to families who are
-              pregnant or have at least one child under 24 months of age when the
-              referral comes directly from child welfare. Families DO NOT have to
-              have an open investigation or preventive services case to be referred.
-              Please see the image below to see which counties are currently being
-              offered the Child Welfare Protocol
-            </p>
-            <p>
-              <img
-                src="/images/HFNY programs 03.23.png"
-                alt="Child Welfare Protocol Eligibility Map"
-              />
-            </p>
-          </div>
-
-          <h2 class="accordion-toggle">
-            Why should I refer expectant and new parents?
-          </h2>
-          <div class="accordion-content">
-            <p>
-              Home visitors can inform expectant and new parents about the
-              benefits of prenatal care and well-baby visits, and assist them in
-              making and keeping appointments. They can answer questions about
-              child development and help parents maintain a safe and supportive
-              environment for their family. Research from a randomized
-              controlled trial shows that Healthy Families New York works for a
-              diverse array of families, including first-time teen parents and
-              those who have had experience with the child welfare system.
-              Specifically, research shows that Healthy Families New York:
-              <ul>
-                <li>Improves birth outcomes</li>
-                <li>Promotes success in school</li>
-                <li>Prevents child abuse and neglect</li>
-                <li>Supports positive parenting</li>
-                <li>Saves money</li>
-              </ul>
-            </p>
-            <p>
-              <a href="/research">Learn more about the benefits of HFNY</a>
-            </p>
-          </div>
-
-          <h2 class="accordion-toggle">How do I make a referral?</h2>
-          <div class="accordion-content">
-            <p>
-              Referring is easy!
-              <a href="/maps">
-                <em>Find a Healthy Families New York program in your area.</em>
-              </a>
-            </p>
-          </div>
         </div>
-        <!-- end accordion -->
+
+        <Accordion accItems={accItemsPro} />
       </div>
     </div>
     <Footer />

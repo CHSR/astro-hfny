@@ -2,7 +2,115 @@
 import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Layout from "@/layouts/Layout.astro";
-// TODO: Refactor accordion to use a component
+import Accordion from "@/components/Accordion.astro";
+
+const accItemsFam = [
+  {
+    togglerTitle: `<a href="javascript:ReplaceImage('image-swap','/images/family-01.png')">
+                        What is Healthy Families New York?
+                      </a>
+                    `,
+    togglerContent: `<p>
+                        Healthy Families New York is a program to help parents with the
+                        changes and needs of their family that come along with the birth
+                        of a new child. HFNY offers services to expecting parents and new
+                        families, beginning weekly and decreasing over time, until the
+                        child starts school or Head Start. Services are available in
+                        English and other languages, depending on the program serving each
+                        community.
+                      </p>
+                      <p>
+                        <a href="/about">
+                          <em>Learn more about our program</em>
+                        </a>
+                      </p>
+                    `,
+  },
+  {
+    togglerTitle: `<a href="javascript:ReplaceImage('image-swap','/images/family-02.png')">
+                        What kinds of services are offered?
+                      </a>
+                    `,
+    togglerContent: `<p>
+                        Our assessment service helps you identify the successes and
+                        stressors that are unique to your family. After the assessment,
+                        you are provided personalized referrals that meet your
+                        family&rsquo;s needs and goals.
+                      </p>
+                      <p>
+                        Additional services may include: providing information about
+                        parenting, infant and child development, and child health;
+                        connecting you with medical providers for prenatal/well-baby
+                        visits and immunizations; assessing your child for developmental
+                        delays; and helping you to access community referral resources and
+                        services (such as job training, legal services, GED preparation
+                        classes, and more!).
+                      </p>
+                      <p>
+                        <a href="/homevisits/process"
+                          ><em>Learn more about our services</em></a
+                        >
+                      </p>
+                    `,
+  },
+  {
+    togglerTitle: `<a href="javascript:ReplaceImage('image-swap','/images/family-03.png')">
+                      Is there a cost for services?
+                    </a>
+                  `,
+    togglerContent: `<p>There is no cost to you. The program is a community service.</p>`,
+  },
+  {
+    togglerTitle: `<a href="javascript:ReplaceImage('image-swap','/images/family-04.png')">
+                      Who can benefit from the program?
+                    </a>
+                  `,
+    togglerContent: `<p>
+                        Parents who are pregnant or have at least one child who is less
+                        than three months of age, are encouraged to find out more about
+                        our services. Please contact your
+                        <a href="/maps">
+                          local HFNY program
+                        </a>
+                        if you would like more information or have questions.
+                      </p>
+                      `,
+  },
+  {
+    togglerTitle: `<a href="javascript:ReplaceImage('image-swap','/images/family-05.png')">
+                      Why should I sign up for this program?
+                    </a>
+                  `,
+    togglerContent: `<p>
+                        Healthy Families New York can benefit your child and family by
+                        improving birth outcomes, promoting later success in school, and
+                        supporting positive parenting. We provide educational books,
+                        videos, and toys. We will assist you in using them in fun
+                        activities that nurture the parent/child relationship and aid your
+                        baby&rsquo;s development.
+                      </p>
+                      <p>
+                        <a href="/homevisits/eligibility"
+                          ><em>Learn more about what our program offers</em></a
+                        >
+                      </p>
+                    `,
+  },
+  {
+    togglerTitle: `<a href="javascript:ReplaceImage('image-swap','/images/family-06.png')">
+                      How do I sign up for the program?
+                    </a>
+                  `,
+    togglerContent: `<p>
+                        Signing up is easy!
+                        <a href="/maps"
+                          ><em>Find a Healthy Families New York program near you</em></a
+                        >
+                      </p>`,
+  },
+];
+
+// console.log(accItemsFam);
 ---
 
 <Layout title="Families">
@@ -33,124 +141,10 @@ import Layout from "@/layouts/Layout.astro";
           <img src="/images/family-01.png" alt="asian family" />
         </div>
 
-        <div id="accordion">
-          <h2 class="accordion-toggle">
-            <a
-              href="javascript:ReplaceImage('image-swap','images/family-01.png')"
-              >What is Healthy Families New York?</a
-            >
-          </h2>
-          <div class="accordion-content">
-            <p>
-              Healthy Families New York is a program to help parents with the
-              changes and needs of their family that come along with the birth
-              of a new child. HFNY offers services to expecting parents and new
-              families, beginning weekly and decreasing over time, until the
-              child starts school or Head Start. Services are available in
-              English and other languages, depending on the program serving each
-              community.
-            </p>
-            <p>
-              <a href="/about">
-                <em>Learn more about our program</em>
-              </a>
-            </p>
-          </div>
-
-          <h2 class="accordion-toggle">
-            <a
-              href="javascript:ReplaceImage('image-swap','images/family-02.png')"
-              >What kinds of services are offered?</a
-            >
-          </h2>
-          <div class="accordion-content">
-            <p>
-              Our assessment service helps you identify the successes and
-              stressors that are unique to your family. After the assessment,
-              you are provided personalized referrals that meet your
-              family&rsquo;s needs and goals.
-            </p>
-            <p>
-              Additional services may include: providing information about
-              parenting, infant and child development, and child health;
-              connecting you with medical providers for prenatal/well-baby
-              visits and immunizations; assessing your child for developmental
-              delays; and helping you to access community referral resources and
-              services (such as job training, legal services, GED preparation
-              classes, and more!).
-            </p>
-            <p>
-              <a href="HomeVisits/process.htm"
-                ><em>Learn more about our services</em></a
-              >
-            </p>
-          </div>
-
-          <h2 class="accordion-toggle">
-            <a
-              href="javascript:ReplaceImage('image-swap','images/family-03.png')"
-              >Is there a cost for services?</a
-            >
-          </h2>
-          <div class="accordion-content">
-            <p>There is no cost to you. The program is a community service.</p>
-          </div>
-
-          <h2 class="accordion-toggle">
-            <a
-              href="javascript:ReplaceImage('image-swap','images/family-04.png')"
-              >Who can benefit from the program?</a
-            >
-          </h2>
-          <div class="accordion-content">
-            <p>
-              Parents who are pregnant or have at least one child who is less
-              than three months of age, are encouraged to find out more about
-              our services. Please contact your <a href="sites2.htm"
-                >local HFNY program</a
-              > if you would like more information or have questions.
-            </p>
-          </div>
-
-          <h2 class="accordion-toggle">
-            <a
-              href="javascript:ReplaceImage('image-swap','images/family-05.png')"
-              >Why should I sign up for this program?</a
-            >
-          </h2>
-          <div class="accordion-content">
-            <p>
-              Healthy Families New York can benefit your child and family by
-              improving birth outcomes, promoting later success in school, and
-              supporting positive parenting. We provide educational books,
-              videos, and toys. We will assist you in using them in fun
-              activities that nurture the parent/child relationship and aid your
-              baby&rsquo;s development.
-            </p>
-            <p>
-              <a href="HomeVisits/eligibility.htm"
-                ><em>Learn more about what our program offers</em></a
-              >
-            </p>
-          </div>
-
-          <h2 class="accordion-toggle">
-            <a
-              href="javascript:ReplaceImage('image-swap','images/family-06.png')"
-              >How do I sign up for the program?</a
-            >
-          </h2>
-          <div class="accordion-content">
-            <p>
-              Signing up is easy! <a href="sites2.htm"
-                ><em>Find a Healthy Families New York program near you</em></a
-              >
-            </p>
-          </div>
-        </div>
-        <!-- end accordion -->
+        <Accordion accItems={accItemsFam} />
       </div>
     </div>
     <Footer />
   </div>
 </Layout>
+<script type="text/javascript" src="/js/replaceimage.js"></script>
