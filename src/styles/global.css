@@ -402,6 +402,10 @@ img {
   color: #a43e97;
 }
 
+#text-area h2 a {
+  color: #a43e97;
+}
+
 #text-area h1.heading {
   border-bottom: 2px solid #00919f;
   padding-bottom: 0.17em;
