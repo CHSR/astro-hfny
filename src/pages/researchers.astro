@@ -3,7 +3,6 @@ import Header from "@/components/Header.astro";
 import Footer from "@/components/Footer.astro";
 import Layout from "@/layouts/Layout.astro";
 import Accordion from "@/components/Accordion.astro";
-// TODO: Refactor accordion to use a component
 
 const accItemsRes = [
   {
@@ -85,9 +84,9 @@ const accItemsRes = [
           alt="Researchers in discussion"
           class="float-right"
         />
-      </div>
 
-      <Accordion accItems={accItemsRes} />
+        <Accordion accItems={accItemsRes} />
+      </div>
     </div>
     <Footer />
   </div>
