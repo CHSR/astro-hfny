@@ -6,11 +6,15 @@ interface AccordionItems {
 
 export interface Props {
   accItems: AccordionItems[];
+  id?: string; // Optional ID for the accordion
 }
-const { accItems } = Astro.props;
+const {
+  accItems,
+  id = `accordion-${Math.random().toString(36).substr(2, 9)}`,
+} = Astro.props;
 ---
 
-<div id="accordion">
+<div id={id} class="accordion">
   {
     accItems.map((item: AccordionItems) => (
       <div class="accordion-item">
