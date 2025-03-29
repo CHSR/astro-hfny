@@ -1,5 +1,123 @@
 ---
+import Accordion from "@/components/Accordion.astro";
 import AboutLayout from "@/layouts/AboutLayout.astro";
+
+const accItemsInit = [
+  {
+    togglerTitle: `10 programs
+                    `,
+    togglerContent: `<table>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Albany</li>
+                    <li>Chemung</li>
+                    <li>Buffalo</li>
+                    <li>Madison</li>
+                    <li>Rensselaer</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Steuben</li>
+                    <li>Ulster</li>
+                    <li>CAMBA - Flatbush</li>
+                    <li>Best Beginnings of Washington Heights</li>
+                    <li>Bronx Perinatal</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+            `,
+  },
+];
+
+const accItemsStage2 = [
+  {
+    togglerTitle: `Expansion to 17 new communities`,
+    togglerContent: `<table>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Bedford Stuyvesant</li>
+                    <li>Broome</li>
+                    <li>Allegany-Cattaraugus</li>
+                    <li>Dutchess</li>
+                    <li>Niagara</li>
+                    <li>Oneida</li>
+                    <li>Ontario</li>
+                    <li>Newburgh</li>
+                    <li>Otsego</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Sullivan</li>
+                    <li>Westchester</li>
+                    <li>South Bronx</li>
+                    <li>Morris Heights</li>
+                    <li>Bushwick</li>
+                    <li>Central Harlem</li>
+                    <li>Queens</li>
+                    <li>Staten Island</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>`,
+  },
+];
+
+const accItemsStage3 = [
+  {
+    togglerTitle: `HFNY expansion adds 10 new sites`,
+    togglerContent: `<table>
+              <tr>
+                <td>
+                  <ul>
+                    <li>Delaware</li>
+                    <li>Herkimer</li>
+                    <li>Middletown</li>
+                    <li>Parkchester (Bronx)</li>
+                    <li>Brookdale (Brooklyn)</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>University Settlement(Manhattan)</li>
+                    <li>Tioga</li>
+                    <li>Suffolk</li>
+                    <li>Cayuga-Seneca</li>
+                    <li>Ontario</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>`,
+  },
+];
+
+const accItemsStage4 = [
+  {
+    togglerTitle: `4 Existing Sites`,
+    togglerContent: `<ul>
+              <li>Erie</li>
+              <li>Schenectady</li>
+              <li>Brookdale (Brooklyn)</li>
+              <li>Morris Heights (Bronx)</li>
+            </ul>`,
+  },
+];
+
+const accItemsStage5 = [
+  {
+    togglerTitle: `4 Existing Sites`,
+    togglerContent: `<ul>
+              <li>Dutchess</li>
+              <li>Schenectady</li>
+              <li>Brookdale (Brooklyn)</li>
+              <li>Morris Heights (Bronx)</li>
+            </ul>`,
+  },
+];
 ---
 
 <AboutLayout
@@ -9,7 +127,7 @@ import AboutLayout from "@/layouts/AboutLayout.astro";
 >
   <h1 class="heading">Timeline</h1>
 
-  <div class="date-list" id="accordion">
+  <div class="date-list">
     <dl>
       <dt>1994</dt>
       <dd class="disc">
@@ -22,31 +140,7 @@ import AboutLayout from "@/layouts/AboutLayout.astro";
       <dt>1995</dt>
       <dd class="disc">
         March 28th - official start date for original
-        <a class="accordion-toggle">10 programs</a>
-        <div class="accordion-content">
-          <table>
-            <tr>
-              <td>
-                <ul>
-                  <li>Albany</li>
-                  <li>Chemung</li>
-                  <li>Buffalo</li>
-                  <li>Madison</li>
-                  <li>Rensselaer</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>Steuben</li>
-                  <li>Ulster</li>
-                  <li>CAMBA - Flatbush</li>
-                  <li>Best Beginnings of Washington Heights</li>
-                  <li>Bronx Perinatal</li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
+        <Accordion accItems={accItemsInit} id="Init" />
       </dd>
       <dd class="disc">
         CHSR joins HFNY to support Evaluation and develop Management Information
@@ -100,38 +194,7 @@ import AboutLayout from "@/layouts/AboutLayout.astro";
     <dl>
       <dt>2001</dt>
       <dd class="disc">
-        Expansion to <a class="accordion-toggle">17 new communities</a>
-        <div class="accordion-content">
-          <table>
-            <tr>
-              <td>
-                <ul>
-                  <li>Bedford Stuyvesant</li>
-                  <li>Broome</li>
-                  <li>Allegany-Cattaraugus</li>
-                  <li>Dutchess</li>
-                  <li>Niagara</li>
-                  <li>Oneida</li>
-                  <li>Ontario</li>
-                  <li>Newburgh</li>
-                  <li>Otsego</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>Sullivan</li>
-                  <li>Westchester</li>
-                  <li>South Bronx</li>
-                  <li>Morris Heights</li>
-                  <li>Bushwick</li>
-                  <li>Central Harlem</li>
-                  <li>Queens</li>
-                  <li>Staten Island</li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
+        <Accordion accItems={accItemsStage2} id="Stage2" />
       </dd>
 
       <dd class="disc">
@@ -220,31 +283,7 @@ import AboutLayout from "@/layouts/AboutLayout.astro";
     <dl>
       <dt>2008</dt>
       <dd class="disc">
-        HFNY expansion adds <a class="accordion-toggle">10 new sites</a>
-        <div class="accordion-content">
-          <table>
-            <tr>
-              <td>
-                <ul>
-                  <li>Delaware</li>
-                  <li>Herkimer</li>
-                  <li>Middletown</li>
-                  <li>Parkchester (Bronx)</li>
-                  <li>Brookdale (Brooklyn)</li>
-                </ul>
-              </td>
-              <td>
-                <ul>
-                  <li>University Settlement(Manhattan)</li>
-                  <li>Tioga</li>
-                  <li>Suffolk</li>
-                  <li>Cayuga-Seneca</li>
-                  <li>Ontario</li>
-                </ul>
-              </td>
-            </tr>
-          </table>
-        </div>
+        <Accordion accItems={accItemsStage3} id="Stage3" />
       </dd>
       <dd class="disc">
         Suffolk enrolls 20,000th statewide HFNY participant on 6/26/08
@@ -309,15 +348,8 @@ import AboutLayout from "@/layouts/AboutLayout.astro";
       <dd class="disc">1st Fatherhood Summit</dd>
       <dd class="disc">
         Maternal Infant Early Childhood Home Visiting (MIECHV) federal funds
-        allow expansion of four <a class="accordion-toggle">existing sites</a>
-        <div class="accordion-content">
-          <ul>
-            <li>Erie</li>
-            <li>South Bronx</li>
-            <li>Morris Heights (Bronx)</li>
-            <li>Parkchester (Bronx)</li>
-          </ul>
-        </div>
+        allow expansion of four
+        <Accordion accItems={accItemsStage4} id="Stage4" />
       </dd>
     </dl>
     <dl>
@@ -353,17 +385,9 @@ import AboutLayout from "@/layouts/AboutLayout.astro";
     <dl>
       <dt>2015</dt>
       <dd class="disc">
-        MIECHV funds allow expansion of four <a class="accordion-toggle"
-          >existing sites</a
-        >, and the addition of one new HFNY program: Sunset Park (Brooklyn)
-        <div class="accordion-content">
-          <ul>
-            <li>Dutchess</li>
-            <li>Schenectady</li>
-            <li>Brookdale (Brooklyn)</li>
-            <li>Morris Heights (Bronx)</li>
-          </ul>
-        </div>
+        MIECHV funds allow expansion of
+        <Accordion accItems={accItemsStage5} id="Stage5" />
+        , and the addition of one new HFNY program: Sunset Park (Brooklyn)
       </dd>
       <dd class="disc">4th Fatherhood Summit</dd>
       <dd class="disc">HFNY celebrates 20th anniversary</dd>
@@ -467,32 +491,7 @@ import AboutLayout from "@/layouts/AboutLayout.astro";
   </div>
 </AboutLayout>
 
-<script
-  type="text/javascript"
-  src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script type="text/javascript" src="../js/accordion.js"></script>
 <style>
-  /* accordion styles ===================== */
-  .accordion-toggle {
-    color: #39c;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-  .accordion-content {
-    display: none;
-    padding-bottom: 0;
-  }
-  .accordion-content.default {
-    display: block;
-  }
-  .instructions {
-    background-image: url(../images/template_images/instructions-icon.png);
-    background-repeat: no-repeat;
-    position: left top;
-    color: #1d809c;
-    padding-left: 1.5em;
-  }
-
   /* Timeline dates */
   .date-list dl {
     display: inline-block;
