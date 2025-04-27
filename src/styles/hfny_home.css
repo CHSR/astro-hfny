@@ -33,7 +33,7 @@ html {
 
 body {
 	background-color: #fff;
-	background-image: url(../images/template_images/background_01.png);
+	background-image: url(/images/template_images/background_01.png);
 	background-position: left top;
 	background-repeat: repeat-x;
 	font-family: Arial, Helvetica, sans-serif;
@@ -131,7 +131,7 @@ img {
 }
 
 #main-nav li a.active {
-	background-image: url(../images/template_images/nav_indicator.png);
+	background-image: url(/images/template_images/nav_indicator.png);
 	background-repeat: no-repeat;
 	background-position: 50% bottom;
 }
@@ -167,7 +167,7 @@ img {
 }
 
 #user-nav li a.active {
-	background-image: url(../images/template_images/nav_indicator.png);
+	background-image: url(/images/template_images/nav_indicator.png);
 	background-repeat: no-repeat;
 	background-position: 50% bottom;
 }
@@ -250,7 +250,7 @@ img {
     cursor: pointer;
 	border: 0;
 	outline: 0;
-	background-image: url(../images/template_images/search_button.png);
+	background-image: url(/images/template_images/search_button.png);
 }
   
 /* ^^^^^^^^^^^^^^^ end search */
@@ -323,15 +323,15 @@ banner button styles
 }
 
 #ban-nav-01 {
-	background-image: url(../images/template_images/what_is_family_support_nt.png);
+	background-image: url(/images/template_images/what_is_family_support_nt.png);
 }
 
 #ban-nav-02 {
-	background-image: url(../images/template_images/am_I_eligible_nt.png);
+	background-image: url(/images/template_images/am_I_eligible_nt.png);
 }
 
 #ban-nav-03 {
-	background-image: url(../images/template_images/how_does_it_work_nt.png);
+	background-image: url(/images/template_images/how_does_it_work_nt.png);
 }
 
 /* =================================
@@ -467,23 +467,23 @@ audience navigation button styles
 }
 
 #aud-nav-01 {
-	background-image: url(../images/template_images/families_nt.png);
+	background-image: url(/images/template_images/families_nt.png);
 }
 
 #aud-nav-02 {
-	background-image: url(../images/template_images/providers_referrals_nt.png);
+	background-image: url(/images/template_images/providers_referrals_nt.png);
 }
 
 #aud-nav-03 {
-	background-image: url(../images/template_images/funders_sponsors_nt.png);
+	background-image: url(/images/template_images/funders_sponsors_nt.png);
 }
 
 #aud-nav-04 {
-	background-image: url(../images/template_images/researchers_nt.png);
+	background-image: url(/images/template_images/researchers_nt.png);
 }
 
 #aud-nav-05 {
-	background-image: url(../images/template_images/theLink_nt.png);
+	background-image: url(/images/template_images/theLink_nt.png);
 }
 
 /* =================================
@@ -575,7 +575,7 @@ footer styles
 	
 	#header {
 	clear: both;
-	background-image: url(../images/template_images/HFNY_logo_mobile_1.png);
+	background-image: url(/images/template_images/HFNY_logo_mobile_1.png);
 	background-repeat: no-repeat;
 	background-color: #00919f;
 	background-position: 50% top;
@@ -808,7 +808,7 @@ footer styles
 @media screen and (max-width: 250px) {
 	
 	#header {
-	background-image: url(../images/template_images/HFNY_logo_mobile.png);
+	background-image: url(/images/template_images/HFNY_logo_mobile.png);
 	min-height: 93px
 	}
 	
