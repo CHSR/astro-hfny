@@ -1,0 +1,85 @@
+---
+import ResearchLayout from "@/layouts/ResearchLayout.astro";
+import { db, Publication } from "astro:db";
+import Accordion from "@/components/Accordion.astro";
+
+const pubs = await db.select().from(Publication);
+const distinctCats = await db
+  .selectDistinct({ category: Publication.category })
+  .from(Publication);
+
+const accItems = distinctCats.map((cat) => {
+  const listItems = pubs
+    .filter((pub) => pub.category === cat.category)
+    .map((pub) => {
+      return `
+        <li>
+          <a href="${pub.fullPath}" target="_blank">${pub.title}</a>
+          ${
+            pub.additionalInfo
+              ? `<span class="small-text">${pub.additionalInfo}</span>`
+              : ""
+          }
+        </li>
+      `;
+    })
+    .join("");
+
+  return {
+    togglerTitle:
+      cat.category === "Journal"
+        ? "Journal Articles and Book Chapters"
+        : cat.category + "s",
+    togglerContent: `<ul class="link-list">${listItems}</ul>`,
+  };
+});
+---
+
+<ResearchLayout
+  title="Publications"
+  activeMainText="Research"
+  activeSubText="Publications"
+>
+  <main>
+    <h1 class="heading">Publications</h1>
+    <h3>Where can I get more information about HFNY&rsquo;s effectiveness?</h3>
+    <p class="instructions">
+      Click on the headings below or <a class="button" id="expandAll"
+        >Expand All</a
+      >
+      <a class="button" id="collapseAll" style="display:none;">Collapse All</a>
+    </p>
+    <Accordion accItems={accItems} />
+    <br />
+    <p>
+      Note: Some of the links above will take you away from the
+      healthyfamiliesnewyork.org site. Please see
+      <a href="/disclaimer">disclaimer.</a>
+    </p>
+  </main>
+
+  <style>
+    /* accordion styles */
+    .accordion-toggle {
+      color: #39c;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    .accordion-content {
+      display: none;
+      padding-bottom: 0;
+    }
+    .accordion-content.default {
+      display: block;
+    }
+    .instructions {
+      background-image: url(/images/template_images/instructions-icon.png);
+      background-repeat: no-repeat;
+      position: left top;
+      color: #1d809c;
+      padding-left: 1.5em;
+    }
+
+    /* Additional existing styles... */
+  </style>
+</ResearchLayout>
