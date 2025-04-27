@@ -3,8 +3,11 @@
 // Initialize accordion functionality
 function initAccordion(accordionId) {
   const $accordion = $(`#${accordionId}`);
-  
-  $accordion.find(".accordion-toggle").click(function () {
+
+  // Remove any existing event listeners to prevent duplicates
+  $accordion.find(".accordion-toggle").off("click").on("click", function (event) {
+    event.stopPropagation(); // Prevent event bubbling
+
     // Expand or collapse this panel
     $(this).next().slideToggle("fast");
 
@@ -15,13 +18,13 @@ function initAccordion(accordionId) {
 
 // Initialize expand/collapse functionality if buttons exist
 function initExpandCollapse(accordionId) {
-  $(`#expandAll-${accordionId}`).click(function () {
+  $(`#expandAll-${accordionId}`).off("click").on("click", function () {
     $(`#${accordionId} .accordion-content`).show();
     $(`#collapseAll-${accordionId}`).show();
     $(this).hide();
   });
 
-  $(`#collapseAll-${accordionId}`).click(function () {
+  $(`#collapseAll-${accordionId}`).off("click").on("click", function () {
     $(`#${accordionId} .accordion-content`).hide();
     $(this).hide();
     $(`#expandAll-${accordionId}`).show();

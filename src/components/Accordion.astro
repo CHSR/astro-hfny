@@ -8,31 +8,35 @@ export interface Props {
   accItems: AccordionItems[];
   id?: string; // Optional ID for the accordion
 }
-const {
-  accItems,
-  id = `accordion-${Math.random().toString(36).substr(2, 9)}`,
-} = Astro.props;
+const { accItems, id = `${Math.random().toString(36).substring(2, 9)}` } =
+  Astro.props;
+
+// const id = `{group}-${Math.random().toString(36).substring(2, 9)}`;
+// console.log("Accordion group:", group); // Log the group for debugging
+// console.log("Accordion ID:", id); // Log the ID for debugging
 ---
 
-<div id={id} class="accordion">
-  {
-    accItems.map((item: AccordionItems) => (
-      <div class="accordion-item">
-        <h2 class="accordion-toggle">
-          <p set:html={item.togglerTitle} />
-        </h2>
-        <div class="accordion-content">
-          <p set:html={item.togglerContent} />
+<>
+  <div id={id} class="accordion">
+    {
+      accItems.map((item: AccordionItems) => (
+        <div class="accordion-item">
+          <div class="accordion-toggle">
+            <p set:html={item.togglerTitle} />
+          </div>
+          <div class="accordion-content">
+            <p set:html={item.togglerContent} />
+          </div>
         </div>
-      </div>
-    ))
-  }
-</div>
+      ))
+    }
+  </div>
+</>
 
 <script
   type="text/javascript"
   src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<script type="text/javascript" src="../js/accordion.js"></script>
+<script type="text/javascript" src="../js/accordion.js" is:inline></script>
 
 <!-- Experimental styles 
  // TODO: Revisit the accordion experimental styles
@@ -81,7 +85,6 @@ const {
     border-bottom: none;
   }
 </style> -->
-
 <style>
   /* accordion styles ===================== */
   .accordion-toggle {
@@ -97,7 +100,7 @@ const {
     display: block;
   }
   .instructions {
-    background-image: url(../images/template_images/instructions-icon.png);
+    background-image: url(/images/template_images/instructions-icon.png);
     background-repeat: no-repeat;
     position: left top;
     color: #1d809c;
