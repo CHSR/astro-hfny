@@ -4,7 +4,7 @@ import AboutLayout from "@/layouts/AboutLayout.astro";
 
 const accItemsInit = [
   {
-    togglerTitle: `10 programs
+    togglerTitle: `March 28th - official start date for original 10 programs
                     `,
     togglerContent: `<table>
               <tr>
@@ -97,7 +97,8 @@ const accItemsStage3 = [
 
 const accItemsStage4 = [
   {
-    togglerTitle: `4 Existing Sites`,
+    togglerTitle: `Maternal Infant Early Childhood Home Visiting (MIECHV) federal funds
+        allow expansion of four existing sites`,
     togglerContent: `<ul>
               <li>Erie</li>
               <li>Schenectady</li>
@@ -109,7 +110,7 @@ const accItemsStage4 = [
 
 const accItemsStage5 = [
   {
-    togglerTitle: `4 Existing Sites`,
+    togglerTitle: `MIECHV funds allow expansion of four existing sites`,
     togglerContent: `<ul>
               <li>Dutchess</li>
               <li>Schenectady</li>
@@ -139,7 +140,6 @@ const accItemsStage5 = [
     <dl>
       <dt>1995</dt>
       <dd class="disc">
-        March 28th - official start date for original
         <Accordion accItems={accItemsInit} id="Init" />
       </dd>
       <dd class="disc">
@@ -347,8 +347,6 @@ const accItemsStage5 = [
       </dd>
       <dd class="disc">1st Fatherhood Summit</dd>
       <dd class="disc">
-        Maternal Infant Early Childhood Home Visiting (MIECHV) federal funds
-        allow expansion of four
         <Accordion accItems={accItemsStage4} id="Stage4" />
       </dd>
     </dl>
@@ -363,7 +361,7 @@ const accItemsStage5 = [
 
       <dd class="disc">2nd Fatherhood Summit</dd>
       <dd class="disc">
-        &ldquo;<a href="../Research/publications.htm"
+        &ldquo;<a href="/research/publications"
           >Effectiveness of home visiting as a strategy for promoting
           children&rsquo;s adjustment to school</a
         >&rdquo; published in the journal
@@ -385,9 +383,8 @@ const accItemsStage5 = [
     <dl>
       <dt>2015</dt>
       <dd class="disc">
-        MIECHV funds allow expansion of
         <Accordion accItems={accItemsStage5} id="Stage5" />
-        , and the addition of one new HFNY program: Sunset Park (Brooklyn)
+        and the addition of one new HFNY program: Sunset Park (Brooklyn)
       </dd>
       <dd class="disc">4th Fatherhood Summit</dd>
       <dd class="disc">HFNY celebrates 20th anniversary</dd>
@@ -519,7 +516,7 @@ const accItemsStage5 = [
 
   .disc {
     padding-left: 0.75em;
-    background-image: url(../images/template_images/black-bullet.png);
+    background-image: url(/images/template_images/black-bullet.png);
     background-repeat: no-repeat;
     background-position: 0px 10px;
   }
