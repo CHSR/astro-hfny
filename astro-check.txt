@@ -1,0 +1,285 @@
+
+> astro-hfny@0.0.1 astro C:\Users\jr286576\Documents\GitHub\astro-hfny
+> astro "check"
+
+05:13:52 [vite] Re-optimizing dependencies because vite config has changed
+05:13:52 [content] Syncing content
+05:13:52 [content] Synced content
+05:13:52 [types] Generated 143ms
+05:13:52 [check] Getting diagnostics for Astro files in C:\Users\jr286576\Documents\GitHub\astro-hfny...
+[96mdb/config.ts[0m:[93m24[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'PublicationAuthor' is declared but its value is never read.
+
+[7m24[0m const PublicationAuthor = defineTable({
+[7m  [0m [93m      ~~~~~~~~~~~~~~~~~[0m
+[96mdb/config.ts[0m:[93m15[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'Author' is declared but its value is never read.
+
+[7m15[0m const Author = defineTable({
+[7m  [0m [93m      ~~~~~~[0m
+
+[96mpublic/js/fittext.js[0m:[93m12[0m:[93m7[0m - [93mwarning[0m[90m ts(6133): [0m'css' is declared but its value is never read.
+
+[7m12[0m   var css = function (el, prop) {
+[7m  [0m [93m      ~~~[0m
+
+[96msrc/components/Accordion.astro[0m:[93m37[0m:[93m3[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m37[0m   type="text/javascript"
+[7m  [0m [93m  ~~~~[0m
+
+[96msrc/components/GoogleMap.astro[0m:[93m1907[0m:[93m9[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m1907[0m         async
+[7m    [0m [93m        ~~~~~[0m
+
+[96msrc/pages/families.astro[0m:[93m148[0m:[93m9[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m148[0m <script type="text/javascript" src="/js/replaceimage.js"></script>
+[7m   [0m [93m        ~~~~[0m
+
+[96msrc/pages/funders.astro[0m:[93m163[0m:[93m9[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m163[0m <script type="text/javascript" src="/js/replaceimage.js"></script>
+[7m   [0m [93m        ~~~~[0m
+
+[96msrc/pages/jobs.astro[0m:[93m284[0m:[93m60[0m - [93mwarning[0m[90m ts(6133): [0m'iDisplayIndexFull' is declared but its value is never read.
+
+[7m284[0m         rowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+[7m   [0m [93m                                                           ~~~~~~~~~~~~~~~~~[0m
+[96msrc/pages/jobs.astro[0m:[93m284[0m:[93m45[0m - [93mwarning[0m[90m ts(6133): [0m'iDisplayIndex' is declared but its value is never read.
+
+[7m284[0m         rowCallback: function (nRow, aData, iDisplayIndex, iDisplayIndexFull) {
+[7m   [0m [93m                                            ~~~~~~~~~~~~~[0m
+[96msrc/pages/jobs.astro[0m:[93m271[0m:[93m11[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m271[0m   <script type="text/javascript">
+[7m   [0m [93m          ~~~~[0m
+[96msrc/pages/jobs.astro[0m:[93m268[0m:[93m5[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m268[0m     type="text/javascript"
+[7m   [0m [93m    ~~~~[0m
+[96msrc/pages/jobs.astro[0m:[93m263[0m:[93m5[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m263[0m     type="text/javascript"
+[7m   [0m [93m    ~~~~[0m
+
+[96msrc/pages/sites.astro[0m:[93m64[0m:[93m12[0m - [93mwarning[0m[90m ts(6133): [0m'initMap' is declared but its value is never read.
+
+[7m64[0m   function initMap() {
+[7m  [0m [93m           ~~~~~~~[0m
+[96msrc/pages/sites.astro[0m:[93m30[0m:[93m36[0m - [93mwarning[0m[90m ts(6133): [0m'$' is declared but its value is never read.
+
+[7m30[0m   jQuery(document).ready(function ($) {
+[7m  [0m [93m                                   ~[0m
+[96msrc/pages/sites.astro[0m:[93m1848[0m:[93m3[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m1848[0m   defer
+[7m    [0m [93m  ~~~~~[0m
+[96msrc/pages/sites.astro[0m:[93m26[0m:[93m3[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m26[0m   async
+[7m  [0m [93m  ~~~~~[0m
+[96msrc/pages/sites.astro[0m:[93m22[0m:[93m3[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m22[0m   type="text/javascript"
+[7m  [0m [93m  ~~~~[0m
+
+[96msrc/pages/about/administration.astro[0m:[93m92[0m:[93m7[0m - [91merror[0m[90m ts(2322): [0mType '{ children: string; align: string; }' is not assignable to type 'HTMLAttributes'.
+  Property 'align' does not exist on type 'HTMLAttributes'.
+
+[7m92[0m   <h2 align="center">HFNY Central Administration</h2>
+[7m  [0m [91m      ~~~~~[0m
+
+[96msrc/pages/homevisits/quotes.astro[0m:[93m63[0m:[93m27[0m - [91merror[0m[90m ts(2322): [0mType '{ children: any; href: string; float: string; }' is not assignable to type 'AnchorHTMLAttributes'.
+  Property 'float' does not exist on type 'AnchorHTMLAttributes'.
+
+[7m63[0m         <a href="../maps" float="right"
+[7m  [0m [91m                          ~~~~~[0m
+[96msrc/pages/homevisits/quotes.astro[0m:[93m60[0m:[93m65[0m - [91merror[0m[90m ts(2322): [0mType '{ children: string; href: string; target: "_blank"; float: string; }' is not assignable to type 'AnchorHTMLAttributes'.
+  Property 'float' does not exist on type 'AnchorHTMLAttributes'.
+
+[7m60[0m         <a href="../Documents/HFNYSiteInfo.pdf" target="_blank" float="right">
+[7m  [0m [91m                                                                ~~~~~[0m
+
+[96msrc/pages/network/index.astro[0m:[93m17[0m:[93m5[0m - [91merror[0m[90m ts(2322): [0mType '{ children: any[]; action: string; method: string; enctype: string; onSubmit: string; }' is not assignable to type 'FormHTMLAttributes'.
+  Property 'onSubmit' does not exist on type 'FormHTMLAttributes'. Did you mean 'onsubmit'?
+
+[7m17[0m     onSubmit="return checkPassword()"
+[7m  [0m [91m    ~~~~~~~~[0m
+[96msrc/pages/network/index.astro[0m:[93m58[0m:[93m14[0m - [93mwarning[0m[90m ts(6133): [0m'checkPassword' is declared but its value is never read.
+
+[7m58[0m     function checkPassword() {
+[7m  [0m [93m             ~~~~~~~~~~~~~[0m
+[96msrc/pages/network/index.astro[0m:[93m38[0m:[93m11[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m38[0m   <script type="text/javascript">
+[7m  [0m [93m          ~~~~[0m
+[96msrc/pages/network/index.astro[0m:[93m33[0m:[93m5[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m33[0m     type="text/javascript"
+[7m  [0m [93m    ~~~~[0m
+
+[96msrc/pages/network/landing.astro[0m:[93m218[0m:[93m11[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m218[0m   <script type="text/javascript">
+[7m   [0m [93m          ~~~~[0m
+[96msrc/pages/network/landing.astro[0m:[93m205[0m:[93m5[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m205[0m     type="text/javascript"
+[7m   [0m [93m    ~~~~[0m
+[96msrc/pages/network/landing.astro[0m:[93m200[0m:[93m5[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m200[0m     type="text/javascript"
+[7m   [0m [93m    ~~~~[0m
+
+[96msrc/pages/network/login.astro[0m:[93m17[0m:[93m5[0m - [91merror[0m[90m ts(2322): [0mType '{ children: any[]; action: string; method: string; enctype: string; onSubmit: string; }' is not assignable to type 'FormHTMLAttributes'.
+  Property 'onSubmit' does not exist on type 'FormHTMLAttributes'. Did you mean 'onsubmit'?
+
+[7m17[0m     onSubmit="return checkPassword()"
+[7m  [0m [91m    ~~~~~~~~[0m
+[96msrc/pages/network/login.astro[0m:[93m58[0m:[93m14[0m - [93mwarning[0m[90m ts(6133): [0m'checkPassword' is declared but its value is never read.
+
+[7m58[0m     function checkPassword() {
+[7m  [0m [93m             ~~~~~~~~~~~~~[0m
+[96msrc/pages/network/login.astro[0m:[93m38[0m:[93m11[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m38[0m   <script type="text/javascript">
+[7m  [0m [93m          ~~~~[0m
+[96msrc/pages/network/login.astro[0m:[93m33[0m:[93m5[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m33[0m     type="text/javascript"
+[7m  [0m [93m    ~~~~[0m
+
+[96msrc/pages/network/workerroles/frs-accordion.astro[0m:[93m118[0m:[93m7[0m - [91merror[0m[90m ts(18047): [0m'expandAllBtn' is possibly 'null'.
+
+[7m118[0m       expandAllBtn.style.display = "inline-block";
+[7m   [0m [91m      ~~~~~~~~~~~~[0m
+[96msrc/pages/network/workerroles/frs-accordion.astro[0m:[93m116[0m:[93m17[0m - [91merror[0m[90m ts(2339): [0mProperty 'style' does not exist on type 'Element'.
+
+[7m116[0m         content.style.display = "none";
+[7m   [0m [91m                ~~~~~[0m
+[96msrc/pages/network/workerroles/frs-accordion.astro[0m:[93m110[0m:[93m7[0m - [91merror[0m[90m ts(18047): [0m'collapseAllBtn' is possibly 'null'.
+
+[7m110[0m       collapseAllBtn.style.display = "inline-block";
+[7m   [0m [91m      ~~~~~~~~~~~~~~[0m
+[96msrc/pages/network/workerroles/frs-accordion.astro[0m:[93m107[0m:[93m17[0m - [91merror[0m[90m ts(2339): [0mProperty 'style' does not exist on type 'Element'.
+
+[7m107[0m         content.style.display = "block";
+[7m   [0m [91m                ~~~~~[0m
+
+[96msrc/pages/network/workerroles/frs.astro[0m:[93m4[0m:[93m8[0m - [91merror[0m[90m ts(2300): [0mDuplicate identifier 'AccordionInstructions'.
+
+[7m4[0m import AccordionInstructions from "@/components/AccordionInstructions.astro";
+[7m [0m [91m       ~~~~~~~~~~~~~~~~~~~~~[0m
+[96msrc/pages/network/workerroles/frs.astro[0m:[93m3[0m:[93m8[0m - [91merror[0m[90m ts(2300): [0mDuplicate identifier 'AccordionInstructions'.
+
+[7m3[0m import AccordionInstructions from "@/components/AccordionInstructions.astro";
+[7m [0m [91m       ~~~~~~~~~~~~~~~~~~~~~[0m
+
+[96msrc/pages/research/publications.astro[0m:[93m81[0m:[93m11[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m81[0m   <script type="text/javascript" src="../js/accordion.js"></script>
+[7m  [0m [93m          ~~~~[0m
+[96msrc/pages/research/publications.astro[0m:[93m78[0m:[93m5[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m78[0m     type="text/javascript"
+[7m  [0m [93m    ~~~~[0m
+
+[96msrc/pages/resources/financial.astro[0m:[93m113[0m:[93m11[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m113[0m   <script type="text/javascript" src="../js/accordion.js"></script>
+[7m   [0m [93m          ~~~~[0m
+[96msrc/pages/resources/financial.astro[0m:[93m110[0m:[93m5[0m - [93mwarning[0m[90m astro(4000): [0mThis script will be treated as if it has the `is:inline` directive because it contains an attribute. Therefore, features that require processing (e.g. using TypeScript or npm packages in the script) are unavailable.
+
+See docs for more details: https://docs.astro.build/en/guides/client-side-scripts/#script-processing.
+
+Add the `is:inline` directive explicitly to silence this hint.
+
+[7m110[0m     type="text/javascript"
+[7m   [0m [93m    ~~~~[0m
+
+Result (84 files): 
+- 11 errors
+- 0 warnings
+- 30 hints
+
+ ELIFECYCLE  Command failed with exit code 1.
