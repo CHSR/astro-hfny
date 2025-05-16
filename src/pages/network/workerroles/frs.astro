@@ -1,0 +1,80 @@
+---
+import NetworkLayout from "@/layouts/NetworkLayout.astro";
+import AccordionInstructions from "@/components/AccordionInstructions.astro";
+import AccordionContainer from "@/components/AccordionContainer.astro";
+import AccordionToggler from "@/components/AccordionToggler.astro";
+---
+
+<NetworkLayout
+  title="Worker Roles"
+  activeMainText="HFNY Network"
+  activeSubText="HFNY Worker Roles"
+>
+  <h1 class="heading">Family Resource Specialist</h1>
+
+  <div style="text-align: center;">
+    <img src="/images/growingtogetherfaw.jpg" />
+  </div>
+  <div>
+    <p>
+      <h3>
+        Click <a
+          href="https://albany.az1.qualtrics.com/jfe/form/SV_bgb8ZyJ5JZglsEJ"
+          >here for the HFNY Exit Survey</a
+        >. <br />
+        This survey is 100% anonymous and should be completed by all staff when HFNY
+        employment has ended.
+      </h3>
+    </p>
+    <h1>Resources for Family Resource Specialists</h1>
+    <AccordionInstructions />
+    <AccordionContainer>
+      <AccordionToggler> FROG </AccordionToggler>
+      <ul>
+        <li>
+          <a href="/Staff/Documents/FROG TOOLKIT 7.22.pdf">FROG Toolkit</a>
+        </li>
+      </ul>
+    </AccordionContainer>
+    <AccordionContainer>
+      <AccordionToggler> Level Change Forms </AccordionToggler>
+      <ul>
+        <li>
+          <a href="/Staff/Documents/Level 1 to Level 2 Form.pdf" target="_blank"
+            >Level 1 to Level 2</a
+          >
+        </li>
+        <li>
+          <a href="/Staff/Documents/Level 2 to Level 3 Form.pdf" target="_blank"
+            >Level 2 to Level 3</a
+          >
+        </li>
+        <li>
+          <a
+            href="/Staff/Documents/Level 3 to Level 4 and Completion Form.pdf"
+            target="_blank">Level 3 to Level 4 and Completion form</a
+          >
+        </li>
+      </ul>
+    </AccordionContainer>
+    <AccordionContainer>
+      <AccordionToggler>
+        HFNY Workforce Development Competencies
+      </AccordionToggler>
+      <ul>
+        <li><a href="/Staff/Competencies.html">Competencies Page</a></li>
+      </ul>
+    </AccordionContainer>
+    <AccordionContainer>
+      <AccordionToggler> Domestic/Intimate Partner Violence </AccordionToggler>
+      <ul>
+        <li>
+          <a href="Documents/Home visitors and DV resource-updated 0424.pdf">
+            Guidance and resources for families experiencing DV/IPV (updated
+            04/2024)
+          </a>
+        </li>
+      </ul>
+    </AccordionContainer>
+  </div>
+</NetworkLayout>

@@ -1,0 +1,28 @@
+<summary>
+  <slot />
+</summary>
+
+<style>
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-size: 1.1em;
+  }
+
+  summary::after {
+    content: "";
+    width: 20px;
+    height: 12px;
+    background: url("https://uploads.sitepoint.com/wp-content/uploads/2023/10/1697699669arrow.svg")
+      no-repeat;
+    background-size: cover;
+    transition: 0.3s;
+    flex-shrink: 0;
+  }
+
+  :global(details[open]) > summary::after {
+    transform: rotate(180deg);
+  }
+</style>
