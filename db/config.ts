@@ -31,6 +31,5 @@ const PublicationAuthor = defineTable({
 
 // https://astro.build/db/config
 export default defineDb({
-  // tables: { Publication, Author, PublicationAuthor },
-  tables: { Publication },
+  tables: { Publication, Author, PublicationAuthor },
 });

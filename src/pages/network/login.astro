@@ -14,7 +14,7 @@ import LoginLayout from "@/layouts/LoginLayout.astro";
     action=""
     method="post"
     enctype="multipart/form-data"
-    onSubmit="return checkPassword()"
+    onsubmit="return checkPassword()"
   >
     <p id="errorText">
       <noscript
@@ -32,10 +32,10 @@ import LoginLayout from "@/layouts/LoginLayout.astro";
   <script
     type="text/javascript"
     src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"
-  ></script>
+    is:inline></script>
 
   <!-- JSLogin: Lines 43-76 set up the login page -->
-  <script type="text/javascript">
+  <script type="text/javascript" is:inline>
     //<!--
     // If the cookie exists, forward to MIS page
     if (document.cookie.indexOf("passwordOk=true") != -1)

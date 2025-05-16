@@ -16,7 +16,7 @@ import NetworkLayout from "@/layouts/NetworkLayout.astro";
   <hr />
   <h2 style="text-align: center;">Recently Updated HFNY Documents</h2>
   <hr />
-  <table id="tblReporting" class="display">
+  <table id="tblNetworkDocs" class="display">
     <thead>
       <tr>
         <th>Category</th>
@@ -199,7 +199,7 @@ import NetworkLayout from "@/layouts/NetworkLayout.astro";
   <script
     type="text/javascript"
     src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"
-  ></script>
+    is:inline></script>
   <!-- dataTables -->
   <script
     type="text/javascript"
@@ -211,13 +211,13 @@ import NetworkLayout from "@/layouts/NetworkLayout.astro";
     href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css"
   />
   <!-- <style>
-    #tblReporting_wrapper {
+    #tblNetworkDocs_wrapper {
       position: absolute;
     }
   </style> -->
-  <script type="text/javascript">
+  <script type="text/javascript" is:inline>
     jQuery(document).ready(function ($) {
-      $("#tblReporting").DataTable({
+      $("#tblNetworkDocs").DataTable({
         language: {
           emptyTable: "No records.",
         },
@@ -227,7 +227,7 @@ import NetworkLayout from "@/layouts/NetworkLayout.astro";
         bSort: true,
         responsive: true,
         order: [[3, "desc"]],
-        autoWidth: true,
+        autoWidth: false,
       });
     });
   </script>
