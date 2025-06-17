@@ -1,4 +1,6 @@
 ---
+import Search from "astro-pagefind/components/Search";
+
 const { activeMainText } = Astro.props;
 
 const menuItems = [
@@ -41,6 +43,14 @@ const menuItems = [
   ...item,
   active: activeMainText === item.text,
 }));
+
+let pagefind;
+document.querySelector("#search").addEventListener("focus", async (e) => {
+  if (!pagefind) {
+    pagefind = await import("/pagefind.js");
+    pagefind.init();
+  }
+});
 ---
 
 <div id="header">
@@ -53,6 +63,13 @@ const menuItems = [
 
   <nav>
     <!-- main site navigation -->
+    <!-- <li><a href="/" class="active">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/homevisits">Home Visits</a></li>
+    <li><a href="/research">Research</a></li>
+    <li><a href="/resources">Resources</a></li>
+    <li><a href="/mis">MIS</a></li>
+    <li><a href="/training">Training</a></li> -->
     <ul id="main-nav">
       {
         menuItems.map((item) => (
@@ -63,14 +80,13 @@ const menuItems = [
           </li>
         ))
       }
-      <!-- <li><a href="/" class="active">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/homevisits">Home Visits</a></li>
-      <li><a href="/research">Research</a></li>
-      <li><a href="/resources">Resources</a></li>
-      <li><a href="/mis">MIS</a></li>
-      <li><a href="/training">Training</a></li> -->
     </ul>
+
+    <Search
+      id="search"
+      className="pagefind-ui"
+      uiOptions={{ showImages: false }}
+    />
 
     <!-- user navigation -->
     <ul id="user-nav">
