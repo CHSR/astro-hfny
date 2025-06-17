@@ -45,8 +45,8 @@ jobs:
           output_location: "" # Built app content directory - optional
           github_id_token: ${{ steps.idtoken.outputs.result }}
           ###### End of Repository/Build Configurations ######
-      - env:
-        SECRET_GOOGLEMAPSAPIKEY: ${{ secrets.SECRET_GOOGLEMAPSAPIKEY }}
+        env:
+          SECRET_GOOGLEMAPSAPIKEY: ${{ secrets.SECRET_GOOGLEMAPSAPIKEY }}
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
