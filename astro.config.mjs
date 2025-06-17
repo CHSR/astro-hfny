@@ -1,8 +1,6 @@
 import { defineConfig, envField } from 'astro/config';
-
 import sitemap from '@astrojs/sitemap';
-
-import db from '@astrojs/db';
+import pagefind from 'astro-pagefind';
 
 export default defineConfig({
   site: 'https://www.healthyfamiliesnewyork.org',
@@ -10,7 +8,8 @@ export default defineConfig({
   output: 'static',
 
   build: {
-    assets: '_assets'
+    assets: '_assets',
+    format: 'file',
   },
 
   env: {
@@ -29,5 +28,5 @@ export default defineConfig({
     }
   },
 
-  integrations: [sitemap(), db()]
+  integrations: [sitemap(), pagefind()]
 });

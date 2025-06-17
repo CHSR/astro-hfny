@@ -1,18 +1,22 @@
 {
+  "description": "Astro site for HFNY",
+  "author": "jayrobot",
+  "license": "MIT",
+  "packageManager": "pnpm@10.10.0",
   "name": "astro-hfny",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && pagefind --site dist && xcopy dist\\pagefind public\\ /e",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/db": "^0.14.13",
-    "@astrojs/sitemap": "^3.3.1",
-    "astro": "^5.7.11",
+    "@astrojs/sitemap": "^3.4.1",
+    "astro": "^5.8.2",
+    "astro-pagefind": "^1.8.3",
     "typescript": "^5.8.3"
   },
   "pnpm": {
@@ -20,5 +24,8 @@
       "esbuild",
       "sharp"
     ]
+  },
+  "devDependencies": {
+    "pagefind": "^1.3.0"
   }
 }
