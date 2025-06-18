@@ -47,7 +47,7 @@ const menuItems = [
 let pagefind;
 document.querySelector("#search").addEventListener("focus", async (e) => {
   if (!pagefind) {
-    pagefind = await import("/pagefind.js");
+    pagefind = await import("./pagefind.js");
     pagefind.init();
   }
 });
