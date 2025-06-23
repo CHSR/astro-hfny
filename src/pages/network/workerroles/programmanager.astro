@@ -41,9 +41,9 @@ import NetworkLayout from "@/layouts/NetworkLayout.astro";
       <li>
         <h3>
           <!-- <a href="Documents/HFNY Committees overview 0623.pdf" target="_blank" float="right"> -->
-          Overview of HFNY Committees (06/30/23) - This document is outdated and
-          the CA Committees are currently being restructured. Please check back soon
-          for the most recent version. Expected availability in May, 2024.
+          <del>Overview of HFNY Committees (06/30/23)</del> - This document is outdated
+          and the CA Committees are currently being restructured. Please check back
+          soon for the most recent version. Expected availability in May, 2024.
         </h3>
       </li>
 
@@ -91,14 +91,13 @@ import NetworkLayout from "@/layouts/NetworkLayout.astro";
         >
           <h3>New Program Manager Timeline (2024-10-02)</h3>
         </a>
-
-        <h3>
-          <a
-            href="Documents/HFNY Participant Critical Incident Report 1-2024 Final.docx"
-          >
-            Participant Critical Incident Report (2024-01-30)
-          </a>
-        </h3>
+      </li>
+      <li>
+        <a
+          href="Documents/HFNY Participant Critical Incident Report 1-2024 Final.docx"
+        >
+          <h3>Participant Critical Incident Report (2024-01-30)</h3>
+        </a>
       </li>
       <li>
         <a href="Documents/Fillable Program Critical Incident Report.docx">
@@ -115,21 +114,34 @@ import NetworkLayout from "@/layouts/NetworkLayout.astro";
       </li>
     </ul>
   </div>
+  <p style="text-align: center; align-items: center;">
+    <p>
+      <a href="/maps"><h3>Find a Program Site</h3></a>
+    </p>
+    <a href="/maps">
+      <img
+        src="/images/program_sites_link.png"
+        alt="New York State Program Sites Map"
+        title="New York State Program Sites Map"
+      />
+    </a>
+    <p>
+      For a complete listing of HFNY sites, click
+      <a href="/Documents/HFNYSiteInfo.pdf" target="_blank">here</a><br />
+      (updated 2025-02-13).
+    </p>
+  </p>
 </NetworkLayout>
 
 <div>
   <h5>
-    <p class="ps-link">
+    <p>
       For a complete listing of HFNY sites, click
-      <a
-        href="../Documents/HFNYSiteInfo.pdf"
-        target="_blank"
-        class="float-right"
-      >
-        here
-      </a>
+      <a href="../Documents/HFNYSiteInfo.pdf" target="_blank">here</a>
+      <br />
       (Updated 2025-02-13).
-      <a href="/maps" class="float-right">
+      <br />
+      <a href="/maps">
         <img src="/images/program_sites_link.png" />
       </a>
     </p>
