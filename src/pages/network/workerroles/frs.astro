@@ -1,0 +1,97 @@
+---
+import NetworkLayout from "@/layouts/NetworkLayout.astro";
+import Accordion from "@/components/Accordion.astro";
+
+// Define accordion items
+const accordionItems = [
+  {
+    togglerTitle:
+      'FROG <img src="/images/new.png" alt="New Item" height="30px" width="30px" />',
+    togglerContent: `
+      <ul>
+        <li>
+          <a href="/Staff/Documents/FROG Toolkit.pdf" target="_blank">
+            FROG Toolkit (updated 2025-05-13)
+          </a>
+        </li>
+      </ul>
+    `,
+  },
+  {
+    togglerTitle: "Level Change Forms",
+    togglerContent: `
+      <ul>
+        <li>
+          <a
+            href="/Staff/Documents/Level 1 to Level 2 Form.pdf"
+            target="_blank">Level 1 to Level 2</a
+          >
+        </li>
+        <li>
+          <a
+            href="/Staff/Documents/Level 2 to Level 3 Form.pdf"
+            target="_blank">Level 2 to Level 3</a
+          >
+        </li>
+        <li>
+          <a
+            href="/Staff/Documents/Level 3 to Level 4 and Completion Form.pdf"
+            target="_blank">Level 3 to Level 4 and Completion form</a
+          >
+        </li>
+      </ul>
+    `,
+  },
+  {
+    togglerTitle: "HFNY Workforce Development Competencies",
+    togglerContent: `
+      <ul>
+        <li><a href="/Staff/Competencies.html">Competencies Page</a></li>
+      </ul>
+    `,
+  },
+  {
+    togglerTitle: "Domestic/Intimate Partner Violence",
+    togglerContent: `
+      <ul>
+        <li>
+          <a href="Documents/Home visitors and DV resource-updated 0424.pdf">
+            Guidance and resources for families experiencing DV/IPV (updated
+            04/2024)
+          </a>
+        </li>
+      </ul>
+    `,
+  },
+];
+---
+
+<NetworkLayout
+  title="Worker Roles"
+  activeMainText="HFNY Network"
+  activeSubText="HFNY Worker Roles"
+>
+  <h1 class="heading">Family Resource Specialist</h1>
+
+  <div align="center"><img src="/images/growingtogetherfaw.jpg" /></div>
+  <div>
+    <p>
+      <h3>
+        Click <a
+          href="https://albany.az1.qualtrics.com/jfe/form/SV_bgb8ZyJ5JZglsEJ"
+          >here for the HFNY Exit Survey</a
+        >. <br />
+        This survey is 100% anonymous and should be completed by all staff when HFNY
+        employment has ended.R
+      </h3>
+    </p>
+    <h1>Resources for Family Resource Specialists</h1>
+    <p class="instructions">
+      Click on the sections to expand or click
+      <a class="button" id="expandAll">Expand All</a>
+      <a class="button" id="collapseAll" style="display:none;">Collapse All</a>
+    </p>
+
+    <Accordion accItems={accordionItems} id="frs-accordion" />
+  </div>
+</NetworkLayout>
