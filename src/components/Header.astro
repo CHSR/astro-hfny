@@ -92,14 +92,26 @@ const menuItems = [
         <img src="/images/template_images/nav_divider.png" alt="hash mark" />
       </li>
       <li><a href="/contact">Contact</a></li>
+      <li>
+        <img src="/images/template_images/nav_divider.png" alt="hash mark" />
+      </li>
+      <li id="usernav-searchicon"><a>Search</a></li>
     </ul>
-    <Search
-      id="search"
-      className="pagefind-ui"
-      uiOptions={{ showImages: false }}
-    />
   </nav>
 </div>
+<div class="search-component" id="nav-searchbar">
+  <Search
+    id="search"
+    className="pagefind-ui"
+    uiOptions={{ showImages: false }}
+  />
+</div>
+<style>
+  .search-component {
+    max-width: 100%;
+    margin: 10px auto;
+  }
+</style>
 
 <script>
   // Mobile menu toggle
@@ -112,6 +124,12 @@ const menuItems = [
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
   });
+
+  // Searchbar toggle
+  const navSearchBar = document.getElementById('nav-searchbar')
+  document.getElementById('usernav-searchicon')?.addEventListener('click', () => {
+    navSearchBar?.classList.toggle('showsearchbar')
+  })
 </script>
 
 <style>

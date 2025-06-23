@@ -142,7 +142,8 @@ img {
 	overflow: visible;
 	text-align: right;
 	float: right;
-	width: 25%; /* so IE8 plays nice */
+	/* width: 25%;  */
+	/* so IE8 plays nice */
 	font-size: .85em;
 }
 
@@ -160,6 +161,7 @@ img {
 	color: #b1e9f9;
 	text-decoration: none;
 	padding-bottom: 13px;
+	cursor: pointer;
 }
 
 #user-nav li a:hover {
@@ -547,7 +549,7 @@ footer styles
 	}
 	 
 	#user-nav {
-	width: 25%;
+	/* width: 25%; */
 	}
 	
 	#user-nav li {

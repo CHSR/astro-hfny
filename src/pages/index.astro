@@ -3,33 +3,39 @@ import Layout from "@/layouts/Layout.astro";
 import Header from "@/components/Header.astro";
 import Banner from "@/components/Banner.astro";
 import Footer from "@/components/Footer.astro";
+
+import Search from "astro-pagefind/components/Search";
 import "@/styles/hfny_home.css";
 ---
 
 <Layout title="Healthy Families New York Org">
-  <Header activeMainText="Home" />
-  <Banner />
+  <div>
+    <Header activeMainText="Home" />
+  </div>
 
-  <div id="content">
-    <!-- Audience navigation -->
-    <div id="audience-nav">
-      <ul>
-        <li><a href="/families" id="aud-nav-01"><span>Families</span></a></li>
-        <li>
-          <a href="/providers" id="aud-nav-02"
-            ><span>Providers &amp; Referral Sources</span></a
-          >
-        </li>
-        <li>
-          <a href="/funders" id="aud-nav-03"><span>Funders</span></a>
-        </li>
-        <li>
-          <a href="/researchers" id="aud-nav-04"><span>Researchers</span></a>
-        </li>
-        <li class="an-last">
-          <a href="/newsletter" id="aud-nav-05"><span>HFNY Newsletter</span></a>
-        </li>
-      </ul>
+  <Banner />
+    <div>
+      <div id="content">
+        <!-- Audience navigation -->
+        <div id="audience-nav">
+          <ul>
+            <li><a href="/families" id="aud-nav-01"><span>Families</span></a></li>
+            <li>
+              <a href="/providers" id="aud-nav-02"
+                ><span>Providers &amp; Referral Sources</span></a
+              >
+            </li>
+            <li>
+              <a href="/funders" id="aud-nav-03"><span>Funders</span></a>
+            </li>
+            <li>
+              <a href="/researchers" id="aud-nav-04"><span>Researchers</span></a>
+            </li>
+            <li class="an-last">
+              <a href="/newsletter" id="aud-nav-05"><span>HFNY Newsletter</span></a>
+            </li>
+          </ul>
+        </div>
     </div>
 
     <!-- Text area with 3-column layout -->

@@ -12,6 +12,14 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+### vscode ###
+.vscode/*
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+build/*
+*.XEN
 
 # environment variables
 .env

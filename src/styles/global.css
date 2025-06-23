@@ -164,7 +164,7 @@ img {
   overflow: visible;
   text-align: right;
   float: right;
-  width: 25%;
+  /* width: 25%; */
   font-size: 0.85em;
 }
 
@@ -194,6 +194,15 @@ img {
   background-position: 50% bottom;
 }
 
+.search-component {
+  overflow: hidden;
+  height: 0px;
+  transition: height 500ms ease;
+}
+
+.showsearchbar {
+  height: calc(64px* var(--pagefind-ui-scale));
+}
 /* Mobile menu */
 #hamburger {
   display: none;
