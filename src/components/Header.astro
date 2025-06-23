@@ -44,13 +44,13 @@ const menuItems = [
   active: activeMainText === item.text,
 }));
 
-let pagefind;
-document.querySelector("#search").addEventListener("focus", async (e) => {
-  if (!pagefind) {
-    pagefind = await import("./pagefind.js");
-    pagefind.init();
-  }
-});
+// let pagefind;
+// document.querySelector("#search").addEventListener("focus", async (e) => {
+//   if (!pagefind) {
+//     pagefind = await import("./pagefind.js");
+//     pagefind.init();
+//   }
+// });
 ---
 
 <div id="header">
@@ -81,13 +81,6 @@ document.querySelector("#search").addEventListener("focus", async (e) => {
         ))
       }
     </ul>
-
-    <Search
-      id="search"
-      className="pagefind-ui"
-      uiOptions={{ showImages: false }}
-    />
-
     <!-- user navigation -->
     <ul id="user-nav">
       <li><a href="/network/login">HFNY Network</a></li>
@@ -100,6 +93,11 @@ document.querySelector("#search").addEventListener("focus", async (e) => {
       </li>
       <li><a href="/contact">Contact</a></li>
     </ul>
+    <Search
+      id="search"
+      className="pagefind-ui"
+      uiOptions={{ showImages: false }}
+    />
   </nav>
 </div>
 
