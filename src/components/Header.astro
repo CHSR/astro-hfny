@@ -3,6 +3,27 @@ import Search from "astro-pagefind/components/Search";
 
 const { activeMainText } = Astro.props;
 
+const userNavItems = [
+  {
+    text: "HFNY Network",
+    href: "/network/login",
+    active: false,
+  },
+  {
+    text: "Jobs",
+    href: "/jobs",
+    active: true,
+  },
+  {
+    text: "Contact",
+    href: "/contact",
+    active: false,
+  },
+].map((item) => ({
+  ...item,
+  active: activeMainText === item.text,
+}));
+
 const menuItems = [
   {
     text: "Home",
@@ -83,18 +104,17 @@ const menuItems = [
     </ul>
     <!-- user navigation -->
     <ul id="user-nav">
-      <li><a href="/network/login">HFNY Network</a></li>
-      <li>
-        <img src="/images/template_images/nav_divider.png" alt="hash mark" />
-      </li>
-      <li><a href="/jobs">Jobs</a></li>
-      <li>
-        <img src="/images/template_images/nav_divider.png" alt="hash mark" />
-      </li>
-      <li><a href="/contact">Contact</a></li>
-      <li>
-        <img src="/images/template_images/nav_divider.png" alt="hash mark" />
-      </li>
+      {
+        userNavItems.map((item) => (
+          <li>
+            <a href={item.href} class={item.active ? "active" : "na"}>
+              {item.text}
+            </a>
+          </li>
+          <li><img src="/images/template_images/nav_divider.png" alt="hash mark" /></li>
+
+        ))
+      }
       <li id="usernav-searchicon"><a>Search</a></li>
     </ul>
   </nav>
@@ -106,14 +126,15 @@ const menuItems = [
     uiOptions={{ showImages: false }}
   />
 </div>
-<style>
-  .search-component {
-    max-width: 100%;
-    margin: 10px auto;
-  }
-</style>
-
 <script>
+  document.addEventListener("astro:page-load", ()=> {
+    // ! Searchbar toggle
+    const navSearchBar = document.getElementById("nav-searchbar");
+    document.getElementById("usernav-searchicon")?.addEventListener("click", () => {
+      navSearchBar?.classList.toggle("showsearchbar");
+    });
+    console.log('Navbar search loaded!')
+  })
   // Mobile menu toggle
   const hamburger = document.getElementById("hamburger");
   const nav = document.querySelector("nav");
@@ -124,14 +145,21 @@ const menuItems = [
     document.documentElement.scrollTop = 0;
     document.body.scrollTop = 0;
   });
-
-  // Searchbar toggle
-  const navSearchBar = document.getElementById('nav-searchbar')
-  document.getElementById('usernav-searchicon')?.addEventListener('click', () => {
-    navSearchBar?.classList.toggle('showsearchbar')
-  })
 </script>
 
 <style>
   /* We'll move the CSS here later */
+    .search-component {
+    max-width: 100%;
+    margin: 10px auto;
+    overflow: hidden;
+    height: 0px;
+    transition: height 500ms ease;
+  }
+  .showsearchbar {
+    height: calc(64px* var(--pagefind-ui-scale));
+  }
+  #usernav-searchicon {
+    cursor: pointer;
+  }
 </style>
