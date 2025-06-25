@@ -25,7 +25,7 @@ const { accItems, id = `${Math.random().toString(36).substring(2, 9)}` } =
             <p set:html={item.togglerTitle} />
           </div>
           <div class="accordion-content">
-            <p set:html={item.togglerContent} />
+            <div set:html={item.togglerContent} />
           </div>
         </div>
       ))
@@ -94,6 +94,7 @@ const { accItems, id = `${Math.random().toString(36).substring(2, 9)}` } =
     cursor: pointer;
   }
   .accordion-content {
+    border: 1px solid transparent;
     display: none;
     padding-bottom: 0;
   }

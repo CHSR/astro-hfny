@@ -1,0 +1,130 @@
+---
+import NetworkLayout from "@/layouts/NetworkLayout.astro";
+import Accordion from "@/components/Accordion.astro";
+
+// Define accordion items
+const accordionItems = [
+  {
+    togglerTitle:
+      'HFNY Home Visit Log Narrative Forms',
+    togglerContent: `
+      <ul>
+        <li>
+          <a href="/documents/HV_Log_Guidelines8.24.23.pdf" target="_blank">
+            HFNY Home Visit Narrative - Guidelines (2023-08-24)
+          </a>
+        </li>
+      </ul>
+    `,
+  },
+  {
+    togglerTitle: "Service Plan",
+    togglerContent: `
+      <ul>
+        <li>
+          <a
+            href="/documents/Service_Plan_Handbook.pdf"
+            target="_blank">Service Plan Handbook (01/2025)</a
+          >
+        </li>
+      </ul>
+    `,
+  },
+  {
+    togglerTitle: "HFNY Family Goal Plan/Individual Family Service Plan Forms",
+    togglerContent: `
+      <ul>
+        <li><a href="/documents/guidetoFGPonMIS02042021.pptx">HFNY Family Goal Plan Instruction Guide for the MIS</a></li>
+        <li><a href="/documents/FGP_Content_Instructions_Pape_Form3-21.pdf" target="_blank">FGP Content Instructions and Paper Form</a></li>
+        <li><a href="/documents/fgp2017instrument.pdf" target="_blank">HFNY FGP/IFSP blank form and Instructions (2017)</a></li>
+        <li><a href="/documents/spanishfgp2017.pdf" target="_blank">HFNY FGPIFSP - Spanish Version (2017)</a></li>
+      </ul>
+    `,
+  },
+  {
+    togglerTitle: "CHEERS Resources and Reflective Strategies",
+    togglerContent: `
+      <ul>
+        <li><a href="/documents/CHEERS_Handbook.pdf" target='_blank'>CHEERS Handbook (2025-03-27)</a></li>
+      </ul>
+    `,
+  },
+  {
+    togglerTitle: "Level Change Forms",
+    togglerContent: `
+      <ul>
+        <li><a href="/documents/Level1_to_Level2_Form.pdf" target='_blank'>Level 1 to Level 2</a></li>
+        <li><a href="/documents/Level2_to_Level3_Form.pdf" target='_blank'>Level 2 to Level 3</a></li>
+        <li><a href="/documents/Level3_to_Level4_and_Completion_Form.pdf" target='_blank'>Level 3 to Level 4 and Completion form</a></li>
+      </ul>
+    `,
+  },
+  {
+    togglerTitle: "Level Change Certificates for Parents (aka Accomplishments Form Fully Editable)",
+    togglerContent: `
+      <ul>
+        <li><a href="/documents/Weekly-to_Every_Other_Week_for_Parents_Fully_Editable_ENG.docx" >Weekly to Every Other Week - English</a></li>
+        <li><a href="/documents/Weekly-to_Every_Other_Week_for_Parents_Fully_Editable_SPANISH.docx" >Weekly to Every Other Week - Spanish</a></li>
+        <li><a href="/documents/Every_Other_Week_to_Monthly_for_Parents_Fully_Editable_ENG.docx" >Every Other Week to Monthly - English</a></li>
+        <li><a href="/documents/Every_Other_Week_to_Monthly_for_Parents_Fully_Editable_SPANISH.docx" >Every Other Week to Monthly - Spanish</a></li>
+        <li><a href="/documents/Monthly_to_Quarterly_for_Parents_Fully_Editable_ENG.docx" >Monthly to Quarterly - English</a></li>
+        <li><a href="/documents/Monthly_to_Quarterly_for_Parents_Fully_Editable_SPANISH.docx" >Monthly to Quarterly - Spanish</a></li>
+        <li><a href="/documents/Quarterly_to_Graduation_for_Parents_Fully_Editable_ENG.docx" >Quarterly to Graduation - English</a></li>
+        <li><a href="/documents/Quarterly_to_Graduation_for_Parents_Fully_Editable_SPANISH.docx" >Quarterly to Graduation - Spanish</a></li>
+      </ul>
+    `,
+  },
+  {
+    togglerTitle: "HFNY Workforce Development Competencies",
+    togglerContent: `
+      <ul>
+        <li><a href="/network/workerroles/competencies">Competencies Page</a></li>
+      </ul>
+    `,
+  },
+    {
+    togglerTitle: "Domestic/Intimate Partner Violence",
+    togglerContent: `
+      <ul>
+        <li>
+          <a href="/documents/Home_visitors_and_DV_resource_updated0424.pdf" target='_blank'>
+            Guidance and resources for families experiencing DV/IPV (updated
+            04/2024)
+          </a>
+        </li>
+      </ul>
+    `,
+  },
+];
+
+---
+
+<NetworkLayout
+  title="Worker Roles"
+  activeMainText="HFNY Network"
+  activeSubText="HFNY Worker Roles"
+>
+  <h1 class="heading">Family Support Specialist</h1>
+
+  <div class="align: center"><img src="/images/bigideasfsw.jpg" /></div>
+  <div>
+    <p>
+      <h3>
+        Click <a
+          href="https://albany.az1.qualtrics.com/jfe/form/SV_bgb8ZyJ5JZglsEJ"
+          >here for the HFNY Exit Survey</a
+        >. <br />
+        This survey is 100% anonymous and should be completed by all staff when HFNY
+        employment has ended.
+      </h3>
+    </p>
+    <h1>Resources for Family Support Specialists</h1>
+    <p class="instructions">
+      Click on the sections to expand or click
+      <a class="button" id="expandAll">Expand All</a>
+      <a class="button" id="collapseAll" style="display:none;">Collapse All</a>
+    </p>
+
+    <Accordion accItems={accordionItems} id="frs-accordion" />
+  </div>
+</NetworkLayout>
