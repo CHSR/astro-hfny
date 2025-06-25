@@ -1,0 +1,120 @@
+---
+import NetworkLayout from "@/layouts/NetworkLayout.astro";
+import Accordion from "@/components/Accordion.astro";
+
+const accordionItems = [
+  {
+    togglerTitle: "Orientation",
+    togglerContent: `
+      <ul>
+        <li>
+            <a href="/documents/HFNY_Multi_Site_System_Orientation_Dec9_19.pptx">
+                HFNY Multi-Site System Orientation
+            </a>
+        </li>
+        <li>
+            <a href="/network/workerroles/competencies">
+                Workforce Development Competencies Page
+            </a>
+        </li>
+        <li>
+            <a href="/documents/Home_visitors_and_DV_resource_updated0424.pdf" target="_blank">
+                Guidance and resources for families experiencing DV/IPV (updated 04/2024)
+            </a>
+        </li>
+      </ul>
+    `,
+  },
+  {
+    togglerTitle: "Form Resources (Handbooks, Toolkits, etc...)",
+    togglerContent: `
+      <ul>
+        <li>
+            <a href="/documents/" target="_blank">
+                FROG Toolkit
+            </a>
+            // !FROG Toolkit document error - "The resource you are looking for has been removed, had its name changed, or is temporarily unavailable."
+        </li>
+        <li>
+            <a href="/documents/SupervisionNoteGuidelines0224.pdf" target="_blank">
+                Guidelines for Supervision Notes (Most recent updates are highlighted in yellow) (Aug 2023 and Feb 2024)
+            </a>
+        </li>
+        <li>
+            <a href="/documents/MIS_supervision.pptx">
+                Presentation given at Supervisor Core covering Supervision in the MIS (May 2019)
+            </a>
+        </li>
+        <li>
+            <a href="/documents/CHEERS_Handbook.pdf" target="_blank">
+                CHEERS Handbook (2025-03-27)
+            </a>
+        </li>
+        <li>
+            <a href="/documents/CHEERSReviewQuizUpdated2023.pptx">
+                CHEERS Review Quiz (2023-01-30)                
+            </a>
+        </li>
+        <li>
+            <a href="/documents/guidetoFGPonMIS02042021.pptx">
+                HFNY Family Goal Plan Instruction Guide for the MIS
+            </a>
+        </li>
+        <li>
+            <a href="/documents/Service_Plan_Handbook.pdf" target="_blank">
+                Service Plan Handbook (01/2025)
+            </a>
+        </li>
+      </ul>
+    `,
+  },
+  {
+    togglerTitle: "MIS Resources",
+    togglerContent: `
+      <ul>
+        <li>
+            <a href="/documents/HFMISUserAgreement20220524.pdf" target="_blank">
+                Healthy Families New York MIS User Agreement (2022-05-24)
+            </a>
+        </li>
+        <li>
+            <a href="/documents/HFNY_Site-to-Site_Transfer_Form.pdf" target="_blank">
+                Healthy Families New York MIS Site-to-Site Transfer Form
+            </a>
+        </li>
+      </ul>
+    `,
+  },
+];
+
+---
+
+<NetworkLayout
+    title="Worker Roles"
+    activeMainText="HFNY Network"
+    activeSubText="HFNY Worker Roles"
+    >
+    <h1 class="heading">Supervisor</h1>
+
+    <div>
+        <p>
+            <h3>
+                Click <a
+                    href="https://albany.az1.qualtrics.com/jfe/form/SV_bgb8ZyJ5JZglsEJ"
+                    >here for the HFNY Exit Survey</a>. 
+                    <br />This survey is 100% anonymous and should be completed by all staff when HFNY employment has ended.
+            </h3>
+        </p>
+    </div>
+        <h1>Resources for Supervisors</h1>
+    <p class="instructions">
+      Click on the sections to expand or click
+      <a class="button" id="expandAll">Expand All</a>
+      <a class="button" id="collapseAll" style="display:none;">Collapse All</a>
+    </p>
+    <Accordion accItems={accordionItems} id="frs-accordion" />
+    <div style="text-align: center; margin-top: 10%;">
+        <img src="/images/rockrule.jpg" alt="rockrule">
+        <p>"We all need people who will give us feedback. <br> That's how we improve." - Bill Gates</p>
+    </div>
+</NetworkLayout>
