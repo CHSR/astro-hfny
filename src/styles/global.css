@@ -225,6 +225,9 @@ img {
 }
 
 /* Search box */
+.pagefind-ui__search-input.svelte-e9gkc3:focus-visible {
+  outline: none;
+}
 #searchbox {
   position: absolute;
   top: 0;
