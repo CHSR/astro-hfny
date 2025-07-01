@@ -1,6 +1,9 @@
 import { defineConfig, envField } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import pagefind from 'astro-pagefind';
+import { loadEnv } from "vite";
+
+// const { PUBLIC_GOOGLEMAPSAPIKEY } = loadEnv(process.env.PUBLIC_GOOGLEMAPSAPIKEY, process.cwd(), "");
 
 export default defineConfig({
   site: 'https://www.healthyfamiliesnewyork.org',
