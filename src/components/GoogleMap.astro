@@ -4,7 +4,7 @@ import Header from "./Header.astro";
 import Footer from "./Footer.astro";
 
 // GoogleMap.astro
-import { SECRET_GOOGLEMAPSAPIKEY } from "astro:env/server";
+import { PUBLIC_GOOGLEMAPSAPIKEY } from "astro:env/server";
 ---
 
 <Layout title="Sites">
@@ -1906,7 +1906,7 @@ import { SECRET_GOOGLEMAPSAPIKEY } from "astro:env/server";
       <script
         async
         defer
-        src={`https://maps.googleapis.com/maps/api/js?key=${SECRET_GOOGLEMAPSAPIKEY}&callback=initMap`}
+        src={`https://maps.googleapis.com/maps/api/js?key=${PUBLIC_GOOGLEMAPSAPIKEY}&callback=initMap`}
         is:inline></script>
     </div>
   </div>
