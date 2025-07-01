@@ -15,8 +15,8 @@ export default defineConfig({
   env: {
     schema: { 
       PUBLIC_GOOGLEMAPSAPIKEY: envField.string({
-        context: 'server',
-        access: 'secret',
+        context: 'client',
+        access: 'public',
         description: 'Google Maps API Key',        
       }),
     }
